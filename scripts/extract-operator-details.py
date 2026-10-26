@@ -13,7 +13,7 @@ for folder,manifest in [(original,'source-manifest.json'),(additional,'additiona
   assert hashlib.sha256((folder/f['file']).read_bytes()).hexdigest()==f['sha256'],'Changed source: '+f['file']
 chars=load(original/'character_table.json');chars.update(load(original/'char_patch_table.json')['patchChars'])
 books=load(original/'handbook_info_table.json')['handbookDict']
-skills=load(original/'skill_table.json');skins=load(additional/'skin_table.json')['charSkins'];voices=load(additional/'charword_table.json')['voiceLangDict']
+skills=load(original/'skill_table.json');skins=load(additional/'skin_table.json')['charSkins'];voice_table=load(additional/'charword_table.json');voices=voice_table['voiceLangDict']
 people=[p for p in load(repo/'data/characters.json')['characters'] if p.get('operator')]
 clean=lambda text:re.sub(r'<[^>]*>','',text or '').replace('\\n','\n').strip()
 def fields(text):
@@ -41,7 +41,7 @@ def description(text,blackboard):
  return '' if '{' in result or '}' in result else result
 def stage(v):return int(v.get('unlockCondition',{}).get('phase','PHASE_0').split('_')[-1])
 forms={};unresolved=[]
-langs={'CN_MANDARIN':'普通话','JP':'日语','EN':'英语','KR':'韩语','CN_TOPOLECT':'方言'}
+langs={key:value['name'] for key,value in voice_table['voiceLangTypeDict'].items()}
 for p in people:
  for form in p['forms']:
   cid=form['charId'];char=chars[cid];chapters=selected_chapters(p['baseCharId'],cid)
