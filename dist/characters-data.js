@@ -425,8 +425,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "维多利亚",
       "organizations": [
         "罗德岛",
-        "罗德岛-精英干员",
-        "罗德岛,罗德岛-精英干员"
+        "罗德岛-精英干员"
       ],
       "regionIds": [
         "victoria",
@@ -593,8 +592,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "哥伦比亚",
       "organizations": [
         "罗德岛",
-        "罗德岛-精英干员",
-        "罗德岛,罗德岛-精英干员"
+        "罗德岛-精英干员"
       ],
       "regionIds": [
         "columbia"
@@ -707,8 +705,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "卡兹戴尔",
       "organizations": [
         "罗德岛",
-        "S.W.E.E.P.",
-        "罗德岛,S.W.E.E.P."
+        "S.W.E.E.P."
       ],
       "regionIds": [
         "kazdel"
@@ -721,7 +718,7 @@ window.TERRA_CHARACTERS = {
         }
       ],
       "role": "罗德岛反渗透负责人",
-      "summary": "罗德岛负责反渗透工作的干员，领导 S.W.E.E.P.。公开履历提到她曾在巴别塔时期担任情报官，后来转入罗德岛；档案记其出身卡兹戴尔、种族为萨卡兹，本条不展开其他经历。",
+      "summary": "罗德岛负责反渗透工作的干员，领导 S.W.E.E.P.。公开履历提到她曾在巴别塔时期担任情报官，后来转入罗德岛；档案记其出身卡兹戴尔、种族为萨卡兹。",
       "tags": [
         "情报",
         "反渗透",
@@ -945,8 +942,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "龙门",
       "organizations": [
         "龙门近卫局",
-        "罗德岛",
-        "炎-龙门,龙门近卫局"
+        "罗德岛"
       ],
       "regionIds": [
         "yan"
@@ -1152,8 +1148,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "东国",
       "organizations": [
         "龙门近卫局",
-        "罗德岛",
-        "炎-龙门,龙门近卫局"
+        "罗德岛"
       ],
       "regionIds": [
         "higashi",
@@ -1321,8 +1316,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "龙门",
       "organizations": [
         "龙门近卫局",
-        "罗德岛",
-        "炎-龙门,龙门近卫局"
+        "罗德岛"
       ],
       "regionIds": [
         "yan"
@@ -1637,8 +1631,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "炎",
       "organizations": [
         "鲤氏侦探事务所",
-        "罗德岛",
-        "炎-龙门,鲤氏侦探事务所"
+        "罗德岛"
       ],
       "regionIds": [
         "yan"
@@ -1756,8 +1749,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "龙门",
       "organizations": [
         "鲤氏侦探事务所",
-        "罗德岛",
-        "炎-龙门,鲤氏侦探事务所"
+        "罗德岛"
       ],
       "regionIds": [
         "yan"
@@ -1873,8 +1865,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "谢拉格",
       "organizations": [
         "喀兰贸易",
-        "罗德岛",
-        "谢拉格,喀兰贸易"
+        "罗德岛"
       ],
       "regionIds": [
         "kjerag"
@@ -2308,8 +2299,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "谢拉格",
       "organizations": [
         "喀兰贸易",
-        "罗德岛",
-        "谢拉格,喀兰贸易"
+        "罗德岛"
       ],
       "regionIds": [
         "kjerag"
@@ -2422,8 +2412,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "莱塔尼亚",
       "organizations": [
         "喀兰贸易",
-        "罗德岛",
-        "谢拉格,喀兰贸易"
+        "罗德岛"
       ],
       "regionIds": [
         "leithanien",
@@ -2549,8 +2538,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "拉特兰",
       "organizations": [
         "企鹅物流",
-        "罗德岛",
-        "炎-龙门,企鹅物流"
+        "罗德岛"
       ],
       "regionIds": [
         "laterano",
@@ -3528,8 +3516,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "卡西米尔",
       "organizations": [
         "红松骑士团",
-        "罗德岛",
-        "卡西米尔,红松骑士团"
+        "罗德岛"
       ],
       "regionIds": [
         "kazimierz"
@@ -3988,8 +3975,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "哥伦比亚",
       "organizations": [
         "企鹅物流",
-        "罗德岛",
-        "炎-龙门,企鹅物流"
+        "罗德岛"
       ],
       "regionIds": [
         "columbia",
@@ -4432,8 +4418,7 @@ window.TERRA_CHARACTERS = {
       "organizations": [
         "莱茵生命（前）",
         "罗德岛",
-        "莱茵生命",
-        "哥伦比亚,莱茵生命"
+        "莱茵生命"
       ],
       "regionIds": [
         "columbia"
@@ -4553,8 +4538,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "哥伦比亚",
       "organizations": [
         "莱茵生命",
-        "罗德岛",
-        "哥伦比亚,莱茵生命"
+        "罗德岛"
       ],
       "regionIds": [
         "columbia"
@@ -4714,8 +4698,7 @@ window.TERRA_CHARACTERS = {
       "organizations": [
         "莱茵生命（前）",
         "罗德岛",
-        "莱茵生命",
-        "哥伦比亚,莱茵生命"
+        "莱茵生命"
       ],
       "regionIds": [
         "columbia"
@@ -4829,8 +4812,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "哥伦比亚",
       "organizations": [
         "莱茵生命",
-        "罗德岛",
-        "哥伦比亚,莱茵生命"
+        "罗德岛"
       ],
       "regionIds": [
         "columbia"
@@ -4948,8 +4930,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "未公开",
       "organizations": [
         "莱茵生命",
-        "罗德岛",
-        "哥伦比亚,莱茵生命"
+        "罗德岛"
       ],
       "regionIds": [
         "columbia"
@@ -5065,8 +5046,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "哥伦比亚",
       "organizations": [
         "莱茵生命",
-        "罗德岛",
-        "哥伦比亚,莱茵生命"
+        "罗德岛"
       ],
       "regionIds": [
         "columbia"
@@ -5295,8 +5275,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "维多利亚",
       "organizations": [
         "格拉斯哥帮",
-        "罗德岛",
-        "维多利亚,格拉斯哥帮"
+        "罗德岛"
       ],
       "regionIds": [
         "victoria"
@@ -5574,8 +5553,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "维多利亚",
       "organizations": [
         "罗德岛",
-        "塔拉",
-        "维多利亚,塔拉"
+        "塔拉"
       ],
       "regionIds": [
         "victoria"
@@ -5855,8 +5833,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "阿戈尔",
       "organizations": [
         "深海猎人",
-        "罗德岛",
-        "阿戈尔,深海猎人"
+        "罗德岛"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -6017,8 +5994,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "阿戈尔",
       "organizations": [
         "深海猎人",
-        "罗德岛",
-        "阿戈尔,深海猎人"
+        "罗德岛"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -6176,8 +6152,7 @@ window.TERRA_CHARACTERS = {
       "organizations": [
         "深海猎人",
         "阿戈尔",
-        "罗德岛",
-        "阿戈尔,深海猎人"
+        "罗德岛"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -6916,8 +6891,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "乌萨斯",
       "organizations": [
         "乌萨斯学生自治团",
-        "罗德岛",
-        "乌萨斯,乌萨斯学生自治团"
+        "罗德岛"
       ],
       "regionIds": [
         "ursus"
@@ -7077,8 +7051,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "乌萨斯",
       "organizations": [
         "乌萨斯学生自治团",
-        "罗德岛",
-        "乌萨斯,乌萨斯学生自治团"
+        "罗德岛"
       ],
       "regionIds": [
         "ursus"
@@ -7192,8 +7165,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "乌萨斯",
       "organizations": [
         "乌萨斯学生自治团",
-        "罗德岛",
-        "乌萨斯,乌萨斯学生自治团"
+        "罗德岛"
       ],
       "regionIds": [
         "ursus"
@@ -7308,8 +7280,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "乌萨斯",
       "organizations": [
         "乌萨斯学生自治团",
-        "罗德岛",
-        "乌萨斯,乌萨斯学生自治团"
+        "罗德岛"
       ],
       "regionIds": [
         "ursus"
@@ -7540,8 +7511,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "炎",
       "organizations": [
         "罗德岛",
-        "炎-岁",
-        "炎,炎-岁"
+        "炎-岁"
       ],
       "regionIds": [
         "yan"
@@ -7659,8 +7629,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "炎",
       "organizations": [
         "罗德岛",
-        "炎-岁",
-        "炎,炎-岁"
+        "炎-岁"
       ],
       "regionIds": [
         "yan"
@@ -7776,8 +7745,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "炎",
       "organizations": [
         "罗德岛",
-        "炎-岁",
-        "炎,炎-岁"
+        "炎-岁"
       ],
       "regionIds": [
         "yan"
@@ -7895,8 +7863,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "炎",
       "organizations": [
         "罗德岛",
-        "炎-岁",
-        "炎,炎-岁"
+        "炎-岁"
       ],
       "regionIds": [
         "yan"
@@ -8010,8 +7977,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "炎",
       "organizations": [
         "罗德岛",
-        "炎-岁",
-        "炎,炎-岁"
+        "炎-岁"
       ],
       "regionIds": [
         "yan"
@@ -9615,8 +9581,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "汐斯塔（独立城邦）",
       "organizations": [
         "汐斯塔",
-        "罗德岛",
-        "哥伦比亚,汐斯塔"
+        "罗德岛"
       ],
       "regionIds": [
         "siesta",
@@ -9736,8 +9701,7 @@ window.TERRA_CHARACTERS = {
       "birthplace": "雷姆必拓",
       "organizations": [
         "汐斯塔",
-        "罗德岛",
-        "哥伦比亚,汐斯塔"
+        "罗德岛"
       ],
       "regionIds": [
         "rim-billiton",
@@ -11033,8 +10997,7 @@ window.TERRA_CHARACTERS = {
         "ジャスティスナイト"
       ],
       "organizations": [
-        "红松骑士团",
-        "卡西米尔,红松骑士团"
+        "红松骑士团"
       ],
       "regionIds": [
         "columbia",
@@ -11889,7 +11852,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动组A4",
-        "罗德岛,行动组A4"
+        "罗德岛"
       ],
       "regionIds": [
         "higashi"
@@ -12048,7 +12011,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动组A4",
-        "罗德岛,行动组A4"
+        "罗德岛"
       ],
       "regionIds": [
         "higashi"
@@ -12202,7 +12165,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动组A4",
-        "罗德岛,行动组A4"
+        "罗德岛"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -12304,7 +12267,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动组A4",
-        "罗德岛,行动组A4"
+        "罗德岛"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -12506,7 +12469,6 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A1",
-        "罗德岛,行动预备组A1",
         "罗德岛"
       ],
       "regionIds": [
@@ -12661,8 +12623,7 @@ window.TERRA_CHARACTERS = {
         "バニラ"
       ],
       "organizations": [
-        "黑钢国际",
-        "哥伦比亚,黑钢国际"
+        "黑钢国际"
       ],
       "regionIds": [
         "columbia"
@@ -12884,7 +12845,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A4",
-        "罗德岛,行动预备组A4"
+        "罗德岛"
       ],
       "regionIds": [
         "victoria"
@@ -12998,7 +12959,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A6",
-        "罗德岛,行动预备组A6"
+        "罗德岛"
       ],
       "regionIds": [
         "rim-billiton"
@@ -13112,7 +13073,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A4",
-        "罗德岛,行动预备组A4"
+        "罗德岛"
       ],
       "regionIds": [
         "leithanien"
@@ -13224,7 +13185,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A1",
-        "罗德岛,行动预备组A1"
+        "罗德岛"
       ],
       "regionIds": [
         "bolivar"
@@ -13336,7 +13297,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A6",
-        "罗德岛,行动预备组A6"
+        "罗德岛"
       ],
       "regionIds": [
         "sargon"
@@ -13453,7 +13414,6 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A1",
-        "罗德岛,行动预备组A1",
         "罗德岛"
       ],
       "regionIds": [
@@ -13605,7 +13565,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A4",
-        "罗德岛,行动预备组A4"
+        "罗德岛"
       ],
       "regionIds": [
         "laterano"
@@ -13720,7 +13680,6 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A1",
-        "罗德岛,行动预备组A1",
         "罗德岛"
       ],
       "regionIds": [
@@ -13876,7 +13835,6 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A1",
-        "罗德岛,行动预备组A1",
         "罗德岛"
       ],
       "regionIds": [
@@ -14029,7 +13987,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A4",
-        "罗德岛,行动预备组A4"
+        "罗德岛"
       ],
       "regionIds": [
         "rim-billiton"
@@ -14140,7 +14098,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A4",
-        "罗德岛,行动预备组A4"
+        "罗德岛"
       ],
       "regionIds": [
         "kjerag"
@@ -14253,7 +14211,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A6",
-        "罗德岛,行动预备组A6"
+        "罗德岛"
       ],
       "regionIds": [
         "columbia"
@@ -15233,8 +15191,7 @@ window.TERRA_CHARACTERS = {
         "滌火ジェシカ"
       ],
       "organizations": [
-        "黑钢国际",
-        "哥伦比亚,黑钢国际"
+        "黑钢国际"
       ],
       "regionIds": [
         "victoria",
@@ -16398,8 +16355,7 @@ window.TERRA_CHARACTERS = {
         "クーリエ"
       ],
       "organizations": [
-        "喀兰贸易",
-        "谢拉格,喀兰贸易"
+        "喀兰贸易"
       ],
       "regionIds": [
         "kjerag"
@@ -16514,7 +16470,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "S.W.E.E.P.",
-        "罗德岛,S.W.E.E.P."
+        "罗德岛"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -19381,8 +19337,7 @@ window.TERRA_CHARACTERS = {
         "マッターホルン"
       ],
       "organizations": [
-        "喀兰贸易",
-        "谢拉格,喀兰贸易"
+        "喀兰贸易"
       ],
       "regionIds": [
         "kjerag"
@@ -21027,8 +20982,7 @@ window.TERRA_CHARACTERS = {
         "キアーベ"
       ],
       "organizations": [
-        "贾维团伙",
-        "叙拉古,贾维团伙"
+        "贾维团伙"
       ],
       "regionIds": [
         "siracusa"
@@ -21136,10 +21090,7 @@ window.TERRA_CHARACTERS = {
       "aliases": [
         "ポンシラス"
       ],
-      "organizations": [
-        "汐斯塔",
-        "哥伦比亚,汐斯塔"
-      ],
+      "organizations": [],
       "regionIds": [
         "siesta",
         "columbia"
@@ -21484,8 +21435,7 @@ window.TERRA_CHARACTERS = {
         "ワイルドメイン"
       ],
       "organizations": [
-        "红松骑士团",
-        "卡西米尔,红松骑士团"
+        "红松骑士团"
       ],
       "regionIds": [
         "kazimierz"
@@ -22374,8 +22324,7 @@ window.TERRA_CHARACTERS = {
         "サーファー"
       ],
       "organizations": [
-        "黑钢国际",
-        "哥伦比亚,黑钢国际"
+        "黑钢国际"
       ],
       "regionIds": [
         "columbia"
@@ -22594,10 +22543,7 @@ window.TERRA_CHARACTERS = {
       "aliases": [
         "ブライオファイタ"
       ],
-      "organizations": [
-        "汐斯塔",
-        "哥伦比亚,汐斯塔"
-      ],
+      "organizations": [],
       "regionIds": [
         "siesta",
         "columbia"
@@ -22820,8 +22766,7 @@ window.TERRA_CHARACTERS = {
         "フランカ"
       ],
       "organizations": [
-        "黑钢国际",
-        "哥伦比亚,黑钢国际"
+        "黑钢国际"
       ],
       "regionIds": [
         "columbia"
@@ -23049,8 +22994,7 @@ window.TERRA_CHARACTERS = {
         "モーガン"
       ],
       "organizations": [
-        "格拉斯哥帮",
-        "维多利亚,格拉斯哥帮"
+        "格拉斯哥帮"
       ],
       "regionIds": [
         "victoria"
@@ -23263,8 +23207,7 @@ window.TERRA_CHARACTERS = {
         "インドラ"
       ],
       "organizations": [
-        "格拉斯哥帮",
-        "维多利亚,格拉斯哥帮"
+        "格拉斯哥帮"
       ],
       "regionIds": [
         "victoria"
@@ -23482,8 +23425,7 @@ window.TERRA_CHARACTERS = {
         "ダグザ"
       ],
       "organizations": [
-        "格拉斯哥帮",
-        "维多利亚,格拉斯哥帮"
+        "格拉斯哥帮"
       ],
       "regionIds": [
         "victoria"
@@ -24035,8 +23977,7 @@ window.TERRA_CHARACTERS = {
         "ブローカ"
       ],
       "organizations": [
-        "贾维团伙",
-        "叙拉古,贾维团伙"
+        "贾维团伙"
       ],
       "regionIds": [
         "siracusa"
@@ -25036,7 +24977,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A6",
-        "罗德岛,行动预备组A6"
+        "罗德岛"
       ],
       "regionIds": [
         "kazimierz"
@@ -25853,8 +25794,7 @@ window.TERRA_CHARACTERS = {
         "アオスタ"
       ],
       "organizations": [
-        "贾维团伙",
-        "叙拉古,贾维团伙"
+        "贾维团伙"
       ],
       "regionIds": [
         "siracusa"
@@ -26279,8 +26219,7 @@ window.TERRA_CHARACTERS = {
         "アブサント"
       ],
       "organizations": [
-        "乌萨斯学生自治团",
-        "乌萨斯,乌萨斯学生自治团"
+        "乌萨斯学生自治团"
       ],
       "regionIds": [
         "ursus"
@@ -26887,8 +26826,7 @@ window.TERRA_CHARACTERS = {
         "溯光アステジーニ"
       ],
       "organizations": [
-        "莱茵生命",
-        "哥伦比亚,莱茵生命"
+        "莱茵生命"
       ],
       "regionIds": [
         "columbia"
@@ -27609,8 +27547,7 @@ window.TERRA_CHARACTERS = {
         "ハーモニー"
       ],
       "organizations": [
-        "塔拉",
-        "维多利亚,塔拉"
+        "塔拉"
       ],
       "regionIds": [
         "victoria"
@@ -28832,8 +28769,7 @@ window.TERRA_CHARACTERS = {
         "メイヤー"
       ],
       "organizations": [
-        "莱茵生命",
-        "哥伦比亚,莱茵生命"
+        "莱茵生命"
       ],
       "regionIds": [
         "columbia"
@@ -30823,7 +30759,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "S.W.E.E.P.",
-        "罗德岛,S.W.E.E.P."
+        "罗德岛"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -30928,8 +30864,7 @@ window.TERRA_CHARACTERS = {
         "ワイフー"
       ],
       "organizations": [
-        "鲤氏侦探事务所",
-        "炎-龙门,鲤氏侦探事务所"
+        "鲤氏侦探事务所"
       ],
       "regionIds": [
         "yan"
@@ -31374,8 +31309,7 @@ window.TERRA_CHARACTERS = {
         "リスカム"
       ],
       "organizations": [
-        "黑钢国际",
-        "哥伦比亚,黑钢国际"
+        "黑钢国际"
       ],
       "regionIds": [
         "columbia"
@@ -31595,8 +31529,7 @@ window.TERRA_CHARACTERS = {
         "クロワッサン"
       ],
       "organizations": [
-        "企鹅物流",
-        "炎-龙门,企鹅物流"
+        "企鹅物流"
       ],
       "regionIds": [
         "minos",
@@ -32490,8 +32423,7 @@ window.TERRA_CHARACTERS = {
         "アッシュロック"
       ],
       "organizations": [
-        "红松骑士团",
-        "卡西米尔,红松骑士团"
+        "红松骑士团"
       ],
       "regionIds": [
         "kazimierz"
@@ -33489,8 +33421,7 @@ window.TERRA_CHARACTERS = {
         "アンドレアナ"
       ],
       "organizations": [
-        "深海猎人",
-        "阿戈尔,深海猎人"
+        "深海猎人"
       ],
       "regionIds": [
         "iberia"
@@ -34269,8 +34200,7 @@ window.TERRA_CHARACTERS = {
         "ブリギッド"
       ],
       "organizations": [
-        "塔拉",
-        "维多利亚,塔拉"
+        "塔拉"
       ],
       "regionIds": [
         "victoria"
@@ -34606,8 +34536,7 @@ window.TERRA_CHARACTERS = {
         "アーモンド"
       ],
       "organizations": [
-        "黑钢国际",
-        "哥伦比亚,黑钢国际"
+        "黑钢国际"
       ],
       "regionIds": [
         "columbia"
@@ -35711,8 +35640,7 @@ window.TERRA_CHARACTERS = {
         "ソラ"
       ],
       "organizations": [
-        "企鹅物流",
-        "炎-龙门,企鹅物流"
+        "企鹅物流"
       ],
       "regionIds": [
         "yan"
@@ -38769,8 +38697,7 @@ window.TERRA_CHARACTERS = {
         "ファートゥース"
       ],
       "organizations": [
-        "红松骑士团",
-        "卡西米尔,红松骑士团"
+        "红松骑士团"
       ],
       "regionIds": [
         "kazimierz"
@@ -39155,8 +39082,7 @@ window.TERRA_CHARACTERS = {
         "ロサ"
       ],
       "organizations": [
-        "乌萨斯学生自治团",
-        "乌萨斯,乌萨斯学生自治团"
+        "乌萨斯学生自治团"
       ],
       "regionIds": [
         "ursus"
@@ -39832,8 +39758,7 @@ window.TERRA_CHARACTERS = {
         "イフリータ"
       ],
       "organizations": [
-        "莱茵生命",
-        "哥伦比亚,莱茵生命"
+        "莱茵生命"
       ],
       "regionIds": [
         "columbia"
@@ -40289,7 +40214,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "罗德岛-精英干员",
-        "罗德岛,罗德岛-精英干员"
+        "罗德岛"
       ],
       "regionIds": [
         "kazdel"
@@ -41074,7 +40999,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "罗德岛-精英干员",
-        "罗德岛,罗德岛-精英干员"
+        "罗德岛"
       ],
       "regionIds": [
         "sargon"
@@ -41191,8 +41116,7 @@ window.TERRA_CHARACTERS = {
         "ネクラス"
       ],
       "organizations": [
-        "塔拉",
-        "维多利亚,塔拉"
+        "塔拉"
       ],
       "regionIds": [
         "victoria"
@@ -41595,7 +41519,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "罗德岛-精英干员",
-        "罗德岛,罗德岛-精英干员"
+        "罗德岛"
       ],
       "regionIds": [
         "ursus"
@@ -42059,8 +41983,7 @@ window.TERRA_CHARACTERS = {
         "ナスティ"
       ],
       "organizations": [
-        "莱茵生命",
-        "哥伦比亚,莱茵生命"
+        "莱茵生命"
       ],
       "regionIds": [
         "kazdel",
@@ -42686,8 +42609,7 @@ window.TERRA_CHARACTERS = {
         "ア"
       ],
       "organizations": [
-        "鲤氏侦探事务所",
-        "炎-龙门,鲤氏侦探事务所"
+        "鲤氏侦探事务所"
       ],
       "regionIds": [
         "yan"
@@ -43125,8 +43047,7 @@ window.TERRA_CHARACTERS = {
         "ウァン"
       ],
       "organizations": [
-        "炎-岁",
-        "炎,炎-岁"
+        "炎-岁"
       ],
       "regionIds": [
         "yan"
@@ -43804,7 +43725,7 @@ window.TERRA_CHARACTERS = {
       "aliases": [],
       "organizations": [
         "罗德岛-精英干员",
-        "罗德岛,罗德岛-精英干员"
+        "罗德岛"
       ],
       "regionIds": [
         "columbia"
@@ -43921,8 +43842,7 @@ window.TERRA_CHARACTERS = {
         "ユー"
       ],
       "organizations": [
-        "炎-岁",
-        "炎,炎-岁"
+        "炎-岁"
       ],
       "regionIds": [
         "yan"
@@ -44585,8 +44505,7 @@ window.TERRA_CHARACTERS = {
         "ウルピアヌス"
       ],
       "organizations": [
-        "深海猎人",
-        "阿戈尔,深海猎人"
+        "深海猎人"
       ],
       "regionIds": [],
       "regionRelations": [],
@@ -45572,7 +45491,7 @@ window.TERRA_CHARACTERS = {
       ],
       "organizations": [
         "行动预备组A6",
-        "罗德岛,行动预备组A6"
+        "罗德岛"
       ],
       "regionIds": [
         "higashi"

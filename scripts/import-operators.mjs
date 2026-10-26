@@ -37,7 +37,7 @@ const groups=input.groups.map(group=>{
   p.role=old?.role||editorial?.role||first.profession+' · '+first.branch;
   p.summary=old?.summary||editorial?.summary||p.name+'是'+first.profession+'干员，分支为'+first.branch+'。基础档案记录其'+(basics['产地']?'产地':'出身地')+'为'+p.birthplace+'。';
   p.tags=unique([...p.tags,...(editorial?.tags||[]),...p.forms.flatMap(f=>[f.profession,f.branch,...f.tags])]);
-  p.organizations=unique([...p.organizations,...p.forms.flatMap(f=>[f.group,f.team,...(!nationNames.has(f.faction)?[f.faction]:[])])]);
+  p.organizations=unique([...p.organizations.flatMap(v=>v.split(',')),...p.forms.flatMap(f=>[f.group,f.team,f.faction].flatMap(v=>(v||'').split(',')).map(v=>v.trim()).filter(v=>!nationNames.has(v)))]);
   for(const form of p.forms){
     const origin=form.profile['出身地']||form.profile['产地'];
     for(const [value,relation,note] of [[origin,form.profile['产地']?'产地（基础档案）':'出身地（基础档案）','基础档案记录为“'+origin+'”。'],[form.nation,'国家或地区阵营（资料字段）','公开阵营字段记录为“'+form.nation+'”，不据此推定国籍或现居地。']]){
