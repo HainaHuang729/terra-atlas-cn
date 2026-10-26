@@ -1,12 +1,16 @@
 <!doctype html>
-<html lang="zh-CN" data-theme="day">
+<html lang="zh-CN" data-theme="night" data-palette="graphite">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#e8ece2">
+  <meta name="theme-color" content="#171b21">
+  <script src="palette-options.js"></script>
   <script>
-    try { document.documentElement.dataset.theme=localStorage.getItem('terra-color-theme-v1')==='night'?'night':'day'; } catch {}
-    document.querySelector('meta[name="theme-color"]').content=document.documentElement.dataset.theme==='day'?'#e8ece2':'#0b1b26';
+    try { document.documentElement.dataset.theme=localStorage.getItem('terra-color-theme-v2')==='day'?'day':'night'; } catch {}
+    document.documentElement.dataset.palette=document.documentElement.dataset.theme==='day'?'glacier':'graphite';
+    const paletteQuery=new URLSearchParams(location.search),paletteOption=window.TERRA_PALETTES?.find(p=>p.id===paletteQuery.get('palette'));
+    if(paletteOption){document.documentElement.dataset.palette=paletteOption.id;document.documentElement.dataset.palettePreview='true';document.documentElement.dataset.theme=paletteOption.mode;if(paletteQuery.get('compare')==='1')document.documentElement.dataset.paletteCompare='true';}
+    document.querySelector('meta[name="theme-color"]').content=window.TERRA_PALETTES?.find(p=>p.id===document.documentElement.dataset.palette)?.colors.canvas||'#171b21';
   </script>
   <meta name="description" content="一张可探索的泰拉地图。沿着国家、文化与文明的线索，认识《明日方舟》的世界。非官方中文地理档案。">
   <title>泰拉观测站 · 明日方舟世界观地图</title>
@@ -19,13 +23,17 @@
   <link rel="stylesheet" href="identity.css">
   <link rel="stylesheet" href="people.css">
   <link rel="stylesheet" href="operator-detail.css">
+  <link rel="stylesheet" href="palette-tokens.css">
+  <link rel="stylesheet" href="palette-theme.css">
+  <link rel="stylesheet" href="palette-operator.css">
   <script src="content.js" defer></script>
   <script src="archive-data.js" defer></script>
   <script src="regions.js" defer></script>
-  <script src="region-geometry.js" defer></script>
+  <script src="region-geometry.js?v=20261026-graphite-sync" defer></script>
   <script src="characters-data.js" defer></script>
   <script src="search-index.js" defer></script>
-  <script src="app.js?v=20261026-dossiers" defer></script>
+  <script src="app.js?v=20261026-graphite-sync" defer></script>
+  <script src="palette-preview.js" defer></script>
 </head>
 <body>
   <div class="app" id="app">

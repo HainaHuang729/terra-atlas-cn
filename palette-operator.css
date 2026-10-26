@@ -1,0 +1,12 @@
+/* Extend the published palette to the full-operator dossier added in this checkout. */
+:root[data-palette] :is(.operator-form-picker select,.operator-filter-details,.people-more,.operator-retry){background:var(--p-card);border-color:var(--line);color:var(--p-ink)}
+:root[data-palette] .operator-form-picker select option{background:var(--p-reader);color:var(--p-ink)}
+:root[data-palette] :is(.operator-current-class>span:first-child,.operator-art-controls>a,.operator-art-credit>a,.operator-source-button){color:var(--p-accent)}
+:root[data-palette] .operator-art-controls button{color:var(--p-body);border-color:var(--line)}
+:root[data-palette] .operator-art-controls button[aria-pressed=true]{color:var(--p-accent);background:color-mix(in srgb,var(--p-accent) 12%,transparent);border-color:var(--p-accent)}
+:root[data-palette] .operator-section-nav{background:var(--p-reader);border-color:var(--line)}
+:root[data-palette] .operator-section-nav button{color:var(--p-body)}
+:root[data-palette] .operator-section-nav button:hover{background:var(--p-soft);color:var(--p-ink)}
+:root[data-palette] :is(.operator-dossier-section h3,.operator-dossier-disclosure>summary,.operator-ability h4,.operator-biography h4){color:var(--p-ink)}
+:root[data-palette] .operator-trait{border-color:var(--p-accent)}
+:root[data-palette] .operator-mobile-art{background:none}
