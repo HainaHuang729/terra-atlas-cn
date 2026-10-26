@@ -1,0 +1,156 @@
+/* Frosted observation glass. The terrain remains visible beneath the reading surface. */
+:root {
+  --glass-surface: linear-gradient(135deg, #adcfe31f 0%, #5f9eb50d 38%, #0b223342 100%), #0a223771;
+  --glass-edge: #c2e9f23d;
+  --glass-highlight: #e5faff66;
+  --glass-shadow: 0 18px 48px #020d2440, inset 0 1px 0 #e5faff38, inset 0 -1px 0 #9ac9dd0d;
+  --glass-text: #edf7fc;
+  --glass-body: #c8dce6;
+  --glass-muted: #a9c7d5;
+}
+
+.archive,
+.search-wrap,
+.search-results,
+.mode-switch,
+.selection-context,
+.map-tools,
+.map-filter,
+.explore-dock,
+.mobile-archive-button {
+  background: var(--glass-surface);
+  border-color: var(--glass-edge);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(20px) saturate(1.35);
+  backdrop-filter: blur(20px) saturate(1.35);
+}
+
+.archive {
+  border-top-color: var(--glass-highlight);
+  border-left-color: #c2e9f252;
+  background: linear-gradient(135deg, #d6f1ff2b, #70b7d20c 35%, #071c343d 100%), #102b4170;
+  box-shadow: 0 24px 64px #020d245c, inset 0 1px 0 #effcff4d, inset 1px 0 0 #c8efff12;
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  backdrop-filter: blur(24px) saturate(1.4);
+}
+
+.archive::before {
+  z-index: -1;
+  background: linear-gradient(118deg, #efffff0d, transparent 38%, transparent 80%, #b0e3ff08);
+}
+
+.archive-topline,
+.archive-tabs,
+.archive-bottom {
+  background: #081f321f;
+  border-color: #c2e9f226;
+}
+
+.archive-tabs { background: #d2edff06; }
+.archive-tabs button { color: var(--glass-body); }
+.archive-tabs button.active {
+  color: #f3fbff;
+  background: linear-gradient(145deg, #d6f4ff26, #9bcde315);
+  box-shadow: inset 0 1px 0 #e8fbff36, 0 3px 10px #02102a12;
+}
+.archive-close { color: #cbe6f2; }
+.archive-close:hover { background: #d7f5ff17; }
+.archive-index,.archive-topline,.archive-bottom { color: var(--glass-muted); }
+.archive-bottom small { color: #a4c3d1; }
+.country-cover { background: linear-gradient(120deg, #dbf5ff0c, #b7e4ff00 75%); }
+.country-title,.overview-title h2,.region-list-heading { color: #f1f9ff; }
+.country-intro { color: #e2eef6; text-shadow: 0 1px 8px #071a3030; }
+.country-detail,.detail-section p,.entry-list p { color: var(--glass-body); }
+.country-kicker,.country-kicker>span:last-child,.country-en,.pane-intro { color: var(--glass-muted); }
+.source-refs,.source-refs a,.country-note,.country-utilities button { color: #accddb; }
+.country-tags span { background: #ceeaff0d; border-color: #c2e9f230; color: #d2e5ef; }
+.dossier-tabs {
+  background: linear-gradient(130deg, #abcfe518, #0b263b94);
+  border-color: #c2e9f238;
+  box-shadow: inset 0 1px 0 #d9f5ff26, 0 5px 18px #03142a12;
+  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  backdrop-filter: blur(18px) saturate(1.3);
+}
+.dossier-tabs button { color: #c5dce7; }
+.dossier-tabs button[aria-selected=true] { background: #d6efff16; color: #ffdcaa; }
+
+/* Inset cards share the glass tint without stacking expensive backdrop blurs. */
+.reading-card,
+.focus-block,
+.tour-card {
+  background: linear-gradient(130deg, #d9f3ff13, #bddfff05), #0a243a29;
+  border: 1px solid #c2e9f22c;
+  border-top-color: #def5ff40;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 #edfcff0a, 0 6px 18px #03132610;
+}
+.tour-card { padding: 17px 14px; margin: 10px 0; }
+.tour-card:last-child { border-bottom-color: #c2e9f22c; }
+.tour-card strong { color: #e9f5fc; }
+.tour-card small { color: #b2cedb; }
+.reading-card p,.focus-block p { color: #c8dfe9; }
+.focus-block small { color: #d2dcc9; }
+.reading-card:hover,.tour-card:hover { background: linear-gradient(130deg, #d9f3ff20, #bddfff0b), #0a243a29; border-color: #d2f2ff52; }
+.bookmark-button,.source-link { background: #c4eaff0c; border-color: #c8ecff38; }
+.bookmark-button.saved { background: #efbb7820; border-color: #efbb7866; }
+.explore-dock button.active,.explore-dock button:hover,.mode-switch button.active,.map-filter button.active { background: #ceeaff1c; box-shadow: inset 0 1px 0 #ecfbff29; }
+.search-results { background: linear-gradient(145deg, #a5d7ee18, #0a243db3); }
+.search-result:hover,.search-result.keyboard-active { background: #c8edff1b; }
+
+/* The world, sources and help windows use the same material as the map dossier. */
+dialog {
+  --paper: #102b41;
+  --ink: var(--glass-text);
+  color: var(--glass-text);
+  background: linear-gradient(130deg, #c7ebff26, #90c8e20a 45%, #04182f4d), #102b419c;
+  border-color: #c2e9f24d;
+  border-top-color: #e8faff7d;
+  border-radius: 18px;
+  box-shadow: 0 32px 100px #020c285e, inset 0 1px 0 #f2ffff33;
+  -webkit-backdrop-filter: blur(28px) saturate(1.4);
+  backdrop-filter: blur(28px) saturate(1.4);
+}
+dialog::backdrop {
+  background: #03132659;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.dialog-top { background: #0a263b96; color: #c7e3ef; border-bottom: 1px solid #d0efff24; }
+.dialog-close:hover { background: #d0efff1a; }
+.world-intro { border-color: #c2e9f226; }
+.world-intro h2,.about-body h2,.help-dialog h2,.about-body h3 { color: #edf7ff; }
+.world-intro .eyebrow,.about-body .eyebrow { color: #a5d2e5; }
+.world-intro p,.about-body p,.concept-card p,.dialog-note,.rights-note { color: #c5dce9; }
+.concept-grid { gap: 14px; padding-bottom: 12px; }
+.concept-grid .concept-card:nth-child(n) {
+  padding: 21px;
+  border: 1px solid #c2e9f229;
+  border-top-color: #ddf5ff40;
+  border-radius: 11px;
+  background: linear-gradient(130deg, #d9f3ff12, #bddfff04), #08223829;
+  box-shadow: inset 0 1px 0 #edfcff0a;
+}
+.concept-card h3 { color: #e9f5fc; }
+.concept-card svg { stroke: #a1d5e9; }
+.concept-card small { color: #a7c8d9; }
+.concept-card a,.source-list a { color: #b6dff2; }
+.source-list li,.rights-note,.help-rows p { border-color: #c2e9f229; }
+.help-rows p { color: #b8d6e4; }
+.help-rows b { color: #e5f3fa; }
+
+@media (max-width:760px) {
+  .archive { background: linear-gradient(135deg, #d6f1ff24, #70b7d208 35%, #071c344d), #102b4182; box-shadow: 0 -12px 48px #020d244d, inset 0 1px 0 #effcff66; }
+  .archive-topline,.archive-tabs { background: #081f321f; }
+  .concept-grid { gap: 12px; }
+  .concept-grid .concept-card:nth-child(n) { padding: 20px; }
+  .tour-card { padding: 15px 12px; }
+}
+
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .archive,.search-wrap,.search-results,.mode-switch,.selection-context,.map-tools,.map-filter,.explore-dock,.mobile-archive-button,dialog { background: #173347; }
+  .dossier-tabs { background: #19384d; }
+}
+@media (prefers-reduced-transparency:reduce) {
+  .archive,.search-wrap,.search-results,.mode-switch,.selection-context,.map-tools,.map-filter,.explore-dock,.mobile-archive-button,dialog { background: #173347; -webkit-backdrop-filter:none; backdrop-filter:none; }
+  .dossier-tabs { background: #19384d; -webkit-backdrop-filter:none; backdrop-filter:none; }
+}

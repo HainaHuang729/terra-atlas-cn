@@ -1,0 +1,62 @@
+/* Original game wordmark; a separate title identifies this fan-made atlas. */
+.brand{min-width:249px;flex-shrink:0;gap:15px}
+.brand-wordmark{width:86px;height:auto;flex-shrink:0;object-fit:contain}
+.official-monochrome{filter:brightness(0) invert(1);opacity:.92}
+.brand-title{padding-left:15px;border-left:1px solid #7894ac40}
+.brand strong{font-size:17px;font-weight:600;letter-spacing:2px;line-height:1.4;white-space:nowrap}
+.brand small{font:9px/1.5 var(--sans);letter-spacing:2px;margin-top:3px;color:#a1b9ce;white-space:nowrap}
+.brand:focus-visible{outline-offset:6px;border-radius:2px}
+.archive-wordmark{width:58px;height:auto;flex-shrink:0;opacity:.65}
+.archive-bottom{gap:14px}
+.archive-bottom .official-monochrome{filter:brightness(0) invert(1)}
+.icon-button{display:flex;align-items:center;justify-content:center}
+.icon-button svg{width:18px;height:18px}
+:is(button,.search-wrap) svg:not(.country-emblem):not(.original-insignia){stroke-linecap:round;stroke-linejoin:round}
+.concept-art{width:66px;height:76px;display:grid;place-items:center;flex-shrink:0}
+.concept-card .concept-art svg{width:100%;height:100%;overflow:hidden}
+.concept-card .official-art svg{stroke:none;fill:none;filter:drop-shadow(0 3px 3px #0003)}
+.concept-card .schematic-art svg{width:44px;height:44px;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.concept-card-header{gap:17px;min-height:76px}
+.concept-card h3{letter-spacing:1px;font-size:19px}
+.concept-card small{font-size:8px;line-height:1.5;letter-spacing:.4px;margin-top:7px}
+.world-intro h2{text-wrap:balance}
+.art-credit{display:block;font-size:10px;line-height:1.8;margin-top:8px;opacity:.85}
+.art-credit a{text-decoration:underline;text-underline-offset:3px}
+:root[data-theme="day"] .official-monochrome{filter:brightness(0);opacity:.8}
+:root[data-theme="day"] .brand-title{border-color:#6e897540}
+:root[data-theme="day"] .brand small{color:#59716f}
+:root[data-theme="day"] .archive-bottom .official-monochrome{filter:brightness(0);opacity:.55}
+:root[data-theme="day"] .concept-card .official-art svg{filter:drop-shadow(0 3px 3px #364c3b1c)}
+@media(max-width:1100px) and (min-width:761px){
+  .masthead{gap:22px}
+  .brand{min-width:233px;gap:12px}
+  .brand-title{padding-left:12px}
+  .brand-wordmark{width:78px}
+  .brand strong{font-size:16px}
+}
+@media(max-width:760px){
+  .masthead{padding-inline:12px;gap:8px}
+  .brand{min-width:0;gap:9px}
+  .brand-title{padding-left:9px}
+  .brand-wordmark{width:61px}
+  .brand strong{font-size:14px;letter-spacing:1px}
+  .brand small{font-size:7px;letter-spacing:1.1px;margin-top:2px}
+  #nav-map{display:none}
+  .main-nav{margin-left:auto}
+  .header-end{flex-shrink:0}
+  .concept-art{width:62px;height:72px}
+  .concept-card-header{gap:14px;min-height:72px}
+}
+@media(max-width:600px){#nav-sources{display:none}}
+@media(max-width:370px){
+  .masthead{padding-inline:8px;gap:6px}
+  .brand{gap:6px}
+  .brand-title{padding-left:6px}
+  .brand-wordmark{width:47px}
+  .brand strong{font-size:13px;letter-spacing:.4px}
+  .brand small{font-size:6px;letter-spacing:.7px}
+  .nav-button{padding-inline:5px}
+  .header-end{gap:3px}
+  .motion-button{width:30px;min-width:30px}
+  .concept-card h3{font-size:18px}
+}

@@ -1,0 +1,122 @@
+{
+  "repository": "https://github.com/Aceship/Arknight-Images",
+  "revision": "0b28f9562fcadbd644c6225f8f8aefbb500b4d22",
+  "rights": "Game faction emblems belong to Hypergryph and their respective rights holders. Retained unmodified.",
+  "assets": [
+    {
+      "id": "sami",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_sami.png",
+      "bytes": 65692,
+      "sha256": "59b4a089861e450f2f32cb790b4bd98268758096e6c54eb793c495877a9e68de"
+    },
+    {
+      "id": "ursus",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_ursus.png",
+      "bytes": 49348,
+      "sha256": "5e780989aebc6b3de33869beabebf2550490fb8f173ef432a4865f0344ef7023"
+    },
+    {
+      "id": "higashi",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_higashi.png",
+      "bytes": 30293,
+      "sha256": "990780bd0089f938d705cd98b2fd1d9695dcd68e91e7197ca47787a964ae634d"
+    },
+    {
+      "id": "yan",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_yan.png",
+      "bytes": 71695,
+      "sha256": "0dfc9c7b2a03ec8ce3dd3b42a7a4e0a8a7ccfab9eff6895fee690f6339328735"
+    },
+    {
+      "id": "kazimierz",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_kazimierz.png",
+      "bytes": 32303,
+      "sha256": "f6c1f9afc04d61be15c9ef6078ad92e553fac7695f47a8be11b1bc672dce2e9d"
+    },
+    {
+      "id": "columbia",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_columbia.png",
+      "bytes": 69861,
+      "sha256": "3fba4fd9021199af2bb415551858f6641e5716d980977749abfcebb0d764e920"
+    },
+    {
+      "id": "bolivar",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_bolivar.png",
+      "bytes": 19914,
+      "sha256": "c7c34453014ecec71ed69c5f4dd2ca5ffae1d4086e3080228c4969ef562ce648"
+    },
+    {
+      "id": "kjerag",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_kjerag.png",
+      "bytes": 77530,
+      "sha256": "c34d68bf2fa7c9cbaefceabfd271a3f031b000e383349f3b09dbfc5b3af0120b"
+    },
+    {
+      "id": "leithanien",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_leithanien.png",
+      "bytes": 68523,
+      "sha256": "14ef81c79b53c8b63dbb9acf3f6ea46505a73b60ba37136c1fff54f9c8a1c111"
+    },
+    {
+      "id": "victoria",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_victoria.png",
+      "bytes": 71706,
+      "sha256": "bda21e01f6277cf9d6566d5b77386bfaeee25c291ffe7769fed8a69c229ef989"
+    },
+    {
+      "id": "minos",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_minos.png",
+      "bytes": 59682,
+      "sha256": "5a9fd3471199aa4ab28c3139a68e701304fee195e2565da682da4aa0a2fa619b"
+    },
+    {
+      "id": "siesta",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_siesta.png",
+      "bytes": 33767,
+      "sha256": "7040d69b2c30697eaaccb2e128d5ed2e7e7adff24ae6fd0fce05dd688d2614e0"
+    },
+    {
+      "id": "siracusa",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_siracusa.png",
+      "bytes": 79049,
+      "sha256": "6c08312287eba4ab4b7b6d92ce2563f4bcd07497774ece61666ae53fb8204d52"
+    },
+    {
+      "id": "laterano",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_laterano.png",
+      "bytes": 52308,
+      "sha256": "a689cdfcf45a3b1f3a50ce0015db25a83969cdaeafd2d504dd71f5648aaf3b93"
+    },
+    {
+      "id": "rim-billiton",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_rim.png",
+      "bytes": 40423,
+      "sha256": "bdb91ea710e8e8d962d397134eb94b27f661e177485dc570627fede8dd17f705"
+    },
+    {
+      "id": "sargon",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_sargon.png",
+      "bytes": 34518,
+      "sha256": "c180471d33a4a3c65aab13645b484dd391826b9621651dafbb9d1bebe12ad717"
+    },
+    {
+      "id": "iberia",
+      "url": "https://raw.githubusercontent.com/Aceship/Arknight-Images/0b28f9562fcadbd644c6225f8f8aefbb500b4d22/factions/logo_iberia.png",
+      "bytes": 50599,
+      "sha256": "1d96009aeb0adf795f6a384632171883dd7ebace34e56bb9c21136008f7156e5"
+    }
+  ],
+  "atlasTrace": {
+    "id": "kazdel",
+    "file": "dist/assets/insignia/kazdel.svg",
+    "source": "dist/assets/terra-base.jpg",
+    "referenceBounds": [
+      843,
+      282,
+      37,
+      45
+    ],
+    "note": "Clean geometric tracing of the atlas emblem, not an official high-resolution source asset. Not the Military Commission emblem.",
+    "sha256": "066fb335f26fe050af056e5399c3a2e886e1a9858c6e209245c9c4149530e9ba"
+  }
+}

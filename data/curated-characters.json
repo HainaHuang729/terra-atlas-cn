@@ -1,0 +1,3316 @@
+{
+  "meta": {
+    "researcher": "dsh / DeepSeek Harness",
+    "researchedAt": "2026-10-26",
+    "scope": "基础人物资料；避开核心剧情；地区联系不代表国籍或当前坐标",
+    "editorNote": "复核人物摘要及地区联系；删除重复扩写和技术字段说明。组织字段记录任职、阵营或合作关系，不一概视作现任成员；不将出身地当作国籍。"
+  },
+  "characters": [
+    {
+      "id": "amiya",
+      "name": "阿米娅",
+      "en": "Amiya",
+      "aliases": [
+        "阿米娅(近卫)",
+        "阿米娅(医疗)"
+      ],
+      "kind": "干员",
+      "race": "卡特斯/奇美拉",
+      "birthplace": "雷姆必拓",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "rim-billiton"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "rim-billiton",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“雷姆必拓”。"
+        }
+      ],
+      "role": "罗德岛公开领袖",
+      "summary": "罗德岛公开领袖，在内部拥有最高执行权。她外表仍是少女，却深受众人信赖，并带领罗德岛为感染者的未来奔走，试图让这片大地摆脱矿石病的阴霾。档案另记其种族为卡特斯/奇美拉。",
+      "tags": [
+        "领袖",
+        "源石技艺"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 阿米娅 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/阿米娅",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地雷姆必拓、种族卡特斯/奇美拉；客观履历称其为罗德岛公开领袖并拥有最高执行权。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/amiya.png"
+    },
+    {
+      "id": "doctor",
+      "name": "博士",
+      "en": "Doctor",
+      "aliases": [],
+      "kind": "非干员",
+      "race": "所引资料未记载",
+      "birthplace": "所引资料未记载",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [],
+      "regionRelations": [],
+      "role": "罗德岛关键人物",
+      "summary": "罗德岛相关故事中的关键人物，以记忆缺失的状态参与行动。所引情报资料记录了其失忆与偶有熟悉感的经历；本条保留这一基础视角，不展开涉及其身份的后续剧情。",
+      "tags": [
+        "指挥",
+        "罗德岛"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 博士 / 情报资料",
+          "url": "https://prts.wiki/w/博士",
+          "kind": "wiki-npc",
+          "evidence": "情报资料一仅记载记忆缺失、偶有熟悉感；未提供种族、出生地或完整履历。"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "kaltsit",
+      "name": "凯尔希",
+      "en": "Kal'tsit",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "罗德岛",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [],
+      "regionRelations": [],
+      "role": "罗德岛医疗负责人",
+      "summary": "罗德岛高层与医疗项目领头人，在冶金、社会学、源石技艺、历史、经济、植物学和地质学等领域都有广博知识。她既参与医疗支援，也深度介入战略指挥；档案将出身地记为罗德岛。",
+      "tags": [
+        "医疗",
+        "战略"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 凯尔希 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/凯尔希",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地罗德岛、种族菲林；客观履历称其为罗德岛高层与医疗项目领头人，并列多项学识。"
+        }
+      ],
+      "notes": [
+        "出身地“罗德岛”是组织/舰船口径，不映射为地区 id。"
+      ],
+      "portrait": "assets/characters/kaltsit.png"
+    },
+    {
+      "id": "blaze",
+      "name": "煌",
+      "en": "Blaze",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "维多利亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "victoria"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "victoria",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“维多利亚”。"
+        }
+      ],
+      "role": "罗德岛精英干员",
+      "summary": "罗德岛精英干员，擅长机动作战、歼灭战和突袭，常作为攻坚战的核心战力。档案记其出身维多利亚，由阿米娅带领；",
+      "tags": [
+        "输出",
+        "生存"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 煌 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/煌",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地维多利亚、种族菲林；客观履历称其为罗德岛精英干员，擅长机动作战与攻坚战。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/blaze.png"
+    },
+    {
+      "id": "rosmontis",
+      "name": "迷迭香",
+      "en": "Rosmontis",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        }
+      ],
+      "role": "罗德岛精英干员",
+      "summary": "罗德岛精英干员，熟练使用极稀有的源石技艺，在对抗大型生物、破坏硬目标和中断冲突等任务中表现突出。她常负责歼灭战与阵地战；档案记其出身哥伦比亚，其余资料被移入高权限库。",
+      "tags": [
+        "输出",
+        "源石技艺"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 迷迭香 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/迷迭香",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族菲林；客观履历称其为罗德岛精英干员，其余档案移入高权限资料库。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/rosmontis.png"
+    },
+    {
+      "id": "ascalon",
+      "name": "阿斯卡纶",
+      "en": "Ascalon",
+      "aliases": [],
+      "kind": "干员",
+      "race": "萨卡兹",
+      "birthplace": "卡兹戴尔",
+      "organizations": [
+        "罗德岛",
+        "S.W.E.E.P."
+      ],
+      "regionIds": [
+        "kazdel"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazdel",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡兹戴尔”。"
+        }
+      ],
+      "role": "罗德岛反渗透负责人",
+      "summary": "罗德岛负责反渗透工作的干员，领导 S.W.E.E.P.。公开履历提到她曾在巴别塔时期担任情报官，后来转入罗德岛；档案记其出身卡兹戴尔、种族为萨卡兹，本条不展开其他经历。",
+      "tags": [
+        "情报",
+        "反渗透"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 阿斯卡纶 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/阿斯卡纶",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡兹戴尔、种族萨卡兹；客观履历称其曾任巴别塔情报官，后任 S.W.E.E.P. 负责人。"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "closure",
+      "name": "可露希尔",
+      "en": "Closure",
+      "aliases": [],
+      "kind": "干员",
+      "race": "萨卡兹",
+      "birthplace": "卡兹戴尔",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazdel"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazdel",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡兹戴尔”。"
+        }
+      ],
+      "role": "罗德岛总工程师",
+      "summary": "罗德岛总工程师、采购部负责人，并兼管多个部门事务。她长期处理舰内工程与物资采购，是罗德岛后勤和技术系统的重要人物；档案记其出身卡兹戴尔、种族为萨卡兹，公开履历相当简短。",
+      "tags": [
+        "工程",
+        "采购"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 可露希尔 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/可露希尔",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡兹戴尔、种族萨卡兹；客观履历称其为罗德岛总工程师与采购部负责人，兼管多个部门。"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "chen",
+      "name": "陈",
+      "en": "Ch'en",
+      "aliases": [
+        "假日威龙陈",
+        "Ch'en the Holungday"
+      ],
+      "kind": "干员",
+      "race": "龙",
+      "birthplace": "龙门",
+      "organizations": [
+        "龙门近卫局",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地原文为“龙门”；本条按干员信息“所属国家=炎-龙门”关联到 yan，不据此推断现实国籍。"
+        }
+      ],
+      "role": "龙门近卫局督察组长",
+      "summary": "龙门近卫局特别督察组组长、高级警司，毕业于维多利亚皇家近卫学校。她在龙门长期打击暴力犯罪和有组织犯罪，后作为特别人员协助罗德岛，提供现场战术指挥；档案记其出身龙门。",
+      "tags": [
+        "爆发",
+        "执法"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 陈 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/陈",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地龙门、种族龙；客观履历称其为龙门高级警司与特别督察组组长，现协助罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/chen.png"
+    },
+    {
+      "id": "hoshiguma",
+      "name": "星熊",
+      "en": "Hoshiguma",
+      "aliases": [],
+      "kind": "干员",
+      "race": "鬼",
+      "birthplace": "东国",
+      "organizations": [
+        "龙门近卫局",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "higashi",
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "higashi",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“东国”。"
+        },
+        {
+          "regionId": "yan",
+          "relation": "活动地区/所属国家（档案）",
+          "note": "PRTS 干员信息所属国家记为“炎-龙门”，任职龙门近卫局；这与出生地东国分开记录。"
+        }
+      ],
+      "role": "龙门近卫局精英干员",
+      "summary": "龙门近卫局特别任务组精英干员，经魏彦吾交涉破格进入近卫局。她擅长高危犯罪处置、要员保护和灾害救援，现以重装干员身份协助罗德岛；档案记其出身东国，所属国家记为炎-龙门。",
+      "tags": [
+        "防护",
+        "执法"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 星熊 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/星熊",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地东国、种族鬼；客观履历与干员信息显示其任职龙门近卫局，所属国家记为炎-龙门。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/hoshiguma.png"
+    },
+    {
+      "id": "swire",
+      "name": "诗怀雅",
+      "en": "Swire",
+      "aliases": [
+        "琳琅诗怀雅",
+        "Swire the Elegant Wit"
+      ],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "龙门",
+      "organizations": [
+        "龙门近卫局",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地原文为“龙门”；本条按干员信息“所属国家=炎-龙门”关联到 yan，不据此推断现实国籍。"
+        }
+      ],
+      "role": "龙门近卫局高级警司",
+      "summary": "龙门近卫局高级警司，以特别合作人员身份协助罗德岛行动，并为现场提供战术指挥支援。公开履历篇幅不长，主要强调她在近卫局的职务与协作关系；档案记其出身龙门，种族为菲林。",
+      "tags": [
+        "指挥",
+        "执法"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 诗怀雅 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/诗怀雅",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地龙门、种族菲林；客观履历称其为龙门近卫局高级警司，并以特别合作人员身份协助罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/swire.png"
+    },
+    {
+      "id": "lin",
+      "name": "林",
+      "en": "Lin",
+      "aliases": [
+        "林雨霞"
+      ],
+      "kind": "干员",
+      "race": "札拉克",
+      "birthplace": "龙门",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地原文为“龙门”；本条按干员信息“所属国家=炎-龙门”关联到 yan，不据此推断现实国籍。"
+        }
+      ],
+      "role": "龙门合作者",
+      "summary": "本名林雨霞，龙门人，公开档案信息有限且部分存疑。她在玉门事件后主动提出与罗德岛正式合作，帮助罗德岛在龙门开展感染者收治工作；本职工作未在档案中说明。她在龙门感染者事务中的协调作用值得关注。",
+      "tags": [
+        "合作",
+        "龙门"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 林 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/林",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地龙门、种族札拉克；客观履历称其本名林雨霞，玉门事件后主动与罗德岛建立合作。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/lin.png"
+    },
+    {
+      "id": "wei-yenwu",
+      "name": "魏彦吾",
+      "en": "Wei Yenwu",
+      "aliases": [],
+      "kind": "非干员",
+      "race": "所引资料未记载",
+      "birthplace": "所引资料未记载",
+      "organizations": [
+        "龙门执政当局"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "活动地区（资料）",
+          "note": "PRTS 情报资料称其为龙门执政者；龙门在档案所属国家口径中与炎关联，未给出出生地。"
+        }
+      ],
+      "role": "龙门执政者",
+      "summary": "龙门执政者、政治家，以睿智有礼和强硬谋略并存著称，在政治圈有较高人望。他依靠外交与商业策略处理龙门与各国关系，推动城市发展；此处依据情报资料介绍其治理角色，不展开其个人过往。",
+      "tags": [
+        "政治",
+        "龙门"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 魏彦吾 / 情报资料",
+          "url": "https://prts.wiki/w/魏彦吾",
+          "kind": "wiki-npc",
+          "evidence": "情报资料称其为政治家、龙门执政者，并概述其外交、谋略与城市治理；未提供种族、出生地。"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "lee",
+      "name": "老鲤",
+      "en": "Lee",
+      "aliases": [],
+      "kind": "干员",
+      "race": "龙",
+      "birthplace": "炎",
+      "organizations": [
+        "鲤氏侦探事务所",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“炎”。"
+        }
+      ],
+      "role": "鲤氏侦探事务所所长",
+      "summary": "龙门鲤氏侦探事务所的创办者，私家侦探。罗德岛在龙门发展业务时与他相识并建立合作，他提供本地信息咨询，也为罗德岛引荐人才；档案记其出身炎，种族为龙。他的事务所承接龙门本地的委托。",
+      "tags": [
+        "侦探",
+        "龙门"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 老鲤 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/老鲤",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地炎、种族龙；客观履历称其为鲤氏侦探事务所创办者，为罗德岛提供龙门信息与人才引荐。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/lee.png"
+    },
+    {
+      "id": "hung",
+      "name": "吽",
+      "en": "Hung",
+      "aliases": [],
+      "kind": "干员",
+      "race": "佩洛",
+      "birthplace": "龙门",
+      "organizations": [
+        "鲤氏侦探事务所",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地原文为“龙门”；本条按干员信息“所属国家=炎-龙门”关联到 yan，不据此推断现实国籍。"
+        }
+      ],
+      "role": "罗德岛重装干员",
+      "summary": "经老鲤推荐加入罗德岛的重装干员，体格高大、体能突出，在前线为队友提供可靠保护。公开履历主要记录其推荐来源与防护职责；档案记其出身龙门、所属组织为鲤氏侦探事务所。",
+      "tags": [
+        "防护",
+        "治疗"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 吽 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/吽",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地龙门、种族佩洛；客观履历称其经老鲤推荐加入，是负责前线保护的重装干员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/hung.png"
+    },
+    {
+      "id": "silverash",
+      "name": "银灰",
+      "en": "SilverAsh",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "谢拉格",
+      "organizations": [
+        "喀兰贸易",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kjerag"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kjerag",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“谢拉格”。"
+        }
+      ],
+      "role": "喀兰贸易董事长",
+      "summary": "谢拉格军阀、喀兰贸易公司董事长，也是希瓦艾什家族现任族长。他在经济贸易、国际政治、外交和战术策划上经验丰富，与罗德岛保持战略支援合作；档案记其出身谢拉格。",
+      "tags": [
+        "领袖",
+        "贸易"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 银灰 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/银灰",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地谢拉格、种族菲林；客观履历称其为谢拉格军阀、喀兰贸易董事长与希瓦艾什家族族长，并向罗德岛提供战略支援。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/silverash.png"
+    },
+    {
+      "id": "pramanix",
+      "name": "初雪",
+      "en": "Pramanix",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "谢拉格",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kjerag"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kjerag",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“谢拉格”。"
+        }
+      ],
+      "role": "喀兰圣女",
+      "summary": "谢拉格出身的喀兰圣女，被视为全谢拉格的宗教领袖，能借圣铃呼唤风雪之力。她通过保密途径来到罗德岛，具体事务和驻留时间没有公开；档案将其出身地记为谢拉格。她的圣铃与谢拉格风雪信仰相连。",
+      "tags": [
+        "宗教",
+        "削弱"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 初雪 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/初雪",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地谢拉格、种族菲林；客观履历称其为喀兰圣女与全谢拉格宗教领袖，现通过保密途径在罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/pramanix.png"
+    },
+    {
+      "id": "cliffheart",
+      "name": "崖心",
+      "en": "Cliffheart",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "谢拉格",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kjerag"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kjerag",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“谢拉格”。"
+        }
+      ],
+      "role": "罗德岛登山专家",
+      "summary": "谢拉格出身的罗德岛干员，攀岩与登山专家，能熟练使用各种攀爬工具。她因矿石病在罗德岛接受治疗，公开履历主要围绕户外专长与治疗安排，本条不展开家庭背景。她的户外经验对山地行动很有价值。",
+      "tags": [
+        "登山",
+        "位移"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 崖心 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/崖心",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地谢拉格、种族菲林；客观履历称其为攀岩登山专家，并在罗德岛接受矿石病治疗。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/cliffheart.png"
+    },
+    {
+      "id": "gnosis",
+      "name": "灵知",
+      "en": "Gnosis",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "谢拉格",
+      "organizations": [
+        "喀兰贸易",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kjerag"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kjerag",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“谢拉格”。"
+        }
+      ],
+      "role": "喀兰贸易前技术执行官",
+      "summary": "前喀兰贸易首席技术执行官，主导过多项核心技术和工业设施开发，对源石有深入研究。他通过喀兰贸易与罗德岛的特别协议加入，现为主要研究室成员；档案记其出身谢拉格。他的技术背景与喀兰贸易的工业布局相关。",
+      "tags": [
+        "科研",
+        "削弱"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 灵知 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/灵知",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地谢拉格、种族黎博利；客观履历称其曾任喀兰贸易首席技术执行官，现为罗德岛主要研究室成员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/gnosis.png"
+    },
+    {
+      "id": "degenbrecher",
+      "name": "锏",
+      "en": "Degenbrecher",
+      "aliases": [],
+      "kind": "干员",
+      "race": "卡普里尼",
+      "birthplace": "莱塔尼亚",
+      "organizations": [
+        "喀兰贸易",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "leithanien",
+        "kjerag"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "leithanien",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“莱塔尼亚”。"
+        },
+        {
+          "regionId": "kjerag",
+          "relation": "组织联系（档案）",
+          "note": "PRTS 干员信息所属国家为谢拉格、组织为喀兰贸易；出生地另记为莱塔尼亚。"
+        }
+      ],
+      "role": "喀兰贸易总裁保镖",
+      "summary": "前卡西米尔骑士竞赛三届冠军，现为喀兰贸易总裁的贴身保镖，并依合同无限期作为干员加入罗德岛。她以强大战斗力为队伍开路；档案记其出身莱塔尼亚，组织联系在谢拉格。她的冠军经历使她在近战中极具压迫力。",
+      "tags": [
+        "近卫",
+        "保镖"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 锏 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/锏",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地莱塔尼亚、种族卡普里尼；客观履历称其为前卡西米尔骑士竞赛冠军、喀兰贸易总裁保镖，并加入罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/degenbrecher.png"
+    },
+    {
+      "id": "exusiai",
+      "name": "能天使",
+      "en": "Exusiai",
+      "aliases": [
+        "新约能天使",
+        "Exusiai the New Covenant"
+      ],
+      "kind": "干员",
+      "race": "萨科塔",
+      "birthplace": "拉特兰",
+      "organizations": [
+        "企鹅物流",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "laterano",
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "laterano",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“拉特兰”。"
+        },
+        {
+          "regionId": "yan",
+          "relation": "活动/组织联系（档案）",
+          "note": "PRTS 干员信息所属国家记为“炎-龙门”、组织为企鹅物流；出生地另记为拉特兰。"
+        }
+      ],
+      "role": "企鹅物流信使",
+      "summary": "拉特兰公民、企鹅物流成员，从事秘密联络和武装押运等非公开工作，常被推测为信使。她以驻罗德岛联络人员身份参与多项行动；档案记其出身拉特兰，所属国家记为炎-龙门。她的工作重心仍在企鹅物流。",
+      "tags": [
+        "狙击",
+        "物流"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 能天使 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/能天使",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地拉特兰、种族萨科塔；客观履历称其为拉特兰公民、企鹅物流成员，并任驻罗德岛联络人员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/exusiai.png"
+    },
+    {
+      "id": "mostima",
+      "name": "莫斯提马",
+      "en": "Mostima",
+      "aliases": [],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "拉特兰",
+      "organizations": [
+        "企鹅物流"
+      ],
+      "regionIds": [
+        "laterano"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "laterano",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“拉特兰”。"
+        }
+      ],
+      "role": "企鹅物流员工",
+      "summary": "企鹅物流员工，习惯单独行动，公开履历称此前经历不详。档案将其出身地记为拉特兰，种族未公开；她与拉特兰和企鹅物流都有明确联系，但本条不展开具体过往。有关她的记录大多停留在物流员工层面。",
+      "tags": [
+        "术师",
+        "物流"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 莫斯提马 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/莫斯提马",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地拉特兰、种族未公开；客观履历仅称其为企鹅物流员工、常单独行动且此前履历不详。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/mostima.png"
+    },
+    {
+      "id": "andoain",
+      "name": "安多恩",
+      "en": "Andoain",
+      "aliases": [],
+      "kind": "非干员",
+      "race": "萨科塔",
+      "birthplace": "所引资料未记载",
+      "organizations": [
+        "寻路者"
+      ],
+      "regionIds": [
+        "laterano"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "laterano",
+          "relation": "活动关联（页面描述）",
+          "note": "PRTS 敌方领袖页称其为与拉特兰为敌的萨科塔寻路者；未给出出生地，仅记录与拉特兰的明确关联。"
+        }
+      ],
+      "role": "寻路者代表人物",
+      "summary": "在拉特兰相关故事中以寻路者身份活动的萨科塔。他为了追问信念，走上一条与拉特兰官方立场相冲突的道路。本条依据公开敌方资料介绍其基本身份，不展开相关故事的结局。",
+      "tags": [
+        "萨科塔",
+        "寻路者"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · “殉道者”，安多恩 / 敌方领袖资料",
+          "url": "https://prts.wiki/w/“殉道者”，安多恩",
+          "kind": "game-enemy",
+          "evidence": "敌方领袖资料页称其为与拉特兰为敌、踏上苦难之路的萨科塔寻路者；未提供基础档案或出生地。"
+        }
+      ],
+      "notes": []
+    },
+    {
+      "id": "fiammetta",
+      "name": "菲亚梅塔",
+      "en": "Fiammetta",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "拉特兰",
+      "organizations": [
+        "拉特兰公证所",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "laterano"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "laterano",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“拉特兰”。"
+        }
+      ],
+      "role": "拉特兰公证所特派员",
+      "summary": "拉特兰公证所高级特派员，具体职务名应本人要求不予记录。她依据罗德岛与拉特兰教廷的合作协议获得补给并提供服务，公开履历强调其公证所身份与射击专长。她的职务信息受到本人明确限制。",
+      "tags": [
+        "公证所",
+        "狙击"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 菲亚梅塔 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/菲亚梅塔",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地拉特兰、种族黎博利；客观履历称其为公证所高级特派员，并依罗德岛与拉特兰教廷协议提供服务。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/fiammetta.png"
+    },
+    {
+      "id": "executor",
+      "name": "送葬人",
+      "en": "Executor",
+      "aliases": [
+        "圣约送葬人",
+        "Executor the Ex Foedere"
+      ],
+      "kind": "干员",
+      "race": "萨科塔",
+      "birthplace": "拉特兰",
+      "organizations": [
+        "拉特兰公证所",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "laterano"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "laterano",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“拉特兰”。"
+        }
+      ],
+      "role": "拉特兰公证所执行者",
+      "summary": "拉特兰公民、公证所法定专业执行者，通晓多种语言和法律框架。他依合约服务于罗德岛，执行与拉特兰公民权益相关的任务；档案记其出身拉特兰、种族为萨科塔。他的执行者身份带有明确法律权限。",
+      "tags": [
+        "公证所",
+        "执行者"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 送葬人 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/送葬人",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地拉特兰、种族萨科塔；客观履历称其为公证所法定专业执行者，并依合约服务罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/executor.png"
+    },
+    {
+      "id": "enforcer",
+      "name": "见行者",
+      "en": "Enforcer",
+      "aliases": [],
+      "kind": "干员",
+      "race": "萨科塔",
+      "birthplace": "拉特兰",
+      "organizations": [
+        "拉特兰公证所",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "laterano"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "laterano",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“拉特兰”。"
+        }
+      ],
+      "role": "拉特兰公证所执行者",
+      "summary": "拉特兰公证所执行者，刚完成实训期。他在万国峰会期间被卷入异端团体引发的骚乱，事后经送葬人引荐，依协议为罗德岛提供协助；档案记其出身拉特兰。他目前仍处于公证所外派体系的早期阶段。",
+      "tags": [
+        "公证所",
+        "特种"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 见行者 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/见行者",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地拉特兰、种族萨科塔；客观履历称其刚通过实训期，万国峰会后经送葬人引荐为罗德岛提供协助。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/enforcer.png"
+    },
+    {
+      "id": "nearl",
+      "name": "临光",
+      "en": "Nearl",
+      "aliases": [
+        "耀骑士临光",
+        "Nearl the Radiant Knight"
+      ],
+      "kind": "干员",
+      "race": "库兰塔",
+      "birthplace": "卡西米尔",
+      "organizations": [
+        "使徒",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazimierz"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazimierz",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡西米尔”。"
+        }
+      ],
+      "role": "前卡西米尔耀骑士",
+      "summary": "前卡西米尔耀骑士，感染者援助团体“使徒”的成员。她擅长掩护、机动作战和开阔地带作战，现作为罗德岛重装干员提供战术指挥；档案记其出身卡西米尔。",
+      "tags": [
+        "耀骑士",
+        "防护"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 临光 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/临光",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡西米尔、种族库兰塔；客观履历称其为前卡西米尔耀骑士、使徒成员，现于罗德岛提供战术指挥。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/nearl.png"
+    },
+    {
+      "id": "blemishine",
+      "name": "瑕光",
+      "en": "Blemishine",
+      "aliases": [
+        "玛莉娅·临光"
+      ],
+      "kind": "干员",
+      "race": "库兰塔",
+      "birthplace": "卡西米尔",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazimierz"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazimierz",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡西米尔”。"
+        }
+      ],
+      "role": "卡西米尔年轻骑士",
+      "summary": "本名玛莉娅·临光，来自卡西米尔的年轻骑士，也是干员临光的妹妹。她有骑士竞技经验，测试中展现优秀作战素质，现与临光一同作为重装干员行动；档案记其出身卡西米尔。她的骑士竞技经验来自卡西米尔本地赛场。",
+      "tags": [
+        "骑士",
+        "防护"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 瑕光 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/瑕光",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡西米尔、种族库兰塔；客观履历称其本名玛莉娅·临光，是临光之妹并有骑士竞技经验。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/blemishine.png"
+    },
+    {
+      "id": "flametail",
+      "name": "焰尾",
+      "en": "Flametail",
+      "aliases": [],
+      "kind": "干员",
+      "race": "札拉克",
+      "birthplace": "卡西米尔",
+      "organizations": [
+        "红松骑士团",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazimierz"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazimierz",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡西米尔”。"
+        }
+      ],
+      "role": "红松骑士团领袖",
+      "summary": "卡西米尔的感染者骑士，也是感染者骑士团“红松”的实际领袖。她在与卡西米尔合作期间接触罗德岛，并主动寻求治疗；档案记其出身卡西米尔，组织联系为红松骑士团。",
+      "tags": [
+        "骑士",
+        "感染者"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 焰尾 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/焰尾",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡西米尔、种族札拉克；客观履历称其为感染者骑士、红松骑士团实际领袖，并寻求罗德岛治疗。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/flametail.png"
+    },
+    {
+      "id": "mlynar",
+      "name": "玛恩纳",
+      "en": "Młynar",
+      "aliases": [
+        "玛恩纳·临光"
+      ],
+      "kind": "干员",
+      "race": "库兰塔",
+      "birthplace": "卡西米尔",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazimierz"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazimierz",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡西米尔”。"
+        }
+      ],
+      "role": "临光家前家主",
+      "summary": "本名玛恩纳·临光，临光家前家主，是临光与瑕光的叔叔，至今没有获得骑士封号。他在特锦赛后接受罗德岛邀请，协助处理卡西米尔地区事务；档案记其出身卡西米尔。他的骑士封号问题与家族地位形成反差。",
+      "tags": [
+        "临光家",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 玛恩纳 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/玛恩纳",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡西米尔、种族库兰塔；客观履历称其为临光家前家主、临光与瑕光的叔叔，并未获骑士封号。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/mlynar.png"
+    },
+    {
+      "id": "gravel",
+      "name": "砾",
+      "en": "Gravel",
+      "aliases": [],
+      "kind": "干员",
+      "race": "札拉克",
+      "birthplace": "卡西米尔",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazimierz"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazimierz",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡西米尔”。"
+        }
+      ],
+      "role": "卡西米尔四阶骑士",
+      "summary": "卡西米尔四阶骑士，因故在罗德岛逗留。她擅长隐秘行动和暗杀，自愿成为博士的近卫之一；本条不展开“因故”的具体内容，档案仅记其出身卡西米尔、种族为札拉克。她的行动范围多集中在博士周边。",
+      "tags": [
+        "骑士",
+        "特种"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 砾 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/砾",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡西米尔、种族札拉克；客观履历称其为四阶骑士，擅长隐秘行动与暗杀，并任博士近卫。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/gravel.png"
+    },
+    {
+      "id": "platinum",
+      "name": "白金",
+      "en": "Platinum",
+      "aliases": [],
+      "kind": "干员",
+      "race": "库兰塔",
+      "birthplace": "卡西米尔",
+      "organizations": [
+        "无胄盟",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazimierz"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazimierz",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡西米尔”。"
+        }
+      ],
+      "role": "无胄盟刺客",
+      "summary": "卡西米尔无胄盟刺客，其他履历缺失。她在机动作战、歼灭战和巷战中展现极高技巧，现于凯尔希指导下作为狙击干员为罗德岛服务；档案记其出身卡西米尔。她的过去仍以无胄盟经历为主。",
+      "tags": [
+        "刺客",
+        "狙击"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 白金 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/白金",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡西米尔、种族库兰塔；客观履历称其为无胄盟刺客、其他履历缺失，现为罗德岛狙击干员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/platinum.png"
+    },
+    {
+      "id": "texas",
+      "name": "德克萨斯",
+      "en": "Texas",
+      "aliases": [
+        "缄默德克萨斯",
+        "Texas the Omertosa"
+      ],
+      "kind": "干员",
+      "race": "鲁珀",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "企鹅物流",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia",
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        },
+        {
+          "regionId": "yan",
+          "relation": "活动/组织联系（档案）",
+          "note": "PRTS 干员信息所属国家记为“炎-龙门”、组织为企鹅物流；出生地另记为哥伦比亚。"
+        }
+      ],
+      "role": "企鹅物流员工",
+      "summary": "企鹅物流员工，单兵作战能力突出，在合约期内担任企鹅物流驻罗德岛联络人员。她出生于哥伦比亚，活动与组织联系落在龙门；档案没有把出生地等同于国籍，本条目同样分开记录。",
+      "tags": [
+        "物流",
+        "先锋"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 德克萨斯 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/德克萨斯",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族鲁珀；客观履历称其为企鹅物流员工及驻罗德岛联络人员，所属国家记为炎-龙门。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/texas.png"
+    },
+    {
+      "id": "lappland",
+      "name": "拉普兰德",
+      "en": "Lappland",
+      "aliases": [
+        "荒芜拉普兰德",
+        "Lappland the Decadenza"
+      ],
+      "kind": "干员",
+      "race": "鲁珀",
+      "birthplace": "叙拉古",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "siracusa"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "siracusa",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“叙拉古”。"
+        }
+      ],
+      "role": "罗德岛特别行动干员",
+      "summary": "叙拉古出身的近卫干员，档案称其身份不明、履历缺失，只记录她在战术攻坚与肃清作战中的歼灭能力。她以特别行动服务的方式与罗德岛合作，具体过往未被补写。她的档案没有给出可核实的出身细节。",
+      "tags": [
+        "近卫",
+        "歼灭"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 拉普兰德 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/拉普兰德",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地叙拉古、种族鲁珀；客观履历称其身份不明、履历缺失，现为罗德岛提供特别行动服务。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/lappland.png"
+    },
+    {
+      "id": "vigil",
+      "name": "伺夜",
+      "en": "Vigil",
+      "aliases": [],
+      "kind": "干员",
+      "race": "鲁珀",
+      "birthplace": "叙拉古",
+      "organizations": [
+        "新沃尔西尼",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "siracusa"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "siracusa",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“叙拉古”。"
+        }
+      ],
+      "role": "新沃尔西尼市长候补",
+      "summary": "叙拉古贝洛内家族出身，曾任该家族领袖，也是新沃尔西尼市长候补之一。他通过德克萨斯代表所属城市与罗德岛建立合作，擅长中距离战斗并展现谋略与领导力；档案记其出身叙拉古。",
+      "tags": [
+        "叙拉古",
+        "领袖"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 伺夜 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/伺夜",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地叙拉古、种族鲁珀；客观履历称其曾任贝洛内家族领袖、为新沃尔西尼市长候补，并经德克萨斯与罗德岛合作。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/vigil.png"
+    },
+    {
+      "id": "saria",
+      "name": "塞雷娅",
+      "en": "Saria",
+      "aliases": [],
+      "kind": "干员",
+      "race": "瓦伊凡",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "莱茵生命（前）",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        }
+      ],
+      "role": "前莱茵生命防卫科主任",
+      "summary": "前莱茵生命防卫科主任，在生命科学、微生物学和源石技艺等领域有建树，也擅长歼灭战、要员保全和异常事态处理。她目前与罗德岛在科研等领域合作；档案记其出身哥伦比亚。她的科研背景与防卫经验同样突出。",
+      "tags": [
+        "科研",
+        "防护"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 塞雷娅 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/塞雷娅",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族瓦伊凡；客观履历称其为前莱茵生命防卫科主任，现与罗德岛在科研等领域合作。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/saria.png"
+    },
+    {
+      "id": "silence",
+      "name": "赫默",
+      "en": "Silence",
+      "aliases": [
+        "淬羽赫默",
+        "Silence the Paradigmatic"
+      ],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "莱茵生命",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        }
+      ],
+      "role": "莱茵生命研究员",
+      "summary": "莱茵生命源石项目研究员，曾主管数项应用研究，也主持过矿石病临床试验。她现于罗德岛为多项行动提供战场医疗救护；档案记其出身哥伦比亚，组织联系仍包括莱茵生命。她在莱茵生命与罗德岛之间保持双重工作联系。",
+      "tags": [
+        "科研",
+        "医疗"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 赫默 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/赫默",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族黎博利；客观履历称其为莱茵生命源石项目研究员，现为罗德岛提供战场医疗。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/silence.png"
+    },
+    {
+      "id": "ptilopsis",
+      "name": "白面鸮",
+      "en": "Ptilopsis",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "莱茵生命（前）",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        }
+      ],
+      "role": "罗德岛医疗干员",
+      "summary": "前莱茵生命数据维护专员，在医疗类源石技艺、医疗数据维护和临床方案应用方面经验丰富。她现于罗德岛医疗部门工作，参与赫默带领的临床实验小组；档案记其出身哥伦比亚。她的表达方式带有明显的数据化特征。",
+      "tags": [
+        "医疗",
+        "数据"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 白面鸮 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/白面鸮",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族黎博利；客观履历称其曾任莱茵生命数据维护专员，现于罗德岛医疗部门与赫默的小组工作。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/ptilopsis.png"
+    },
+    {
+      "id": "magallan",
+      "name": "麦哲伦",
+      "en": "Magallan",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "莱茵生命",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        }
+      ],
+      "role": "莱茵生命外勤专员",
+      "summary": "莱茵生命实验室外勤专员，擅长操控高度模块化无人机，能根据战场需要提供攻击或支援。她在合作协议下以罗德岛为据点展开新一轮探索；档案记其出身哥伦比亚。她的外勤工作常远离固定实验室。",
+      "tags": [
+        "科研",
+        "无人机"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 麦哲伦 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/麦哲伦",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族黎博利；客观履历称其为莱茵生命外勤专员，在合作协议下以罗德岛为据点探索。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/magallan.png"
+    },
+    {
+      "id": "muelsyse",
+      "name": "缪尔赛思",
+      "en": "Muelsyse",
+      "aliases": [],
+      "kind": "干员",
+      "race": "精灵",
+      "birthplace": "未公开",
+      "organizations": [
+        "莱茵生命",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "所属国家（档案）",
+          "note": "PRTS 干员信息所属国家记为哥伦比亚；基础档案出生地未公开。"
+        }
+      ],
+      "role": "莱茵生态科主任",
+      "summary": "莱茵生命生态科主任，哥伦比亚生命科学与环境科学领域专家。她在特里蒙事件后与罗德岛建立联系，随后签订长期科研合作并参与作战；档案只公开所属国家为哥伦比亚，出生地未公开。",
+      "tags": [
+        "科研",
+        "生态"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 缪尔赛思 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/缪尔赛思",
+          "kind": "game-profile",
+          "evidence": "基础档案载出生地未公开、种族精灵；干员信息所属国家为哥伦比亚，客观履历称其为莱茵生命生态科主任。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/muelsyse.png"
+    },
+    {
+      "id": "dorothy",
+      "name": "多萝西",
+      "en": "Dorothy",
+      "aliases": [],
+      "kind": "干员",
+      "race": "札拉克",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "莱茵生命",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        }
+      ],
+      "role": "莱茵源石技艺应用科主任",
+      "summary": "莱茵生命源石技艺应用科主任，在罗德岛使用本名作为代号。她以合作项目负责人身份加入，为多项研究提供帮助；档案记其出身哥伦比亚，公开履历重点在专业能力而非私人经历。",
+      "tags": [
+        "科研",
+        "源石技艺"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 多萝西 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/多萝西",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族札拉克；客观履历称其为源石技艺应用科主任，以合作项目负责人身份加入罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/dorothy.png"
+    },
+    {
+      "id": "mountain",
+      "name": "山",
+      "en": "Mountain",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "哥伦比亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "columbia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "columbia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“哥伦比亚”。"
+        }
+      ],
+      "role": "罗德岛近卫干员",
+      "summary": "哥伦比亚某建筑业龙头公司CEO之子，家族遭竞争对手陷害后入狱，离开监狱后加入罗德岛。他拥有极适合战斗的体魄，现作为近卫干员活跃在第一线；档案记其出身哥伦比亚。他的战斗能力与其体格密切相关。",
+      "tags": [
+        "近卫",
+        "格斗"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 山 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/山",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地哥伦比亚、种族菲林；客观履历称其为建筑公司CEO之子，家族遭陷害入狱，出狱后加入罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/mountain.png"
+    },
+    {
+      "id": "siege",
+      "name": "推进之王",
+      "en": "Siege",
+      "aliases": [
+        "维娜"
+      ],
+      "kind": "干员",
+      "race": "阿斯兰",
+      "birthplace": "维多利亚",
+      "organizations": [
+        "格拉斯哥帮",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "victoria"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "victoria",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“维多利亚”。"
+        }
+      ],
+      "role": "罗德岛先锋队长",
+      "summary": "本名维娜，维多利亚公民，代号推进之王，大部分履历缺失且存在数项未证实指控。她在多项测试中成绩优异，现为罗德岛先锋人员并担任作战小队队长；档案记其出身维多利亚。",
+      "tags": [
+        "先锋",
+        "领袖"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 推进之王 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/推进之王",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地维多利亚、种族阿斯兰；客观履历称其本名维娜、大部分履历缺失，现为罗德岛先锋队长。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/siege.png"
+    },
+    {
+      "id": "bagpipe",
+      "name": "风笛",
+      "en": "Bagpipe",
+      "aliases": [],
+      "kind": "干员",
+      "race": "瓦伊凡",
+      "birthplace": "维多利亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "victoria"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "victoria",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“维多利亚”。"
+        }
+      ],
+      "role": "维多利亚退役军人",
+      "summary": "毕业于维多利亚皇家近卫学校，在维多利亚军队服役三年后退役，经陈警司介绍加入罗德岛。她受过系统军事训练，在各类任务中展现专业战斗技巧；档案记其出身维多利亚。她的军队经验使她能适应高强度任务。",
+      "tags": [
+        "军人",
+        "先锋"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 风笛 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/风笛",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地维多利亚、种族瓦伊凡；客观履历称其毕业于维多利亚皇家近卫学校，服役三年后经陈介绍加入罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/bagpipe.png"
+    },
+    {
+      "id": "reed",
+      "name": "苇草",
+      "en": "Reed",
+      "aliases": [
+        "焰影苇草",
+        "Reed the Flame Shadow"
+      ],
+      "kind": "干员",
+      "race": "德拉克",
+      "birthplace": "维多利亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "victoria"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "victoria",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“维多利亚”。"
+        }
+      ],
+      "role": "罗德岛留舰干员",
+      "summary": "身份不明、履历缺失的维多利亚干员。她作为矿石病患者，被医疗干员从维多利亚小丘郡战后废墟中救出并收留，康复后通过测试留舰查看；本条目不补写其本名与身份猜想。她的战斗技巧在测试中得到认可。",
+      "tags": [
+        "源石技艺",
+        "先锋"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 苇草 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/苇草",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地维多利亚、种族德拉克；客观履历称其身份不明、由医疗干员自小丘郡废墟救出，现留舰查看。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/reed.png"
+    },
+    {
+      "id": "horn",
+      "name": "号角",
+      "en": "Horn",
+      "aliases": [],
+      "kind": "干员",
+      "race": "鲁珀",
+      "birthplace": "维多利亚",
+      "organizations": [
+        "维多利亚风暴突击队",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "victoria"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "victoria",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“维多利亚”。"
+        }
+      ],
+      "role": "维多利亚突击队指挥官",
+      "summary": "毕业于维多利亚皇家近卫学校，现任维多利亚风暴突击队第二分队指挥官。她在伦蒂尼姆事件中与罗德岛协同作战，并经介绍签订战略合作条款；档案记其出身维多利亚。她的指挥岗位与风暴突击队直接相关。",
+      "tags": [
+        "军人",
+        "指挥"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 号角 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/号角",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地维多利亚、种族鲁珀；客观履历称其任风暴突击队第二分队指挥官，于伦蒂尼姆事件后与罗德岛战略合作。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/horn.png"
+    },
+    {
+      "id": "skadi",
+      "name": "斯卡蒂",
+      "en": "Skadi",
+      "aliases": [
+        "浊心斯卡蒂",
+        "Skadi the Corrupting Heart"
+      ],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "阿戈尔",
+      "organizations": [
+        "深海猎人",
+        "罗德岛"
+      ],
+      "regionIds": [],
+      "regionRelations": [],
+      "role": "深海猎人赏金猎人",
+      "summary": "赏金猎人，现受罗德岛雇佣，擅长对抗大型生物、破坏硬目标和攻坚战。档案记其出身阿戈尔、组织联系为深海猎人，但成为赏金猎人之前的履历缺失。",
+      "tags": [
+        "深海猎人",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 斯卡蒂 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/斯卡蒂",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地阿戈尔、种族未公开；客观履历称其为受罗德岛雇佣的赏金猎人，此前履历缺失，组织为深海猎人。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/skadi.png"
+    },
+    {
+      "id": "specter",
+      "name": "幽灵鲨",
+      "en": "Specter",
+      "aliases": [
+        "归溟幽灵鲨",
+        "Specter the Unchained"
+      ],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "阿戈尔",
+      "organizations": [
+        "深海猎人",
+        "罗德岛"
+      ],
+      "regionIds": [],
+      "regionRelations": [],
+      "role": "深海猎人近卫干员",
+      "summary": "身份不明、履历缺失的深海猎人成员，擅长对抗大型生物与破坏硬目标。她现作为近卫干员在罗德岛某作战小队任职；档案记其出身阿戈尔、种族未公开，过往经历没有被补写。她的代号与真实身份之间仍有距离。",
+      "tags": [
+        "深海猎人",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 幽灵鲨 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/幽灵鲨",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地阿戈尔、种族未公开；客观履历称其身份不明、履历缺失，现为罗德岛近卫干员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/specter.png"
+    },
+    {
+      "id": "gladiia",
+      "name": "歌蕾蒂娅",
+      "en": "Gladiia",
+      "aliases": [],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "阿戈尔",
+      "organizations": [
+        "深海猎人",
+        "阿戈尔",
+        "罗德岛"
+      ],
+      "regionIds": [],
+      "regionRelations": [],
+      "role": "深海猎人战争设计师",
+      "summary": "阿戈尔技术执政官、荣誉军团长，也是深海猎人的总战争设计师之一。她以合作姿态协助罗德岛，并兼任罗德岛阿戈尔事务负责人；档案记其出身阿戈尔，登陆时间地点不明。她的军事设计背景影响深海猎人行动。",
+      "tags": [
+        "深海猎人",
+        "指挥"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 歌蕾蒂娅 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/歌蕾蒂娅",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地阿戈尔、种族未公开；客观履历称其为阿戈尔技术执政官、荣誉军团长及深海猎人总战争设计师之一。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/gladiia.png"
+    },
+    {
+      "id": "lumen",
+      "name": "流明",
+      "en": "Lumen",
+      "aliases": [],
+      "kind": "干员",
+      "race": "阿戈尔",
+      "birthplace": "伊比利亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "iberia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "iberia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“伊比利亚”。"
+        }
+      ],
+      "role": "罗德岛驻伊比利亚干员",
+      "summary": "经极境与凯尔希引荐，成为罗德岛驻伊比利亚干员，协助执行当地感染者医疗救护。他也列席罗德岛、阿戈尔与审判庭的三方会议；档案记其出身伊比利亚、种族为阿戈尔。他的立场介于伊比利亚与阿戈尔之间。",
+      "tags": [
+        "医疗",
+        "伊比利亚"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 流明 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/流明",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地伊比利亚、种族阿戈尔；客观履历称其经极境与凯尔希引荐，任罗德岛驻伊比利亚干员并列席三方会议。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/lumen.png"
+    },
+    {
+      "id": "elysium",
+      "name": "极境",
+      "en": "Elysium",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "伊比利亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "iberia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "iberia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“伊比利亚”。"
+        }
+      ],
+      "role": "罗德岛通讯干员",
+      "summary": "出身伊比利亚的罗德岛干员，掌握与声讯相关的特殊源石技艺，负责维持战场通讯、辅助秘密行动。他在特殊行动小队三队担任队长副手；档案记其出身伊比利亚。他的源石技艺以声讯传递为核心。",
+      "tags": [
+        "通讯",
+        "先锋"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 极境 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/极境",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地伊比利亚、种族黎博利；客观履历称其掌握声讯源石技艺，在特殊行动小队三队任队长副手。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/elysium.png"
+    },
+    {
+      "id": "thorns",
+      "name": "棘刺",
+      "en": "Thorns",
+      "aliases": [],
+      "kind": "干员",
+      "race": "阿戈尔",
+      "birthplace": "伊比利亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "iberia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "iberia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“伊比利亚”。"
+        }
+      ],
+      "role": "罗德岛前线干员",
+      "summary": "精通剑术与药剂制作的罗德岛前线干员，出身伊比利亚腹地。据其自述，他在当地宗教局势动荡中离开家乡，后受邀来到罗德岛；档案特别注明这段局势描述尚未完全考证。他的自述是了解其早年经历的主要来源。",
+      "tags": [
+        "剑术",
+        "药剂"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 棘刺 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/棘刺",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地伊比利亚、种族阿戈尔；客观履历称其精通剑术与药剂，自述因当地宗教局势离开家乡，此段尚未完全考证。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/thorns.png"
+    },
+    {
+      "id": "irene",
+      "name": "艾丽妮",
+      "en": "Irene",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "伊比利亚",
+      "organizations": [
+        "伊比利亚审判庭",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "iberia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "iberia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“伊比利亚”。"
+        }
+      ],
+      "role": "审判庭信使",
+      "summary": "前伊比利亚审判官，大审判官达里奥的学生，熟悉伊比利亚历史、律法与人文地理。她在“愚人号”事件后辞去审判官职务，现以审判庭信使身份与罗德岛合作；档案记其出身伊比利亚。",
+      "tags": [
+        "审判庭",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 艾丽妮 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/艾丽妮",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地伊比利亚、种族黎博利；客观履历称其为前审判官、达里奥的学生，事件后以审判庭信使身份与罗德岛合作。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/irene.png"
+    },
+    {
+      "id": "whisperain",
+      "name": "絮雨",
+      "en": "Whisperain",
+      "aliases": [],
+      "kind": "干员",
+      "race": "阿戈尔",
+      "birthplace": "伊比利亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "iberia"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "iberia",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“伊比利亚”。"
+        }
+      ],
+      "role": "巡游医生",
+      "summary": "伊比利亚出身的巡游医生，很少在同一地点长期停留，在卡西米尔和萨米等地留下行动记录。她因救治一队任务中的罗德岛干员而临时加入医疗部；档案记其出身伊比利亚。她的治疗对象多为旅途中的伤患。",
+      "tags": [
+        "医生",
+        "巡游"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 絮雨 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/絮雨",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地伊比利亚、种族阿戈尔；客观履历称其为巡游医生，在卡西米尔与萨米有行动记录，因救治罗德岛干员临时加入。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/whisperain.png"
+    },
+    {
+      "id": "zima",
+      "name": "凛冬",
+      "en": "Зима",
+      "aliases": [],
+      "kind": "干员",
+      "race": "乌萨斯",
+      "birthplace": "乌萨斯",
+      "organizations": [
+        "乌萨斯学生自治团",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "ursus"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "ursus",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“乌萨斯”。"
+        }
+      ],
+      "role": "乌萨斯学生自治团成员",
+      "summary": "切尔诺伯格事变前在切城某中学就读，在校期间已表现出对战斗与突击的热情。她现为乌萨斯学生自治团成员，并担任罗德岛作战小队队长；档案记其出身乌萨斯。她的队伍领导职责与自治团经历相关。",
+      "tags": [
+        "学生",
+        "先锋"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 凛冬 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/凛冬",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地乌萨斯、种族乌萨斯；客观履历称其切尔诺伯格事变前在切城中学就读，现为罗德岛作战小队队长。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/zima.png"
+    },
+    {
+      "id": "istina",
+      "name": "真理",
+      "en": "Истина",
+      "aliases": [],
+      "kind": "干员",
+      "race": "乌萨斯",
+      "birthplace": "乌萨斯",
+      "organizations": [
+        "乌萨斯学生自治团",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "ursus"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "ursus",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“乌萨斯”。"
+        }
+      ],
+      "role": "乌萨斯学生自治团成员",
+      "summary": "切尔诺伯格事变前在切城某中学就读，常向源石技艺杂志投稿，熟悉名家著作、推理文学与社会学期刊。她以实习辅助干员身份加入战斗，并整理资料；档案记其出身乌萨斯。她在战斗与文书工作之间保持平衡。",
+      "tags": [
+        "学生",
+        "辅助"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 真理 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/真理",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地乌萨斯、种族乌萨斯；客观履历称其切城中学时期向源石技艺杂志投稿，现为实习辅助干员并整理资料。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/istina.png"
+    },
+    {
+      "id": "gummy",
+      "name": "古米",
+      "en": "Гум",
+      "aliases": [],
+      "kind": "干员",
+      "race": "乌萨斯",
+      "birthplace": "乌萨斯",
+      "organizations": [
+        "乌萨斯学生自治团",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "ursus"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "ursus",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“乌萨斯”。"
+        }
+      ],
+      "role": "乌萨斯学生自治团成员",
+      "summary": "曾获全乌萨斯童子军活动大赛青少年组亚军，切尔诺伯格事变前在切城某中学就读。她擅长乌萨斯式烹调，现为实习重装干员，负责后勤与战地烹饪；档案记其出身乌萨斯。她的童子军经历为后勤工作打下基础。",
+      "tags": [
+        "学生",
+        "后勤"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 古米 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/古米",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地乌萨斯、种族乌萨斯；客观履历称其获童子军大赛青少年组亚军，擅长乌萨斯式烹调，现负责后勤与战地烹饪。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/gummy.png"
+    },
+    {
+      "id": "leto",
+      "name": "烈夏",
+      "en": "Лето",
+      "aliases": [],
+      "kind": "干员",
+      "race": "乌萨斯",
+      "birthplace": "乌萨斯",
+      "organizations": [
+        "乌萨斯学生自治团",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "ursus"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "ursus",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“乌萨斯”。"
+        }
+      ],
+      "role": "乌萨斯学生自治团成员",
+      "summary": "本名罗莎琳·塔季扬诺夫娜·拉里娜，切尔诺伯格事变前在切城某中学就读，与凛冬同为学生中的领军人物。她现为外勤小组成员，多承担中长线任务；档案记其出身乌萨斯。她的本名在档案中被完整列出。",
+      "tags": [
+        "学生",
+        "外勤"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 烈夏 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/烈夏",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地乌萨斯、种族乌萨斯；客观履历称其本名罗莎琳，与凛冬同为学生领袖，现为外勤小组成员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/leto.png"
+    },
+    {
+      "id": "hellagur",
+      "name": "赫拉格",
+      "en": "Hellagur",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "乌萨斯",
+      "organizations": [
+        "阿撒兹勒",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "ursus"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "ursus",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“乌萨斯”。"
+        }
+      ],
+      "role": "阿撒兹勒诊所管理者",
+      "summary": "曾隶属乌萨斯帝国近卫军，现为切尔诺伯格感染者地下诊所“阿撒兹勒”的管理者。他拥有成熟军事理论和高超战斗技巧，依协议长驻罗德岛提供战术指挥；档案记其出身乌萨斯。他的诊所主要面向感染者。",
+      "tags": [
+        "军人",
+        "指挥"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 赫拉格 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/赫拉格",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地乌萨斯、种族黎博利；客观履历称其曾任乌萨斯帝国近卫军，现管理阿撒兹勒诊所并长驻罗德岛提供战术指挥。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/hellagur.png"
+    },
+    {
+      "id": "dusk",
+      "name": "夕",
+      "en": "Dusk",
+      "aliases": [],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "炎",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“炎”。"
+        }
+      ],
+      "role": "炎国画家",
+      "summary": "炎国画家，目前待业。她在留舰人员年的积极行动下，以访客身份被带到罗德岛，擅长炎国传统绘画，现寓居舰内某偏僻走道；档案记其出身炎。",
+      "tags": [
+        "画家",
+        "术师",
+        "岁"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 夕 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/夕",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地炎、种族未公开；客观履历称其为炎国画家，被年以访客身份带至罗德岛，现寓居舰内。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/dusk.png"
+    },
+    {
+      "id": "nian",
+      "name": "年",
+      "en": "Nian",
+      "aliases": [],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "炎",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“炎”。"
+        }
+      ],
+      "role": "炎国金属工艺师",
+      "summary": "自称无业游民，熟习各类金属工艺，拥有与身份不太相称的渊博冶金知识。她以访客身份逗留罗德岛，偶尔为金属加工项目提供建议；档案记其出身炎。她的冶金知识在舰内颇受重视。",
+      "tags": [
+        "金属工艺",
+        "防护",
+        "岁"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 年 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/年",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地炎、种族未公开；客观履历称其熟习金属工艺、拥有渊博冶金知识，以访客身份逗留罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/nian.png"
+    },
+    {
+      "id": "ling",
+      "name": "令",
+      "en": "Ling",
+      "aliases": [],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "炎",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“炎”。"
+        }
+      ],
+      "role": "炎国诗人",
+      "summary": "寓居尚蜀的诗人，与炎国司岁台等政府部门有联系。她在尚蜀事件中接触罗德岛，后通过审核以访客身份驻留本舰；档案记其出身炎。她的诗作与其源石技艺同样带有个人风格。",
+      "tags": [
+        "诗人",
+        "辅助",
+        "岁"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 令 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/令",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地炎、种族未公开；客观履历称其为寓居尚蜀的诗人，与司岁台有联系，尚蜀事件后以访客身份驻留。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/ling.png"
+    },
+    {
+      "id": "chongyue",
+      "name": "重岳",
+      "en": "Chongyue",
+      "aliases": [],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "炎",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“炎”。"
+        }
+      ],
+      "role": "前玉门武术教官",
+      "summary": "年、夕、令的兄长，与炎国兵部和司岁台往来密切，曾任移动城市玉门的武术教官，现已卸任。他因探视亲属来到罗德岛，以访客身份暂驻并提供作战建议；档案记其出身炎。他的作战建议多来自亲身经验。",
+      "tags": [
+        "武术",
+        "近卫",
+        "岁"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 重岳 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/重岳",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地炎、种族未公开；客观履历称其为年、夕、令的兄长，曾任玉门武术教官，现以访客身份驻留并提供作战建议。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/chongyue.png"
+    },
+    {
+      "id": "shu",
+      "name": "黍",
+      "en": "Shu",
+      "aliases": [],
+      "kind": "干员",
+      "race": "未公开",
+      "birthplace": "炎",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“炎”。"
+        }
+      ],
+      "role": "炎国农业天师",
+      "summary": "炎国农业天师、天师府授业天师，曾在炎国北部农业基地大荒城长期从事研究并取得成果。她因访问亲属以访客身份暂驻罗德岛；档案记其出身炎。她的大荒城研究持续多年。",
+      "tags": [
+        "农业",
+        "治疗",
+        "岁"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 黍 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/黍",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地炎、种族未公开；客观履历称其为农业天师、天师府授业天师，曾在大荒城研究，现以访客身份暂驻。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/shu.png"
+    },
+    {
+      "id": "zuo-le",
+      "name": "左乐",
+      "en": "Zuo Le",
+      "aliases": [],
+      "kind": "干员",
+      "race": "斐迪亚",
+      "birthplace": "炎",
+      "organizations": [
+        "司岁台",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "yan"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "yan",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“炎”。"
+        }
+      ],
+      "role": "炎国司岁台秉烛人",
+      "summary": "隶属炎国处理巨兽问题的秘密组织“司岁台”，任秉烛人之职。他因监督代理人之故暂驻罗德岛，定期回炎国述职，并兼职外勤干员；档案记其出身炎、种族为斐迪亚。他在罗德岛与炎国之间往返。",
+      "tags": [
+        "司岁台",
+        "外勤"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 左乐 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/左乐",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地炎、种族斐迪亚；客观履历称其隶属司岁台、任秉烛人，因监督代理人暂驻罗德岛并兼职外勤。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/zuo-le.png"
+    },
+    {
+      "id": "saga",
+      "name": "嵯峨",
+      "en": "Saga",
+      "aliases": [],
+      "kind": "干员",
+      "race": "佩洛",
+      "birthplace": "东国",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "higashi"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "higashi",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“东国”。"
+        }
+      ],
+      "role": "云游僧人",
+      "summary": "东国出身的云游僧人，部分经历不明。她原本因迷路误入罗德岛办事处，询问后也有求职意向，遂通过测试加入；她善用随身薙刀，作为先锋活跃于前线，档案记其出身东国。她的僧人身份与先锋作战形成反差。",
+      "tags": [
+        "僧人",
+        "先锋"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 嵯峨 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/嵯峨",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地东国、种族佩洛；客观履历称其为云游僧人，因迷路误入罗德岛办事处并通过测试加入，善用薙刀。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/saga.png"
+    },
+    {
+      "id": "akafuyu",
+      "name": "赤冬",
+      "en": "Akafuyu",
+      "aliases": [],
+      "kind": "干员",
+      "race": "阿戈尔",
+      "birthplace": "东国",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "higashi"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "higashi",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“东国”。"
+        }
+      ],
+      "role": "东国剑士",
+      "summary": "来自东国的剑士，信影流居合据物斩剑法传人。除传统剑术外，她也具备优秀的现代战斗技巧与战术素养；因个人风格鲜明，仍需时间适应罗德岛作战体系，档案记其出身东国。她仍在适应罗德岛的协同作战方式。",
+      "tags": [
+        "剑士",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 赤冬 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/赤冬",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地东国、种族阿戈尔；客观履历称其为信影流居合据物斩传人，兼具现代战斗技巧，仍需适应罗德岛体系。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/akafuyu.png"
+    },
+    {
+      "id": "utage",
+      "name": "宴",
+      "en": "Utage",
+      "aliases": [],
+      "kind": "干员",
+      "race": "不明",
+      "birthplace": "东国",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "higashi"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "higashi",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“东国”。"
+        }
+      ],
+      "role": "东国游学生",
+      "summary": "从东国前来龙门游学的普通学生，被卷入感染者事件后患上矿石病，听从医师建议来到罗德岛并通过评审成为干员。她对病情看得较开，但执行任务时会显出令人畏惧的一面。她的病情没有影响日常学习与任务。",
+      "tags": [
+        "学生",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 宴 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/宴",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地东国、种族不明；客观履历称其从东国来龙门游学，因感染者事件患病，后到罗德岛并通过评审成为干员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/utage.png"
+    },
+    {
+      "id": "typhon",
+      "name": "提丰",
+      "en": "Typhon",
+      "aliases": [],
+      "kind": "干员",
+      "race": "萨卡兹",
+      "birthplace": "萨米",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "sami"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "sami",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“萨米”。"
+        }
+      ],
+      "role": "萨米猎人",
+      "summary": "活跃于萨米的萨卡兹猎人，对当地自然环境和潜在威胁有充分知识与应对技巧。她应麦哲伦邀请与罗德岛合作，协助处理萨米及无尽冰原事务；档案记其出身萨米。她与麦哲伦的邀请构成合作起点。",
+      "tags": [
+        "猎人",
+        "狙击"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 提丰 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/提丰",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地萨米、种族萨卡兹；客观履历称其为活跃于萨米的猎人，应麦哲伦邀请协助罗德岛处理萨米与无尽冰原事务。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/typhon.png"
+    },
+    {
+      "id": "april",
+      "name": "四月",
+      "en": "April",
+      "aliases": [],
+      "kind": "干员",
+      "race": "卡特斯",
+      "birthplace": "雷姆必拓",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "rim-billiton"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "rim-billiton",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“雷姆必拓”。"
+        }
+      ],
+      "role": "前雷姆必拓猎人",
+      "summary": "原雷姆必拓猎人，因感染矿石病失业，辗转加入罗德岛。她没有接受过专业训练，各项指标平均，但因过往职业经历在狙击培训上表现较好；档案记其出身雷姆必拓。她的狙击训练弥补了非专业出身。",
+      "tags": [
+        "猎人",
+        "狙击"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 四月 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/四月",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地雷姆必拓、种族卡特斯；客观履历称其原为猎人，因矿石病失业后加入罗德岛，在狙击培训上表现较好。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/april.png"
+    },
+    {
+      "id": "eunectes",
+      "name": "森蚺",
+      "en": "Eunectes",
+      "aliases": [],
+      "kind": "干员",
+      "race": "斐迪亚",
+      "birthplace": "萨尔贡",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "sargon"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "sargon",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“萨尔贡”。"
+        }
+      ],
+      "role": "阿卡胡拉部族族长",
+      "summary": "萨尔贡阿卡胡拉地区某部族的族长，也是嘉维尔的同乡。她经过干员测试后加入罗德岛并接受治疗，拥有不输于嘉维尔的身体素质，与伙伴“暴躁铁皮”共同作战；档案记其出身萨尔贡。",
+      "tags": [
+        "族长",
+        "重装"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 森蚺 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/森蚺",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地萨尔贡、种族斐迪亚；客观履历称其为阿卡胡拉部族族长、嘉维尔同乡，经测试加入罗德岛并接受治疗。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/eunectes.png"
+    },
+    {
+      "id": "manticore",
+      "name": "狮蝎",
+      "en": "Manticore",
+      "aliases": [],
+      "kind": "干员",
+      "race": "曼提柯",
+      "birthplace": "萨尔贡",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "sargon"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "sargon",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“萨尔贡”。"
+        }
+      ],
+      "role": "罗德岛特种干员",
+      "summary": "履历大部分缺失，入职前曾从事指定对象清除工作，推测身份为杀手。她在潜伏、侵扰和突袭敌军阵线等行动中表现过硬，现为罗德岛特种干员；档案记其出身萨尔贡。她的代号与推测身份都不等于本名。",
+      "tags": [
+        "特种",
+        "杀手"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 狮蝎 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/狮蝎",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地萨尔贡、种族曼提柯；客观履历称其履历大部分缺失，入职前从事指定对象清除，现为罗德岛特种干员。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/manticore.png"
+    },
+    {
+      "id": "carnelian",
+      "name": "卡涅利安",
+      "en": "Carnelian",
+      "aliases": [],
+      "kind": "干员",
+      "race": "卡普里尼",
+      "birthplace": "萨尔贡",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "sargon",
+        "leithanien"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "sargon",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“萨尔贡”。"
+        },
+        {
+          "regionId": "leithanien",
+          "relation": "活动地区/所属国家（档案）",
+          "note": "PRTS 干员信息所属国家为莱塔尼亚，客观履历称其受霍恩洛厄伯爵雇佣并长期停留莱塔尼亚；出生地另记为萨尔贡。"
+        }
+      ],
+      "role": "莱塔尼亚游学者",
+      "summary": "出身萨尔贡深处不受王酋管辖的古老部族，目前外出游学。她受莱塔尼亚霍恩洛厄伯爵雇佣，长期停留莱塔尼亚，并与罗德岛合作执行当地任务；档案所属国家记为莱塔尼亚。她的游学范围横跨萨尔贡与莱塔尼亚。",
+      "tags": [
+        "游学",
+        "术师"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 卡涅利安 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/卡涅利安",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地萨尔贡、种族卡普里尼；干员信息所属国家为莱塔尼亚，履历称其受霍恩洛厄伯爵雇佣并长期停留当地。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/carnelian.png"
+    },
+    {
+      "id": "beeswax",
+      "name": "蜜蜡",
+      "en": "Beeswax",
+      "aliases": [],
+      "kind": "干员",
+      "race": "卡普里尼",
+      "birthplace": "萨尔贡",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "sargon"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "sargon",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“萨尔贡”。"
+        }
+      ],
+      "role": "萨尔贡部族术师",
+      "summary": "来自萨尔贡沙漠深处的古老部族，主动联络罗德岛要求登舰寻人。得知所寻目标暂时不会归舰后，她申请加入并随行，现为正式术师干员；档案记其出身萨尔贡。她的部族背景与沙漠环境相关。",
+      "tags": [
+        "部族",
+        "术师"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 蜜蜡 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/蜜蜡",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地萨尔贡、种族卡普里尼；客观履历称其来自萨尔贡沙漠古老部族，主动登舰寻人并随行，现为正式术师。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/beeswax.png"
+    },
+    {
+      "id": "pallas",
+      "name": "帕拉斯",
+      "en": "Pallas",
+      "aliases": [],
+      "kind": "干员",
+      "race": "丰蹄",
+      "birthplace": "米诺斯",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "minos"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "minos",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“米诺斯”。"
+        }
+      ],
+      "role": "前米诺斯祭司",
+      "summary": "曾在米诺斯担任祭司，离开雅赛努斯城邦前往阿克罗蒂村任职，带领当地民众反抗萨尔贡周边部落的长期侵扰，并推动旅游与文化产业。后因病情恶化到罗德岛秘密治疗；档案记其出身米诺斯。",
+      "tags": [
+        "祭司",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 帕拉斯 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/帕拉斯",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地米诺斯、种族丰蹄；客观履历称其曾任祭司，在阿克罗蒂村组织反抗并推动文旅，后因病情恶化赴罗德岛治疗。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/pallas.png"
+    },
+    {
+      "id": "vulcan",
+      "name": "火神",
+      "en": "Vulcan",
+      "aliases": [],
+      "kind": "干员",
+      "race": "丰蹄",
+      "birthplace": "米诺斯",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "minos"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "minos",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“米诺斯”。"
+        }
+      ],
+      "role": "米诺斯铁匠",
+      "summary": "来自米诺斯的铁匠，感染矿石病后到罗德岛求医，与罗德岛达成协议后成为干员。她平日主要负责其他干员的武器维护与打造，必要时亲自出战；档案记其出身米诺斯。她的锻造经验来自米诺斯传统。",
+      "tags": [
+        "铁匠",
+        "重装"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 火神 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/火神",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地米诺斯、种族丰蹄；客观履历称其为铁匠，感染矿石病后到罗德岛求医并成为干员，负责武器维护打造。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/vulcan.png"
+    },
+    {
+      "id": "sideroca",
+      "name": "铸铁",
+      "en": "Sideroca",
+      "aliases": [],
+      "kind": "干员",
+      "race": "丰蹄",
+      "birthplace": "米诺斯",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "minos"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "minos",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“米诺斯”。"
+        }
+      ],
+      "role": "米诺斯佣兵",
+      "summary": "经验丰富的米诺斯佣兵，擅长保护目标与押运货物。她已与罗德岛签订长期雇佣合同，经内部训练后具备参加各项任务的经验与实力；档案记其出身米诺斯。她的长期合同使她常驻罗德岛任务体系。",
+      "tags": [
+        "佣兵",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 铸铁 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/铸铁",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地米诺斯、种族丰蹄；客观履历称其为经验丰富的佣兵，擅长目标保护与货物押运，已与罗德岛长期签约。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/sideroca.png"
+    },
+    {
+      "id": "ceylon",
+      "name": "锡兰",
+      "en": "Ceylon",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "汐斯塔（独立城邦）",
+      "organizations": [
+        "汐斯塔",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "siesta"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "siesta",
+          "relation": "出生地/组织联系（档案）",
+          "note": "基础档案出身地为“汐斯塔（独立城邦）”，所属组织亦记为汐斯塔；干员信息所属国家另记为哥伦比亚，本条目不据此改写出生地。"
+        }
+      ],
+      "role": "汐斯塔源石研究者",
+      "summary": "维多利亚国立大学源石研究专业毕业生，现为凯尔希医生研究室内的辅助研究员。她擅长水系法术，能在战场提供医疗支援；档案记其出身汐斯塔、组织联系为汐斯塔。她的源石研究与水系法术互为补充。",
+      "tags": [
+        "研究",
+        "医疗"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 锡兰 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/锡兰",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地汐斯塔（独立城邦）、种族黎博利；客观履历称其毕业于维多利亚国立大学，现为凯尔希研究室辅助研究员。"
+        }
+      ],
+      "notes": [
+        "所引档案同时记录哥伦比亚的国家字段与汐斯塔的出身地；此处保留汐斯塔联系，不据国家字段改写出身地。"
+      ],
+      "portrait": "assets/characters/ceylon.png"
+    },
+    {
+      "id": "schwarz",
+      "name": "黑",
+      "en": "Schwarz",
+      "aliases": [],
+      "kind": "干员",
+      "race": "菲林",
+      "birthplace": "雷姆必拓",
+      "organizations": [
+        "汐斯塔",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "rim-billiton",
+        "siesta"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "rim-billiton",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“雷姆必拓”。"
+        },
+        {
+          "regionId": "siesta",
+          "relation": "组织联系（档案）",
+          "note": "PRTS 干员信息组织为汐斯塔；出生地另记为雷姆必拓。"
+        }
+      ],
+      "role": "汐斯塔前治安局长",
+      "summary": "前汐斯塔市市长SP兼城市治安局局长，随锡兰共同加入罗德岛。她在隐秘行动、侦察与反侦察、野外求生和弩使用方面造诣卓越，并负责部分基层干员训练；档案记其出身雷姆必拓。",
+      "tags": [
+        "安保",
+        "狙击"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 黑 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/黑",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地雷姆必拓、种族菲林；客观履历称其曾任汐斯塔市长SP兼治安局长，随锡兰加入罗德岛并负责部分训练。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/schwarz.png"
+    },
+    {
+      "id": "tequila",
+      "name": "龙舌兰",
+      "en": "Tequila",
+      "aliases": [
+        "埃内斯托·萨拉斯"
+      ],
+      "kind": "干员",
+      "race": "佩洛",
+      "birthplace": "玻利瓦尔",
+      "organizations": [
+        "多索雷斯（前）",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "bolivar"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "bolivar",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“玻利瓦尔”。"
+        }
+      ],
+      "role": "前多索雷斯贸易官员",
+      "summary": "本名埃内斯托·萨拉斯，前多索雷斯国际贸易管理部副主任。他在多索雷斯城内暴乱事件中被革职，后经陈引荐通过测试加入罗德岛，仍保持爽朗的社交风格；档案记其出身玻利瓦尔。",
+      "tags": [
+        "外交",
+        "近卫"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 龙舌兰 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/龙舌兰",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地玻利瓦尔、种族佩洛；客观履历称其本名埃内斯托，曾任多索雷斯国际贸易管理部副主任，事件后被革职并经陈引荐加入罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/tequila.png"
+    },
+    {
+      "id": "la-pluma",
+      "name": "羽毛笔",
+      "en": "La Pluma",
+      "aliases": [],
+      "kind": "干员",
+      "race": "黎博利",
+      "birthplace": "玻利瓦尔",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "bolivar"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "bolivar",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“玻利瓦尔”。"
+        }
+      ],
+      "role": "罗德岛近卫干员",
+      "summary": "真正玻利瓦尔人某中尉之女，父亲死后由父亲战友潘乔收养，随后一同辗转至多索雷斯。多索雷斯事件后，她与龙舌兰来到罗德岛并通过审查；档案记其出身玻利瓦尔。她的玻利瓦尔身份使审查更为谨慎。",
+      "tags": [
+        "近卫",
+        "玻利瓦尔"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 羽毛笔 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/羽毛笔",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地玻利瓦尔、种族黎博利；客观履历称其为玻利瓦尔中尉之女，由潘乔收养后辗转多索雷斯，事件后加入罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/la-pluma.png"
+    },
+    {
+      "id": "warmy",
+      "name": "温米",
+      "en": "Warmy",
+      "aliases": [],
+      "kind": "干员",
+      "race": "卡特斯",
+      "birthplace": "雷姆必拓",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "rim-billiton"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "rim-billiton",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“雷姆必拓”。"
+        }
+      ],
+      "role": "罗德岛少年干员",
+      "summary": "出生于雷姆必拓一座矿业小镇，年纪尚小，却在烹饪和机械修理等技术领域展现天分。她经暴行推荐，在监护人阿兰娜陪同下来到罗德岛接受治疗并学习源石技艺基础；档案记其出身雷姆必拓。",
+      "tags": [
+        "少年",
+        "源石技艺"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 温米 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/温米",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地雷姆必拓、种族卡特斯；客观履历称其出生于矿业小镇，经暴行推荐、由监护人阿兰娜陪同到罗德岛治疗并学习。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/warmy.png"
+    },
+    {
+      "id": "shining",
+      "name": "闪灵",
+      "en": "Shining",
+      "aliases": [],
+      "kind": "干员",
+      "race": "萨卡兹",
+      "birthplace": "卡兹戴尔",
+      "organizations": [
+        "使徒",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazdel"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazdel",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡兹戴尔”。"
+        }
+      ],
+      "role": "使徒医疗干员",
+      "summary": "萨卡兹医师，前萨卡兹医疗组织“赦罪师”成员，现为感染者援助团体“使徒”的一员。她在源石技艺、战场急救和临床医学方面知识渊博，为罗德岛提供医疗支援；档案记其出身卡兹戴尔。",
+      "tags": [
+        "医疗",
+        "使徒"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 闪灵 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/闪灵",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡兹戴尔、种族萨卡兹；客观履历称其为前“赦罪师”成员、现“使徒”成员，为罗德岛提供医疗支援。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/shining.png"
+    },
+    {
+      "id": "mudrock",
+      "name": "泥岩",
+      "en": "Mudrock",
+      "aliases": [],
+      "kind": "干员",
+      "race": "萨卡兹",
+      "birthplace": "卡兹戴尔",
+      "organizations": [
+        "泥岩小队",
+        "罗德岛"
+      ],
+      "regionIds": [
+        "kazdel"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "kazdel",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“卡兹戴尔”。"
+        }
+      ],
+      "role": "萨卡兹雇佣兵领袖",
+      "summary": "萨卡兹雇佣兵，曾随军加入整合运动，因意见不合带小队离开乌萨斯，后辗转莱塔尼亚与卡兹戴尔。她在卡兹戴尔与精英干员Logos接触，随后前往罗德岛；档案记其出身卡兹戴尔。",
+      "tags": [
+        "雇佣兵",
+        "重装"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 泥岩 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/泥岩",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地卡兹戴尔、种族萨卡兹；客观履历称其率队离开乌萨斯、辗转莱塔尼亚与卡兹戴尔，后随 Logos 前往罗德岛。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/mudrock.png"
+    },
+    {
+      "id": "eyjafjalla",
+      "name": "艾雅法拉",
+      "en": "Eyjafjalla",
+      "aliases": [],
+      "kind": "干员",
+      "race": "卡普里尼",
+      "birthplace": "莱塔尼亚",
+      "organizations": [
+        "罗德岛"
+      ],
+      "regionIds": [
+        "leithanien"
+      ],
+      "regionRelations": [
+        {
+          "regionId": "leithanien",
+          "relation": "出生地（档案）",
+          "note": "PRTS 基础档案出身地为“莱塔尼亚”。"
+        }
+      ],
+      "role": "火山学家",
+      "summary": "火山学家、天灾信使，在高等源石技艺和高能量法术释放方面天赋卓越。她现于罗德岛接受治疗，同时提供天灾研究、环境观察与危险地形航行保障；档案记其出身莱塔尼亚。她的火山研究与天灾信使工作相辅相成。",
+      "tags": [
+        "火山学",
+        "术师"
+      ],
+      "sources": [
+        {
+          "title": "PRTS · 艾雅法拉 / 基础档案、客观履历",
+          "url": "https://prts.wiki/w/艾雅法拉",
+          "kind": "game-profile",
+          "evidence": "基础档案载出身地莱塔尼亚、种族卡普里尼；客观履历称其为火山学家、天灾信使，现于罗德岛接受治疗并提供天灾研究与环境评估。"
+        }
+      ],
+      "notes": [],
+      "portrait": "assets/characters/eyjafjalla.png"
+    }
+  ],
+  "unverified": [
+    {
+      "topic": "克丽斯腾",
+      "reason": "PRTS 当前仅有敌方领袖页，缺少基础档案、种族、出生地与组织字段；为避免用记忆补全，本轮未列为人物条目。"
+    },
+    {
+      "topic": "坎黛拉",
+      "reason": "对 PRTS 公开搜索 API 检索“坎黛拉”“坎黛拉·桑切斯”均为 0 命中，未读取到可用人物页，故不纳入。"
+    },
+    {
+      "topic": "“鼠王”",
+      "reason": "PRTS 的“鼠王”是重定向到敌方领袖页“‘鼠王’”，没有基础人物档案；本轮未纳入。"
+    },
+    {
+      "topic": "特蕾西娅、曼弗雷德等剧情核心人物",
+      "reason": "涉及重大身份、生死或结局信息；为遵守回避要求，未纳入本轮基础人物表。"
+    },
+    {
+      "topic": "史尔特尔",
+      "reason": "来源地未在已读页面确认，按题意不编造地区联系；本轮不纳入。"
+    },
+    {
+      "topic": "其他异格/升变形态",
+      "reason": "已把可确认的官方异格名合并到对应人物 aliases；未为每个异格单独立人物条目。"
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "repository": "https://github.com/Kengxxiao/ArknightsGameData",
+  "revision": "fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad",
+  "collectedAt": "2026-10-26",
+  "files": [
+    {
+      "file": "character_table.json",
+      "source": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/character_table.json",
+      "fetchedVia": "https://cdn.jsdelivr.net/gh/Kengxxiao/ArknightsGameData@fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/character_table.json",
+      "bytes": 15099388,
+      "sha256": "e8f42a2dd5c5e72ec3fc7282ee7c0d06aadb5ccdfb2c0b63dd6da55de6c17ba5",
+      "status": "ok",
+      "keys": [
+        "char_285_medic2",
+        "char_286_cast3",
+        "char_4220_kormr",
+        "char_376_therex",
+        "char_4000_jnight",
+        "char_4077_palico",
+        "char_4091_ulika",
+        "char_4093_frston"
+      ]
+    },
+    {
+      "file": "handbook_info_table.json",
+      "source": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/handbook_info_table.json",
+      "fetchedVia": "https://cdn.jsdelivr.net/gh/Kengxxiao/ArknightsGameData@fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/handbook_info_table.json",
+      "bytes": 5835127,
+      "sha256": "7c7da9fb0c7e2421887b5b7f9ca62f792b7353b541d225026a9f8c79828e3f4c",
+      "status": "ok",
+      "keys": [
+        "handbookDict",
+        "npcDict",
+        "teamMissionList",
+        "handbookDisplayConditionList",
+        "handbookStageData",
+        "handbookStageTime"
+      ]
+    },
+    {
+      "file": "char_meta_table.json",
+      "source": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/char_meta_table.json",
+      "fetchedVia": "https://cdn.jsdelivr.net/gh/Kengxxiao/ArknightsGameData@fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/char_meta_table.json",
+      "bytes": 67151,
+      "sha256": "82cea00d1c224991651f865976a552ea2375815a8c1e3a8fe1bb3a25b89f3183",
+      "status": "ok",
+      "keys": [
+        "spCharGroups",
+        "spCharMissions",
+        "spCharVoucherSkinTime",
+        "charIdMasterListMap",
+        "charMasterDataMap"
+      ]
+    },
+    {
+      "file": "char_patch_table.json",
+      "source": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/char_patch_table.json",
+      "fetchedVia": "https://cdn.jsdelivr.net/gh/Kengxxiao/ArknightsGameData@fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/char_patch_table.json",
+      "bytes": 48761,
+      "sha256": "d1850d5aeec1a9246a0531e88c167e66745644957662c8272fc764f54904c57e",
+      "status": "ok",
+      "keys": [
+        "infos",
+        "patchChars",
+        "unlockConds",
+        "patchDetailInfoList"
+      ]
+    },
+    {
+      "file": "handbook_team_table.json",
+      "status": "failed",
+      "error": "<urlopen error _ssl.c:1064: The handshake operation timed out>"
+    },
+    {
+      "file": "uniequip_table.json",
+      "source": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/uniequip_table.json",
+      "fetchedVia": "https://cdn.jsdelivr.net/gh/Kengxxiao/ArknightsGameData@fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/uniequip_table.json",
+      "bytes": 3392727,
+      "sha256": "c436d9ca672c8e8c3926d0ccbd496f7591004baf944f8cb47458572f4eaa8590",
+      "status": "ok",
+      "keys": [
+        "equipDict",
+        "missionList",
+        "subProfDict",
+        "subProfToProfDict",
+        "charEquip",
+        "equipTypeInfos",
+        "equipTrackDict"
+      ]
+    },
+    {
+      "file": "skill_table.json",
+      "source": "https://raw.githubusercontent.com/Kengxxiao/ArknightsGameData/fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/skill_table.json",
+      "fetchedVia": "https://cdn.jsdelivr.net/gh/Kengxxiao/ArknightsGameData@fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad/zh_CN/gamedata/excel/skill_table.json",
+      "bytes": 11564841,
+      "sha256": "df32d6f6fe95fb543f08afa93a293224e8d6ae72c13f40053f5186029b2144c6",
+      "status": "ok"
+    }
+  ],
+  "rosterCrosscheck": {
+    "collectedAt": "2026-10-26",
+    "revision": "fe7d8d05edc36cf5678a24bfe9e84e891f6cf7ad",
+    "operatorFormCount": 434,
+    "identityCount": 394,
+    "wikiFormCount": 434,
+    "missingInWiki": [],
+    "missingInGame": [],
+    "excludedSpecialModeCount": 29
+  },
+  "wikiRosterSource": "https://prts.wiki/w/干员一览",
+  "wikiRosterSha256": "582153d9b1d3fd0b0b5e81dfcb0eba0bbdd56b3b5aaa68b3c3a985fe6df41f44"
+}

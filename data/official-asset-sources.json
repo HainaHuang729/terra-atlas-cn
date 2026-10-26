@@ -1,0 +1,106 @@
+{
+  "retrieved": "2026-10-26",
+  "rights": "《明日方舟》字标及世界观图示权利归鹰角网络及相关权利方所有。非官方爱好者网站引用；不代表官方。",
+  "assets": [
+    {
+      "id": "arknights-wordmark",
+      "source": "https://ak.hypergryph.com/",
+      "element": "svg_def-title_arknights",
+      "viewBox": "0 0 254 119",
+      "sha256": "55e3c129167a0d2aeae2bd05bccf23ac0ba7c818d3890df9b2b4dc7e6f05f99f",
+      "file": "dist/assets/official/arknights-wordmark.svg",
+      "treatment": "官方页面内联矢量路径原样提取，仅添加独立 SVG 包装；不改绘路径。"
+    },
+    {
+      "id": "originium",
+      "label": "源石",
+      "file": "dist/assets/official/originium.png",
+      "source": "https://web.hycdn.cn/arknights/official/_next/static/media/originiums.9f8e9628.png",
+      "sourcePage": "https://ak.hypergryph.com/",
+      "sha256": "4c6b8d7adb3b13a2cd5b3afed7a80e7db9c0a93adfe716772ae54bfd6bba1ae5",
+      "bytes": 147748,
+      "viewBox": [
+        284,
+        258,
+        431,
+        507
+      ],
+      "treatment": "官方 PNG 原文件；仅在页面按透明边界显示，不修改位图。"
+    },
+    {
+      "id": "originium-arts",
+      "label": "源石技艺",
+      "file": "dist/assets/official/originium-arts.png",
+      "source": "https://web.hycdn.cn/arknights/official/_next/static/media/originium_arts.59c1b8e9.png",
+      "sourcePage": "https://ak.hypergryph.com/",
+      "sha256": "7892c87ede064fa5ec5cd8baaaca22f07a888049a5de62b5d2722bdd4b861ec6",
+      "bytes": 196498,
+      "viewBox": [
+        335,
+        65,
+        325,
+        729
+      ],
+      "treatment": "官方 PNG 原文件；仅在页面按透明边界显示，不修改位图。"
+    },
+    {
+      "id": "nomadic-city",
+      "label": "移动城邦",
+      "file": "dist/assets/official/nomadic-city.png",
+      "source": "https://web.hycdn.cn/arknights/official/_next/static/media/nomadic_city.b6c65b2a.png",
+      "sourcePage": "https://ak.hypergryph.com/",
+      "sha256": "36102181a055a99923963d147f799abbc067fad4a558fcca1e342bb143f36e42",
+      "bytes": 213422,
+      "viewBox": [
+        284,
+        363,
+        457,
+        340
+      ],
+      "treatment": "官方 PNG 原文件；仅在页面按透明边界显示，不修改位图。"
+    },
+    {
+      "id": "infected",
+      "label": "感染者",
+      "file": "dist/assets/official/infected.png",
+      "source": "https://web.hycdn.cn/arknights/official/_next/static/media/infected.da8e117c.png",
+      "sourcePage": "https://ak.hypergryph.com/",
+      "sha256": "65904ef8f3921be0797471cad6a5faf612fd5d513590bddd7528d884871931bb",
+      "bytes": 186849,
+      "viewBox": [
+        350,
+        362,
+        295,
+        350
+      ],
+      "treatment": "官方 PNG 原文件；仅在页面按透明边界显示，不修改位图。"
+    },
+    {
+      "id": "rhodes-island-world",
+      "label": "罗德岛",
+      "file": "dist/assets/official/rhodes-island-world.png",
+      "source": "https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.4f587114.png",
+      "sourcePage": "https://ak.hypergryph.com/",
+      "sha256": "9c260e8b992f81c156d83a88fc9d603d123b1ad8227d3fd532774b4356153457",
+      "bytes": 111164,
+      "viewBox": [
+        333,
+        292,
+        330,
+        440
+      ],
+      "treatment": "官方 PNG 原文件；仅在页面按透明边界显示，不修改位图。"
+    },
+    {
+      "id": "rhodes-island-badge",
+      "label": "罗德岛徽标",
+      "file": "dist/assets/official/rhodes-island-badge.png",
+      "source": "https://web.hycdn.cn/arknights/official/_next/static/media/rhodes_island.18d9416c.png",
+      "sourcePage": "https://ak.hypergryph.com/",
+      "sha256": "f6faa9b6dedc3cf091f686d1278e9b6738c4981da27c63f1bcd39e05114eed75",
+      "bytes": 6455,
+      "viewBox": null,
+      "treatment": "官方 PNG 原文件；仅在页面按透明边界显示，不修改位图。"
+    }
+  ]
+}

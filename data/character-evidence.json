@@ -1,0 +1,1146 @@
+{
+  "meta": {
+    "researchedAt": "2026-10-26",
+    "researcher": "dsh / DeepSeek Harness",
+    "note": "记录本轮实际读取/尝试的公开 PRTS 页面。源站直连 403，已保留失败记录；后续通过 web_fetch 与 m.prts.wiki 的 action=raw 成功读取。未访问私人目录或账号配置。",
+    "sourceUrlCheck": "84 个 canonical /w/ 人物来源 URL 已于 2026-10-26 通过 m.prts.wiki 状态复核，全部 HTTP 200；日志见 cache/source_url_checks.txt。"
+  },
+  "accesses": [
+    {
+      "url": "https://prts.wiki/index.php?title=%E9%98%BF%E7%B1%B3%E5%A8%85&action=raw",
+      "route": "curl -L (prts.wiki 源站)",
+      "result": "failed",
+      "http": 403,
+      "cache": null,
+      "facts": "返回 Tengine 403 页面，未取得条目正文；未据该响应写入任何资料。"
+    },
+    {
+      "url": "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85",
+      "route": "curl -L (prts.wiki 源站)",
+      "result": "failed",
+      "http": 403,
+      "cache": null,
+      "facts": "返回 Tengine 403 页面；同一条目随后改用 web_fetch 与 m.prts.wiki 成功读取。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=parse&page=%E9%98%BF%E7%B1%B3%E5%A8%85&prop=wikitext&format=json",
+      "route": "curl -L (prts.wiki API)",
+      "result": "failed",
+      "http": 403,
+      "cache": null,
+      "facts": "源站 API 亦被 403 拦截，未取得 JSON。"
+    },
+    {
+      "url": "https://www.prts.wiki/index.php?title=%E9%98%BF%E7%B1%B3%E5%A8%85&action=raw",
+      "route": "curl -L (www.prts.wiki)",
+      "result": "failed",
+      "http": 502,
+      "cache": null,
+      "facts": "www 主机返回 502，未取得内容。"
+    },
+    {
+      "url": "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85",
+      "route": "web_fetch (HTML)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "成功读取阿米娅条目的 HTML 版；确认“干员档案”中的基础档案、综合体检测试与客观履历字段。"
+    },
+    {
+      "url": "https://prts.wiki/index.php?title=%E9%98%BF%E7%B1%B3%E5%A8%85&action=raw",
+      "route": "web_fetch (action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "成功读取完整 wikitext；基础档案出身地雷姆必拓、种族卡特斯/奇美拉。"
+    },
+    {
+      "url": "https://prts.wiki/index.php?title=%E9%98%BF%E7%B1%B3%E5%A8%85&action=raw&section=14",
+      "route": "web_fetch (action=raw&section=14)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "读取“相关道具”段，确认按章节取 raw 的方式可行；未用于人物概述。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=query&meta=siteinfo&siprop=general&format=json",
+      "route": "web_fetch (MediaWiki API)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "读取站点基本信息，确认 MediaWiki 1.43.9 与 API 可用。"
+    },
+    {
+      "url": "https://prts.wiki/index.php?title=%E5%8D%9A%E5%A3%AB&action=raw",
+      "route": "web_fetch (action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "博士情报资料一：只记载记忆缺失、偶有熟悉感，未载种族/出生地。"
+    },
+    {
+      "url": "https://prts.wiki/index.php?title=%E5%AE%89%E5%A4%9A%E6%81%A9&action=raw",
+      "route": "web_fetch (action=raw)",
+      "result": "redirect",
+      "http": 200,
+      "cache": null,
+      "facts": "页面为 #REDIRECT [[“殉道者”，安多恩]]，未直接提供人物资料。"
+    },
+    {
+      "url": "https://prts.wiki/index.php?title=%E5%85%8B%E4%B8%BD%E6%96%AF%E8%85%BE%C2%B7%E8%8E%B1%E7%89%B9&action=raw",
+      "route": "web_fetch (action=raw)",
+      "result": "failed",
+      "http": 404,
+      "cache": null,
+      "facts": "“克丽斯腾·莱特”页面 404；克丽斯腾只有敌方领袖页，故未列人物。"
+    },
+    {
+      "url": "https://prts.wiki/index.php?title=%E5%9D%8E%E9%BB%9B%E6%8B%89&action=raw",
+      "route": "web_fetch (action=raw)",
+      "result": "failed",
+      "http": 404,
+      "cache": null,
+      "facts": "“坎黛拉”页面 404，未取得可用人物档案。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=query&list=search&srsearch=%E5%9D%8E%E9%BB%9B%E6%8B%89&format=json&srlimit=5",
+      "route": "web_fetch (search API)",
+      "result": "no-results",
+      "http": 200,
+      "cache": null,
+      "facts": "“坎黛拉”全站搜索 0 命中。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=query&list=search&srsearch=%E5%9D%8E%E9%BB%9B%E6%8B%89%20%E6%A1%91%E5%88%87%E6%96%AF&format=json&srlimit=10",
+      "route": "web_fetch (search API)",
+      "result": "no-results",
+      "http": 200,
+      "cache": null,
+      "facts": "“坎黛拉 桑切斯”0 命中。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=query&list=search&srsearch=%E5%9D%8E%E5%B2%B1%E6%8B%89&format=json&srlimit=10",
+      "route": "web_fetch (search API)",
+      "result": "no-results",
+      "http": 200,
+      "cache": null,
+      "facts": "另一异写“坎岱拉”0 命中。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=query&list=search&srsearch=%E9%BC%A0%E7%8E%8B&format=json&srlimit=5",
+      "route": "web_fetch (search API)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "命中“鼠王”重定向与敌方领袖页“‘鼠王’”；没有基础人物档案，未纳入。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=W&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/W.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E2%80%9C%E6%AE%89%E9%81%93%E8%80%85%E2%80%9D%EF%BC%8C%E5%AE%89%E5%A4%9A%E6%81%A9&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/“殉道者”，安多恩.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E4%B8%B4%E5%85%89&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/临光.txt",
+      "facts": "用于人物条目：出身地“卡西米尔”、种族“库兰塔”、身份“前卡西米尔耀骑士”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E4%BB%A4&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/令.txt",
+      "facts": "用于人物条目：出身地“炎”、种族“未公开”、身份“炎国诗人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E4%BC%BA%E5%A4%9C&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/伺夜.txt",
+      "facts": "用于人物条目：出身地“叙拉古”、种族“鲁珀”、身份“新沃尔西尼市长候补”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%81%87%E6%97%A5%E5%A8%81%E9%BE%99%E9%99%88&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/假日威龙陈.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%85%8B%E4%B8%BD%E6%96%AF%E8%85%BE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/克丽斯腾.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%87%9B%E5%86%AC&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/凛冬.txt",
+      "facts": "用于人物条目：出身地“乌萨斯”、种族“乌萨斯”、身份“乌萨斯学生自治团成员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%87%AF%E5%B0%94%E5%B8%8C&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/凯尔希.txt",
+      "facts": "用于人物条目：出身地“罗德岛”、种族“菲林”、身份“罗德岛医疗负责人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%88%9D%E9%9B%AA&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/初雪.txt",
+      "facts": "用于人物条目：出身地“谢拉格”、种族“菲林”、身份“喀兰圣女”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%8D%9A%E5%A3%AB&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/博士.txt",
+      "facts": "博士情报资料一，419 字节；仅记忆缺失与偶有熟悉感，未载种族/出生地。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%8D%A1%E6%B6%85%E5%88%A9%E5%AE%89&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/卡涅利安.txt",
+      "facts": "用于人物条目：出身地“萨尔贡”、种族“卡普里尼”、身份“莱塔尼亚游学者”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%8F%A4%E7%B1%B3&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/古米.txt",
+      "facts": "用于人物条目：出身地“乌萨斯”、种族“乌萨斯”、身份“乌萨斯学生自治团成员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%8F%AF%E9%9C%B2%E5%B8%8C%E5%B0%94&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/可露希尔.txt",
+      "facts": "用于人物条目：出身地“卡兹戴尔”、种族“萨卡兹”、身份“罗德岛总工程师”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%8F%B7%E8%A7%92&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/号角.txt",
+      "facts": "用于人物条目：出身地“维多利亚”、种族“鲁珀”、身份“维多利亚突击队指挥官”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%90%BD&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/吽.txt",
+      "facts": "用于人物条目：出身地“龙门”、种族“佩洛”、身份“罗德岛重装干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%9B%9B%E6%9C%88&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/四月.txt",
+      "facts": "用于人物条目：出身地“雷姆必拓”、种族“卡特斯”、身份“前雷姆必拓猎人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%9B%A0%E9%99%80%E7%BD%97&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/因陀罗.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%9B%BE%E8%80%B6&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/图耶.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%9C%A3%E7%BA%A6%E9%80%81%E8%91%AC%E4%BA%BA&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/圣约送葬人.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%A1%9E%E9%9B%B7%E5%A8%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/塞雷娅.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“瓦伊凡”、身份“前莱茵生命防卫科主任”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%A4%95&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/夕.txt",
+      "facts": "用于人物条目：出身地“炎”、种族“未公开”、身份“炎国画家”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%A4%9A%E8%90%9D%E8%A5%BF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/多萝西.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“札拉克”、身份“莱茵源石技艺应用科主任”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%A4%9C%E8%8E%BA&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/夜莺.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%AE%89%E5%A4%9A%E6%81%A9&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "redirect",
+      "http": 200,
+      "cache": "cache/raw/安多恩.txt",
+      "facts": "41 字节重定向页，目标为“殉道者”，安多恩；未把它当作独立人物正文。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%AE%B4&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/宴.txt",
+      "facts": "用于人物条目：出身地“东国”、种族“不明”、身份“东国游学生”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%B1%B1&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/山.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“菲林”、身份“罗德岛近卫干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%B4%96%E5%BF%83&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/崖心.txt",
+      "facts": "用于人物条目：出身地“谢拉格”、种族“菲林”、身份“罗德岛登山专家”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%B5%AF%E5%B3%A8&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/嵯峨.txt",
+      "facts": "用于人物条目：出身地“东国”、种族“佩洛”、身份“云游僧人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%B7%A6%E4%B9%90&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/左乐.txt",
+      "facts": "用于人物条目：出身地“炎”、种族“斐迪亚”、身份“炎国司岁台秉烛人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%B8%95%E6%8B%89%E6%96%AF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/帕拉斯.txt",
+      "facts": "用于人物条目：出身地“米诺斯”、种族“丰蹄”、身份“前米诺斯祭司”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%B9%B4&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/年.txt",
+      "facts": "用于人物条目：出身地“炎”、种族“未公开”、身份“炎国金属工艺师”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%B9%BD%E7%81%B5%E9%B2%A8&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/幽灵鲨.txt",
+      "facts": "用于人物条目：出身地“阿戈尔”、种族“未公开”、身份“深海猎人近卫干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%BC%82%E5%AE%A2&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/异客.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%BD%92%E6%BA%9F%E5%B9%BD%E7%81%B5%E9%B2%A8&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/归溟幽灵鲨.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/德克萨斯.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“鲁珀”、身份“企鹅物流员工”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/拉普兰德.txt",
+      "facts": "用于人物条目：出身地“叙拉古”、种族“鲁珀”、身份“罗德岛特别行动干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%8E%A8%E8%BF%9B%E4%B9%8B%E7%8E%8B&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/推进之王.txt",
+      "facts": "用于人物条目：出身地“维多利亚”、种族“阿斯兰”、身份“罗德岛先锋队长”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%8F%90%E4%B8%B0&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/提丰.txt",
+      "facts": "用于人物条目：出身地“萨米”、种族“萨卡兹”、身份“萨米猎人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%96%AD%E7%BD%AA%E8%80%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/断罪者.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%96%AF%E5%8D%A1%E8%92%82&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/斯卡蒂.txt",
+      "facts": "用于人物条目：出身地“阿戈尔”、种族“未公开”、身份“深海猎人赏金猎人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%96%B0%E7%BA%A6%E8%83%BD%E5%A4%A9%E4%BD%BF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/新约能天使.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%97%A9%E9%9C%B2&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/早露.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%98%9F%E7%86%8A&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/星熊.txt",
+      "facts": "用于人物条目：出身地“东国”、种族“鬼”、身份“龙门近卫局精英干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%9A%B4%E8%A1%8C&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/暴行.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%9B%BC%E5%BC%97%E9%9B%B7%E5%BE%B7&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/曼弗雷德.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%9E%81%E5%A2%83&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/极境.txt",
+      "facts": "用于人物条目：出身地“伊比利亚”、种族“黎博利”、身份“罗德岛通讯干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%9E%97&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/林.txt",
+      "facts": "用于人物条目：出身地“龙门”、种族“札拉克”、身份“龙门合作者”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%9F%8F%E5%96%99&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/柏喙.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%A3%98%E5%88%BA&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/棘刺.txt",
+      "facts": "用于人物条目：出身地“伊比利亚”、种族“阿戈尔”、身份“罗德岛前线干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%A3%AE%E8%9A%BA&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/森蚺.txt",
+      "facts": "用于人物条目：出身地“萨尔贡”、种族“斐迪亚”、身份“阿卡胡拉部族族长”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%A7%90%E7%90%A5&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/槐琥.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%AD%8C%E8%95%BE%E8%92%82%E5%A8%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/歌蕾蒂娅.txt",
+      "facts": "用于人物条目：出身地“阿戈尔”、种族“未公开”、身份“深海猎人战争设计师”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%B3%A5%E5%B2%A9&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/泥岩.txt",
+      "facts": "用于人物条目：出身地“卡兹戴尔”、种族“萨卡兹”、身份“萨卡兹雇佣兵领袖”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%B5%81%E6%98%8E&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/流明.txt",
+      "facts": "用于人物条目：出身地“伊比利亚”、种族“阿戈尔”、身份“罗德岛驻伊比利亚干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%B5%8A%E5%BF%83%E6%96%AF%E5%8D%A1%E8%92%82&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/浊心斯卡蒂.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/淬羽赫默.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%B8%A9%E7%B1%B3&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/温米.txt",
+      "facts": "用于人物条目：出身地“雷姆必拓”、种族“卡特斯”、身份“罗德岛少年干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%BD%98%E4%B9%94&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "redirect",
+      "http": 200,
+      "cache": null,
+      "facts": "潘乔页面为重定向/无独立人物档案，未纳入最终人物表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%81%AB%E7%A5%9E&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/火神.txt",
+      "facts": "用于人物条目：出身地“米诺斯”、种族“丰蹄”、身份“米诺斯铁匠”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%81%B5%E7%9F%A5&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/灵知.txt",
+      "facts": "用于人物条目：出身地“谢拉格”、种族“黎博利”、身份“喀兰贸易前技术执行官”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%83%88%E5%A4%8F&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/烈夏.txt",
+      "facts": "用于人物条目：出身地“乌萨斯”、种族“乌萨斯”、身份“乌萨斯学生自治团成员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%84%B0%E5%B0%BE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/焰尾.txt",
+      "facts": "用于人物条目：出身地“卡西米尔”、种族“札拉克”、身份“红松骑士团领袖”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%84%B0%E5%BD%B1%E8%8B%87%E8%8D%89&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/焰影苇草.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%85%8C&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/煌.txt",
+      "facts": "用于人物条目：出身地“维多利亚”、种族“菲林”、身份“罗德岛精英干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%89%B9%E8%95%BE%E8%A5%BF%E5%A8%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/特蕾西娅.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%8B%AE%E8%9D%8E&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/狮蝎.txt",
+      "facts": "用于人物条目：出身地“萨尔贡”、种族“曼提柯”、身份“罗德岛特种干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%8E%9B%E6%81%A9%E7%BA%B3&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/玛恩纳.txt",
+      "facts": "用于人物条目：出身地“卡西米尔”、种族“库兰塔”、身份“临光家前家主”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%90%B3%E7%90%85%E8%AF%97%E6%80%80%E9%9B%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/琳琅诗怀雅.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%91%95%E5%85%89&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/瑕光.txt",
+      "facts": "用于人物条目：出身地“卡西米尔”、种族“库兰塔”、身份“卡西米尔年轻骑士”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%99%BD%E9%87%91&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/白金.txt",
+      "facts": "用于人物条目：出身地“卡西米尔”、种族“库兰塔”、身份“无胄盟刺客”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%99%BD%E9%9D%A2%E9%B8%AE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/白面鸮.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“黎博利”、身份“罗德岛医疗干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%9C%9F%E7%90%86&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/真理.txt",
+      "facts": "用于人物条目：出身地“乌萨斯”、种族“乌萨斯”、身份“乌萨斯学生自治团成员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%A0%BE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/砾.txt",
+      "facts": "用于人物条目：出身地“卡西米尔”、种族“札拉克”、身份“卡西米尔四阶骑士”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%A9%BA&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/空.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%B5%AE%E9%9B%A8&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/絮雨.txt",
+      "facts": "用于人物条目：出身地“伊比利亚”、种族“阿戈尔”、身份“巡游医生”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%BB%AE%E8%89%AF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/绮良.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%BC%84%E9%BB%98%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/缄默德克萨斯.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%BC%AA%E5%B0%94%E8%B5%9B%E6%80%9D&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/缪尔赛思.txt",
+      "facts": "用于人物条目：出身地“未公开”、种族“精灵”、身份“莱茵生态科主任”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%BD%97%E5%AE%BE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/罗宾.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E7%BE%BD%E6%AF%9B%E7%AC%94&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/羽毛笔.txt",
+      "facts": "用于人物条目：出身地“玻利瓦尔”、种族“黎博利”、身份“罗德岛近卫干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%80%80%E9%AA%91%E5%A3%AB%E4%B8%B4%E5%85%89&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/耀骑士临光.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%80%81%E9%B2%A4&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/老鲤.txt",
+      "facts": "用于人物条目：出身地“炎”、种族“龙”、身份“鲤氏侦探事务所所长”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%83%BD%E5%A4%A9%E4%BD%BF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/能天使.txt",
+      "facts": "用于人物条目：出身地“拉特兰”、种族“萨科塔”、身份“企鹅物流信使”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%89%BE%E4%B8%BD%E5%A6%AE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/艾丽妮.txt",
+      "facts": "用于人物条目：出身地“伊比利亚”、种族“黎博利”、身份“审判庭信使”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/艾雅法拉.txt",
+      "facts": "用于人物条目：出身地“莱塔尼亚”、种族“卡普里尼”、身份“火山学家”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%8B%87%E8%8D%89&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/苇草.txt",
+      "facts": "用于人物条目：出身地“维多利亚”、种族“德拉克”、身份“罗德岛留舰干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%8B%A6%E8%89%BE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/苦艾.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%8D%92%E8%8A%9C%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/荒芜拉普兰德.txt",
+      "facts": "异格页面，仅用于核对别名与同一人物关系；未另立人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%8E%AB%E6%96%AF%E6%8F%90%E9%A9%AC&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/莫斯提马.txt",
+      "facts": "用于人物条目：出身地“拉特兰”、种族“未公开”、身份“企鹅物流员工”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%8F%B2%E4%BA%9A%E6%A2%85%E5%A1%94&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/菲亚梅塔.txt",
+      "facts": "用于人物条目：出身地“拉特兰”、种族“黎博利”、身份“拉特兰公证所特派员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%9C%9C%E8%9C%A1&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/蜜蜡.txt",
+      "facts": "用于人物条目：出身地“萨尔贡”、种族“卡普里尼”、身份“萨尔贡部族术师”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%A7%81%E8%A1%8C%E8%80%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/见行者.txt",
+      "facts": "用于人物条目：出身地“拉特兰”、种族“萨科塔”、身份“拉特兰公证所执行者”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%AF%97%E6%80%80%E9%9B%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/诗怀雅.txt",
+      "facts": "用于人物条目：出身地“龙门”、种族“菲林”、身份“龙门近卫局高级警司”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%B4%BE%E7%BB%B4&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/贾维.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%B5%A4%E5%86%AC&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/赤冬.txt",
+      "facts": "用于人物条目：出身地“东国”、种族“阿戈尔”、身份“东国剑士”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%B5%AB%E6%8B%89%E6%A0%BC&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/赫拉格.txt",
+      "facts": "用于人物条目：出身地“乌萨斯”、种族“黎博利”、身份“阿撒兹勒诊所管理者”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%B5%AB%E9%BB%98&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/赫默.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“黎博利”、身份“莱茵生命研究员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%BF%B7%E8%BF%AD%E9%A6%99&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/迷迭香.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“菲林”、身份“罗德岛精英干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%80%81%E8%91%AC%E4%BA%BA&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/送葬人.txt",
+      "facts": "用于人物条目：出身地“拉特兰”、种族“萨科塔”、身份“拉特兰公证所执行者”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%87%8D%E5%B2%B3&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/重岳.txt",
+      "facts": "用于人物条目：出身地“炎”、种族“未公开”、身份“前玉门武术教官”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%93%B6%E7%81%B0&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/银灰.txt",
+      "facts": "用于人物条目：出身地“谢拉格”、种族“菲林”、身份“喀兰贸易董事长”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%93%B8%E9%93%81&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/铸铁.txt",
+      "facts": "用于人物条目：出身地“米诺斯”、种族“丰蹄”、身份“米诺斯佣兵”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%94%8F&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/锏.txt",
+      "facts": "用于人物条目：出身地“莱塔尼亚”、种族“卡普里尼”、身份“喀兰贸易总裁保镖”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%94%A1%E5%85%B0&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/锡兰.txt",
+      "facts": "用于人物条目：出身地“汐斯塔（独立城邦）”、种族“黎博利”、身份“汐斯塔源石研究者”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%97%AA%E7%81%B5&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/闪灵.txt",
+      "facts": "用于人物条目：出身地“卡兹戴尔”、种族“萨卡兹”、身份“使徒医疗干员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%98%BF&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/阿.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%98%BF%E6%96%AF%E5%8D%A1%E7%BA%B6&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/阿斯卡纶.txt",
+      "facts": "用于人物条目：出身地“卡兹戴尔”、种族“萨卡兹”、身份“罗德岛反渗透负责人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%98%BF%E7%B1%B3%E5%A8%85&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/阿米娅.txt",
+      "facts": "用于人物条目：出身地“雷姆必拓”、种族“卡特斯/奇美拉”、身份“罗德岛公开领袖”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%99%88&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/陈.txt",
+      "facts": "用于人物条目：出身地“龙门”、种族“龙”、身份“龙门近卫局督察组长”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%99%A8%E6%98%9F&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/陨星.txt",
+      "facts": "候选人物页，已读取字段用于筛选；未纳入最终 84 人表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%A3%8E%E7%AC%9B&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/风笛.txt",
+      "facts": "用于人物条目：出身地“维多利亚”、种族“瓦伊凡”、身份“维多利亚退役军人”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%AD%8F%E5%BD%A6%E5%90%BE&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/魏彦吾.txt",
+      "facts": "用于人物条目：出身地“未公开”、种族“未公开”、身份“龙门执政者”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%BA%A6%E5%93%B2%E4%BC%A6&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/麦哲伦.txt",
+      "facts": "用于人物条目：出身地“哥伦比亚”、种族“黎博利”、身份“莱茵生命外勤专员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%BB%8D&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/黍.txt",
+      "facts": "用于人物条目：出身地“炎”、种族“未公开”、身份“炎国农业天师”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%BB%91&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/黑.txt",
+      "facts": "用于人物条目：出身地“雷姆必拓”、种族“菲林”、身份“汐斯塔前治安局长”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%BC%A0%E7%8E%8B&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "redirect",
+      "http": 200,
+      "cache": null,
+      "facts": "鼠王页面为重定向/无独立人物档案，未纳入最终人物表。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E9%BE%99%E8%88%8C%E5%85%B0&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/龙舌兰.txt",
+      "facts": "用于人物条目：出身地“玻利瓦尔”、种族“佩洛”、身份“前多索雷斯贸易官员”。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E2%80%9C%E6%AE%89%E9%81%93%E8%80%85%E2%80%9D%EF%BC%8C%E5%AE%89%E5%A4%9A%E6%81%A9&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/“殉道者”，安多恩.txt",
+      "facts": "读取敌方领袖资料：描述其为与拉特兰为敌的萨科塔寻路者；无基础档案/出生地。"
+    },
+    {
+      "url": "https://prts.wiki/w/%E9%AD%8F%E5%BD%A6%E5%90%BE",
+      "route": "web_fetch (HTML)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "魏彦吾情报资料页；确认“政治家，龙门执政者”原文与人物图注。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%AD%A4%E6%98%9F&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "success",
+      "http": 200,
+      "cache": "cache/raw/孤星.txt",
+      "facts": "活动页提到“克丽斯腾·莱特”全名及其观星间“万星园”，并有哥伦比亚方面行动描述；未给出基础档案，故不据此新增人物条目。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E8%8E%B1%E8%8C%B5%E7%94%9F%E5%91%BD&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "failed",
+      "http": 404,
+      "cache": null,
+      "facts": "“莱茵生命”标题 404，没有独立组织主页面可读取。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E6%80%BB%E8%BE%96&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "redirect",
+      "http": 200,
+      "cache": null,
+      "facts": "“总辖”为 27 字节重定向/极短页，未提供可用人物档案。"
+    },
+    {
+      "url": "https://m.prts.wiki/index.php?title=%E5%85%8B%E4%B8%BD%E6%96%AF%E8%85%BE%C2%B7%E8%8E%B1%E7%89%B9&action=raw",
+      "route": "curl -L (m.prts.wiki action=raw)",
+      "result": "failed",
+      "http": 404,
+      "cache": null,
+      "facts": "“克丽斯腾·莱特”在 m.prts 入口同样 404；只找到“克丽斯腾”敌方领袖页。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=query&list=search&srsearch=%E5%85%8B%E4%B8%BD%E6%96%AF%E8%85%BE&format=json&srlimit=20",
+      "route": "web_fetch (search API)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "搜索仅命中“克丽斯腾”敌方领袖页与其 spine 子页，共 2 条；无基础人物页。"
+    },
+    {
+      "url": "https://prts.wiki/api.php?action=query&list=search&srsearch=%E8%8E%B1%E8%8C%B5%E7%94%9F%E5%91%BD&format=json&srlimit=10",
+      "route": "web_fetch (search API)",
+      "result": "success",
+      "http": 200,
+      "cache": null,
+      "facts": "搜索返回 10 条莱茵生命相关条目/敌人页，未见独立组织主页面；不用于人物履历。"
+    }
+  ]
+}

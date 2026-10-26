@@ -1,0 +1,164 @@
+[
+  {
+    "region": "sami",
+    "point": [
+      460,
+      126
+    ],
+    "inside": true,
+    "reason": "萨米字标下方不应留下缺口"
+  },
+  {
+    "region": "kazimierz",
+    "point": [
+      535,
+      240
+    ],
+    "inside": true,
+    "reason": "卡西米尔英文黑条下方"
+  },
+  {
+    "region": "leithanien",
+    "point": [
+      660,
+      326
+    ],
+    "inside": true,
+    "reason": "莱塔尼亚英文黑条下方"
+  },
+  {
+    "region": "victoria",
+    "point": [
+      585,
+      414
+    ],
+    "inside": true,
+    "reason": "维多利亚国名下方"
+  },
+  {
+    "region": "columbia",
+    "point": [
+      354,
+      385
+    ],
+    "inside": false,
+    "reason": "排除被误收进轮廓的山地纹理"
+  },
+  {
+    "region": "columbia",
+    "point": [
+      330,
+      366
+    ],
+    "inside": true,
+    "reason": "哥伦比亚南侧城名下方"
+  },
+  {
+    "region": "kjerag",
+    "point": [
+      469,
+      341
+    ],
+    "inside": true,
+    "reason": "谢拉格完整六边形上部"
+  },
+  {
+    "region": "kazdel",
+    "point": [
+      868,
+      328
+    ],
+    "inside": true,
+    "reason": "卡兹戴尔六边形上半部"
+  },
+  {
+    "region": "siesta",
+    "point": [
+      503,
+      512
+    ],
+    "inside": true,
+    "reason": "汐斯塔六边形下缘"
+  },
+  {
+    "region": "rim-billiton",
+    "point": [
+      869,
+      470
+    ],
+    "inside": true,
+    "reason": "雷姆必拓字标产生的假孔洞应填回"
+  },
+  {
+    "region": "sargon",
+    "point": [
+      213,
+      580
+    ],
+    "inside": true,
+    "reason": "萨尔贡漏描的独立六边形"
+  },
+  {
+    "region": "siracusa",
+    "point": [
+      740,
+      362
+    ],
+    "inside": false,
+    "reason": "叙拉古西侧地形不应被填入"
+  },
+  {
+    "region": "higashi",
+    "point": [
+      1056,
+      194
+    ],
+    "inside": false,
+    "reason": "东国与炎的交界不能重复命中"
+  },
+  {
+    "region": "ursus",
+    "point": [
+      740,
+      175
+    ],
+    "inside": false,
+    "reason": "乌萨斯内部西侧空隙"
+  },
+  {
+    "region": "ursus",
+    "point": [
+      789,
+      148
+    ],
+    "inside": false,
+    "reason": "乌萨斯内部东侧空隙"
+  },
+  {
+    "region": "yan",
+    "point": [
+      1045,
+      230
+    ],
+    "inside": false,
+    "reason": "炎内部空隙保持镂空"
+  },
+  {
+    "region": "kazimierz",
+    "point": [
+      587,
+      303
+    ],
+    "inside": false,
+    "reason": "排除被误填的首都西南山路"
+  },
+  {
+    "region": "yan",
+    "point": [
+      990,
+      247
+    ],
+    "inside": true,
+    "reason": "修补后的颈部不应残留文字形状的细缝"
+  }
+]

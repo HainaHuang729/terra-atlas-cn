@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const root=new URL('../dist/',import.meta.url),context=vm.createContext({window:{}});
+for(const name of ['content.js','archive-data.js','characters-data.js','search-index.js'])vm.runInContext(readFileSync(new URL(name,root),'utf8'),context,{filename:name});
+const w=context.window,byCountry=new Map(w.TERRA_ARCHIVE.countries.map(c=>[c.id,c]));
+const countries=w.TERRA_CONTENT.countries.map(c=>({...c,dossier:byCountry.get(c.id)}));
+const characters=w.TERRA_CHARACTERS.characters;
+const search=w.TERRA_SEARCH.create({countries,characters,concepts:[...w.TERRA_CONTENT.concepts,...w.TERRA_ARCHIVE.concepts]});
+const expected=[['阿米娅','person','amiya'],['Amiya','person','amiya'],['博士','person','doctor'],['Kaltsit','person','kaltsit'],['假日威龙陈','person','chen'],['缄默德克萨斯','person','texas'],['林雨霞','person','lin'],['阿米娅近卫','person','amiya'],['龙门','place'],['莱茵生命','organization'],['孤星','reading'],['源石','concept']];
+for(const [q,type,id] of expected){
+  const hit=search.query(q)[0];
+  assert.ok(hit,'Missing query: '+q);assert.equal(hit.type,type,'Wrong type for '+q);
+  if(id)assert.equal(hit.id,id,'Wrong character for '+q);
+}
+assert.equal(search.query('completely-unmatched-xyz').length,0);
+const rhodes=search.query('罗德岛',{scope:'person'});
+assert.ok(rhodes.length>50);assert.ok(rhodes.every(e=>e.type==='person'));
+assert.equal(search.query('假日威龙陈',{scope:'person'}).filter(e=>e.id==='chen').length,1);
+assert.ok(search.query('炎',{scope:'country'}).some(e=>e.id==='yan'));
+assert.ok(search.query('医疗 罗德岛',{scope:'person'}).some(e=>e.id==='kaltsit'));
+const counts=Object.fromEntries(['person','country','place','organization','concept','reading'].map(type=>[type,search.entries.filter(e=>e.type===type).length]));
+assert.equal(counts.person,397);assert.equal(counts.country,18);assert.equal(counts.concept,10);
+assert.equal(search.query('维什戴尔',{scope:'person'})[0].aliases.includes('维什戴尔'),true);
+assert.ok(search.query('真银斩',{scope:'person'}).some(e=>e.id==='silverash'));
+const coverage=w.TERRA_CHARACTERS.meta.operatorCoverage;
+assert.equal(coverage.operatorCount,394);assert.equal(coverage.operatorFormCount,434);
+const operators=characters.filter(p=>p.operator),forms=operators.flatMap(p=>p.forms);
+assert.equal(operators.length,394);assert.equal(forms.length,434);assert.equal(new Set(forms.map(f=>f.charId)).size,434);
+assert.equal(characters.find(p=>p.id==='amiya').forms.length,3);
+assert.equal(new Set(forms.map(f=>f.profession)).size,8);
+assert.equal(new Set(forms.map(f=>f.rarity)).size,6);
+assert.ok(forms.every(f=>f.portrait&&Object.keys(f.profile).length));
+assert.equal(new Set(search.entries.map(e=>e.key)).size,search.entries.length);
+console.log('Search checks passed: '+JSON.stringify(counts));

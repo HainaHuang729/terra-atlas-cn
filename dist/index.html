@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#e8ece2">
+  <script>
+    try { document.documentElement.dataset.theme=localStorage.getItem('terra-color-theme-v1')==='night'?'night':'day'; } catch {}
+    document.querySelector('meta[name="theme-color"]').content=document.documentElement.dataset.theme==='day'?'#e8ece2':'#0b1b26';
+  </script>
+  <meta name="description" content="一张可探索的泰拉地图。沿着国家、文化与文明的线索，认识《明日方舟》的世界。非官方中文地理档案。">
+  <title>泰拉观测站 · 明日方舟世界观地图</title>
+  <link rel="icon" type="image/png" href="assets/official/rhodes-island-badge.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ui-theme.css">
+  <link rel="stylesheet" href="spatial.css">
+  <link rel="stylesheet" href="glass.css">
+  <link rel="stylesheet" href="daylight.css">
+  <link rel="stylesheet" href="identity.css">
+  <link rel="stylesheet" href="people.css">
+  <script src="content.js" defer></script>
+  <script src="archive-data.js" defer></script>
+  <script src="regions.js" defer></script>
+  <script src="region-geometry.js" defer></script>
+  <script src="characters-data.js" defer></script>
+  <script src="search-index.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="masthead">
+      <a class="brand" href="#" aria-label="返回泰拉全图" id="brand-home">
+        <img class="brand-wordmark official-monochrome" src="assets/official/arknights-wordmark.svg" width="254" height="119" alt="明日方舟">
+        <span class="brand-title"><strong>泰拉观测站</strong><small>非官方地理档案</small></span>
+      </a>
+      <nav class="main-nav" aria-label="主要导航">
+        <button class="nav-button active" id="nav-map">世界地图 <span>ATLAS</span></button>
+        <button class="nav-button" id="nav-concepts">世界设定 <span>WORLD</span></button>
+        <button class="nav-button" id="nav-sources">资料说明 <span>ABOUT</span></button>
+      </nav>
+      <div class="header-end"><span class="edition">中文地理档案 <b>18 地区</b></span><button class="motion-button theme-button" id="theme-toggle" aria-pressed="true" aria-label="切换昼夜配色" title="切换为夜间配色"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg><span>白天</span></button><button class="motion-button" id="motion-toggle" aria-pressed="true" aria-label="关闭界面动效" title="关闭界面动效"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m13 3-8 11h6l-1 7 9-12h-6Z"/></svg><span>动效开</span></button><button class="icon-button" id="help-button" aria-label="操作帮助" title="操作帮助"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.3 8.6a2.8 2.8 0 0 1 5.4 1c0 2-2.7 2.3-2.7 4.2M12 17h.01"/></svg></button></div>
+    </header>
+
+    <main class="workspace">
+      <section class="map-panel" aria-label="泰拉交互地图">
+        <div class="map-toolbar">
+          <div class="search-wrap">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+            <input id="search" type="search" role="combobox" placeholder="搜索人物、地区、组织或设定" autocomplete="off" aria-autocomplete="list" aria-label="搜索人物与世界资料" aria-controls="search-options" aria-expanded="false">
+            <kbd>/</kbd>
+            <div id="search-results" class="search-results" hidden></div>
+          </div>
+          <div class="mode-switch" role="group" aria-label="底图样式"><button class="active" data-style="terminal" aria-pressed="true">全息</button><button data-style="original" aria-pressed="false">原图</button></div>
+        </div>
+
+        <div class="map-heading" aria-hidden="true"><span class="eyebrow">泰拉诸国 · 立体交互图鉴</span><h1>TERRA<span>泰拉</span></h1><p>点亮一片大地，展开它的故事。</p></div>
+        <div class="selection-context" id="selection-context" hidden><span id="selected-name"></span><button id="selection-reset">返回全图 <span aria-hidden="true">↙</span></button></div>
+        <div class="map-viewport" id="map-viewport" tabindex="0" aria-label="可拖拽地图。滚轮缩放，方向键平移，加减号缩放，Home归位。">
+          <div class="map-stage" id="map-stage">
+            <div class="map-surface" id="map-surface"><div class="map-plinth" aria-hidden="true"></div>
+            <img id="map-image" class="map-image" src="assets/terra-base.jpg" width="1280" height="822" alt="《大地巡旅》泰拉诸国行政概略图，展示已知大陆的地理与国家分布" draggable="false">
+            <div class="region-layers" id="region-layers" aria-hidden="true"></div>
+            <svg class="tour-route" id="tour-route" viewBox="0 0 1280 822" aria-hidden="true"></svg>
+            </div>
+            <div id="map-markers" class="map-markers"></div>
+          </div>
+        </div>
+        <div class="map-vignette" aria-hidden="true"></div>
+
+        <div class="compass" aria-hidden="true"><span>N</span><svg viewBox="0 0 28 34"><path d="m14 2 10 27-10-7-10 7Z" fill="none" stroke="currentColor"/><path d="M14 2v20L4 29Z" fill="currentColor"/></svg></div>
+        <div class="map-tools" role="group" aria-label="地图工具">
+          <button id="zoom-in" title="放大 (+)" aria-label="放大地图"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          <button id="zoom-out" title="缩小 (-)" aria-label="缩小地图"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+          <button id="map-reset" title="全图 (Home)" aria-label="回到全图"><svg viewBox="0 0 24 24"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 8h8v8H8z"/></svg></button>
+          <button id="perspective-toggle" class="on" title="切换立体与平面视角" aria-label="切换为平面地图" aria-pressed="true">3D</button>
+          <span class="tool-divider"></span>
+          <button id="labels-toggle" class="on" title="显示或隐藏互动标注" aria-label="显示或隐藏互动标注" aria-pressed="true">Aa</button>
+          <button id="fullscreen" title="全屏地图" aria-label="切换全屏"><svg viewBox="0 0 24 24"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg></button>
+        </div>
+
+        <div class="map-filter" role="group" aria-label="按主题筛选国家">
+          <button class="active" data-filter="all" aria-pressed="true">全部</button><button data-filter="industry" aria-pressed="false">工业与科技</button><button data-filter="culture" aria-pressed="false">文化与信仰</button><button data-filter="frontier" aria-pressed="false">荒野与边境</button>
+        </div>
+
+        <div class="explore-dock" role="group" aria-label="探索入口"><button id="dock-index"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h4v4H4zM12 6h8M4 15h4v4H4zM12 16h8"/></svg><span>地区索引</span><b>18</b></button><button id="dock-characters"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-3a8 8 0 0 1 16 0v3"/></svg><span>人物档案</span><b id="characters-count">0</b></button><button id="dock-saved"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v17l-6-4-6 4Z"/></svg><span>我的标记</span><b id="saved-count">0</b></button><button id="dock-random"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 17 5-5 6 0 5-7m-5 0h5v5M4 6l4 4m8 5 4 4m-5 0h5v-5"/></svg><span>随机探索</span></button></div>
+
+        <footer class="map-status"><span><i></i><b id="map-count">18 个区域</b></span><span class="interaction-hint">点选地块 · 拖动探索 · 滚轮缩放</span><span class="visit-status" id="visit-status">已探索 0 / 18</span><span id="zoom-label">100%</span></footer>
+        <button class="mobile-archive-button" id="mobile-archive-button" aria-expanded="false" aria-controls="archive">主题导览 <span>↑</span></button>
+      </section>
+
+      <aside class="archive" id="archive" aria-label="人物与世界档案">
+        <button class="sheet-handle" id="sheet-expand" aria-label="展开档案" aria-expanded="false"><span></span><b>展开阅读</b></button>
+        <div class="archive-topline"><span>地理档案</span><button class="archive-close" id="archive-close" aria-label="关闭档案">×</button><span class="archive-index" id="archive-index">T / 000</span></div>
+        <nav class="archive-tabs" aria-label="档案视图"><button data-view="overview" class="active" aria-current="page">导览</button><button data-view="list">地区索引</button><button data-view="people">人物 <b id="archive-characters-count">0</b></button><button data-view="saved">我的标记 <b id="archive-saved-count">0</b></button></nav>
+        <div id="archive-content" class="archive-content"></div>
+        <div class="archive-bottom"><img class="archive-wordmark official-monochrome" src="assets/official/arknights-wordmark.svg" width="254" height="119" alt="明日方舟" loading="lazy"><div>非官方泰拉地理档案<small>地理 · 文明 · 旅行笔记</small></div><span class="archive-lines" aria-hidden="true"></span></div>
+      </aside>
+    </main>
+  </div>
+
+  <dialog id="world-dialog" class="world-dialog">
+    <div class="dialog-top"><span>WORLD / PRIMER</span><button class="dialog-close" data-close="world-dialog" aria-label="关闭世界设定">×</button></div>
+    <div class="world-intro"><span class="eyebrow">理解泰拉的基础词条</span><h2>文明，在风暴之间生长。</h2><p>能源、天灾与迁徙，塑造着泰拉的城市，也改变着每个人的生活。</p></div>
+    <div id="concept-grid" class="concept-grid"></div>
+    <p class="dialog-note">这里介绍基础世界设定，保留剧情中的发现与悬念。<span class="art-credit">源石等 5 项图示来自<a href="https://ak.hypergryph.com/" target="_blank" rel="noopener noreferrer">《明日方舟》官网</a>，其余为本站示意图。</span></p>
+  </dialog>
+
+  <dialog id="about-dialog" class="about-dialog">
+    <div class="dialog-top"><span>ARCHIVE / SOURCES</span><button class="dialog-close" data-close="about-dialog" aria-label="关闭资料说明">×</button></div>
+    <div class="about-body"><span class="eyebrow">关于这份地图</span><h2>为探索而整理。</h2><p>这是一个非官方中文互动地理档案。地图以《大地巡旅》中的「泰拉诸国行政概略图」为参考，整理 18 个国家与地区的地理、社会、地点、组织、人物与延伸阅读资料。</p><h3>如何阅读</h3><p>底图采用设定集地图的公开转载照片，细节清晰度有限，代表书中所绘的已知大陆。发光地块按 1280×822 底图的原生像素坐标描边，保留分离地块与内部空隙；字标遮挡或实拍模糊处作局部补线。轮廓对应这张印刷图示，用于互动索引，不代表精确行政国界。图上使用游戏阵营原始图标；卡兹戴尔采用依据底图纹章描摹的清洁矢量版。图标锚定于底图相应纹章位置，不是精确城市坐标。行政信息以底图所示版本为准，不代表实时剧情中的疆界。</p><p>移动城市、本舰以及未能在这张地表图上明确定位的地域，没有被添加为固定地点。主题筛选与导览是本页的阅读组织方式。</p><h3>人物与搜索</h3><p>人物资料依据公开干员档案和百科资料独立整理，每份人物档案附来源。出生地、组织联系与活动地区分别记录，不代表国籍、现居地或固定坐标；异格名称归入同一人物的检索别名。搜索涵盖人物、地区、地点、势力、世界设定和篇目，支持中英文及已核实别名。本次快照已按公开游戏数据与 PRTS 名录逐项收录全干员，含联动、限定、异格和职业切换；特殊模式专属预备单位与召唤物不计入干员图鉴。剧情档案与战斗数值全文可通过各形态的资料链接阅读。</p><h3>资料范围</h3><p>各地区档案采用公开资料独立编写，逐段附有参考链接。地点、组织与阅读线索可在档案内切换；移动城市不被视作固定地理坐标。内容以基础世界观为主，无法把各故事时期视为同一时间点。外部百科含剧情与玩家考据，请按需阅读。</p><h3>人物头像</h3><p>有可核实资源的干员采用游戏原始头像，文件来自 PRTS 文件库及<a href="https://github.com/Aceship/Arknight-Images/tree/main/avatars" target="_blank" rel="noopener noreferrer">Aceship · Arknight-Images 公开素材镜像 ↗</a>，保留原始比例。无对应图片的条目使用文字占位，不生成或仿绘人物肖像。相关图像权利归原权利方所有。</p><h3>标志与图示</h3><p>页首《明日方舟》字标、罗德岛徽标，以及源石、源石技艺、移动城邦、感染者和罗德岛五项世界设定图示，取自<a href="https://ak.hypergryph.com/" target="_blank" rel="noopener noreferrer">《明日方舟》官方网站 ↗</a>。字标保留官网矢量路径，图示保留原始 PNG，仅调整显示比例与透明留白。泰拉观测站为本站名称；其他设定配图及通用操作图标为本站绘制的示意图，不是官方标识。</p><p>17 个地区标志采用游戏阵营图标原始 PNG，按透明边界统一留白，保持原有比例；卡兹戴尔依据底图纹章轮廓描摹为透明 SVG，去除照片背景与邻接杂线。素材来源：<a href="https://github.com/Aceship/Arknight-Images/tree/main/factions" target="_blank" rel="noopener noreferrer">Aceship · Arknight-Images 阵营图标库 ↗</a>。相关图像权利归原权利方所有。</p><h3>资料来源</h3><ul class="source-list"><li><a href="https://github.com/HainaHuang729/terra-atlas-cn" target="_blank" rel="noopener noreferrer">本站开源代码与素材清单 <span>↗</span></a></li><li><a href="https://ak.hypergryph.com/" target="_blank" rel="noopener noreferrer">《明日方舟》官方网站 <span>↗</span></a></li><li><a href="https://ak.hypergryph.com/protocol/application" target="_blank" rel="noopener noreferrer">官方世界背景与源石设定 <span>↗</span></a></li><li><a href="https://book.douban.com/subject/36620611/" target="_blank" rel="noopener noreferrer">《大地巡旅》官方世界观设定集书目 <span>↗</span></a></li><li><a href="https://www.vgover.com/news/126193" target="_blank" rel="noopener noreferrer">行政概略图公开转载与出处 <span>↗</span></a></li><li><a href="https://prts.wiki/w/泰拉大典:地理" target="_blank" rel="noopener noreferrer">PRTS · 泰拉大典地理索引 <span>↗</span></a></li></ul><div class="rights-note">《明日方舟》相关设定、名称及原始地图的权利归原权利方所有。本页为非官方爱好者整理，界面与短篇导读为独立制作；各档案附参考链接。外部百科可能包含剧情信息。</div></div>
+  </dialog>
+
+  <dialog id="help-dialog" class="help-dialog"><div class="dialog-top"><span>CONTROLS / 快速操作</span><button class="dialog-close" data-close="help-dialog" aria-label="关闭操作帮助">×</button></div><h2>开始你的泰拉巡旅</h2><div class="help-rows"><p><span>昼夜配色</span><b>页顶太阳 / 月亮按钮</b></p><p><span>移动地图</span><b>拖动 / 方向键</b></p><p><span>缩放地图</span><b>滚轮 / 双指 / + −</b></p><p><span>返回全图</span><b>Home</b></p><p><span>寻找国家</span><b>/</b></p><p><span>查看档案</span><b>点击地块 / 国名</b></p><p><span>关闭弹窗</span><b>Esc</b></p></div><p class="dialog-note">标记的地区保存在当前浏览器中。点击「主题导览」可以按线索逐站阅读。</p></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
