@@ -65,7 +65,7 @@ npm run check
 
 ## GitHub Pages 发布
 
-`main` 保存源码，`gh-pages` 保存 `dist/` 的发布内容。Pages 使用 `gh-pages` 分支根目录发布；`.nojekyll` 禁用 Jekyll 转换。资源均采用相对路径，人物与地区链接采用 hash，兼容 GitHub Pages 项目子目录。
+`main` 保存源码，`gh-pages` 保存 `dist/` 的发布内容。Pages 使用 `gh-pages` 分支根目录发布；`.nojekyll` 禁用 Jekyll 转换。资源均采用相对路径，人物与地区链接采用 hash，兼容 GitHub Pages 项目子目录。发布还需要已登录的 [GitHub CLI](https://cli.github.com/)，无需在项目里保存令牌。
 
 修改后先构建、检查并提交，再发布：
 
@@ -78,7 +78,7 @@ git push origin main
 npm run deploy
 ```
 
-`npm run deploy` 使用 Git 自带的 `subtree`，推送已提交的 `dist/` 内容。发布状态可在仓库的 **Actions** 与 **Settings → Pages** 中查看。Fork 后请把 Pages 发布源设为自己的 `gh-pages` 分支，并修改本文件及 `package.json` 中的网站链接。
+`npm run deploy` 确认当前提交已推送到 `main`，然后通过 GitHub API 复用远端已有的 `dist/` Git 树创建发布提交，避免向发布分支再次上传整套立绘。已有分支通过正常前进更新，不强制覆盖并发改动；首次运行可创建 `gh-pages` 分支。发布状态可在仓库的 **Actions** 与 **Settings → Pages** 中查看。Fork 后请把 Pages 发布源设为自己的 `gh-pages` 分支，并修改本文件及 `package.json` 中的网站链接。
 
 ## 许可与致谢
 
