@@ -160,5 +160,59 @@
     ],
     "inside": true,
     "reason": "修补后的颈部不应残留文字形状的细缝"
+  },
+  {
+    "region": "yan",
+    "point": [
+      857,
+      233
+    ],
+    "inside": true,
+    "reason": "炎西北侧独立六边形归属炎"
+  },
+  {
+    "region": "ursus",
+    "point": [
+      857,
+      233
+    ],
+    "inside": false,
+    "reason": "炎西北侧独立六边形不得命中乌萨斯"
+  },
+  {
+    "region": "ursus",
+    "point": [
+      782,
+      255
+    ],
+    "inside": true,
+    "reason": "交界西侧乌萨斯分离区保留"
+  },
+  {
+    "region": "yan",
+    "point": [
+      782,
+      255
+    ],
+    "inside": false,
+    "reason": "乌萨斯西侧分离区不应误并入炎"
+  },
+  {
+    "region": "yan",
+    "point": [
+      907,
+      262
+    ],
+    "inside": true,
+    "reason": "炎原有西侧独立单格保留"
+  },
+  {
+    "region": "ursus",
+    "point": [
+      907,
+      262
+    ],
+    "inside": false,
+    "reason": "炎原有独立单格不得命中乌萨斯"
   }
 ]

@@ -50,17 +50,18 @@
   const pad = n => String(n).padStart(2,'0');
   const mobile = () => window.innerWidth<=760;
   const reduceMotion = () => systemMotion.matches||motionOff;
-  const canAnimate = () => !reduceMotion()&&!keyboardMode;
+  const canAnimate = () => !reduceMotion()&&!keyboardMode&&!document.documentElement.hasAttribute('data-palette-compare');
   function setColorTheme(theme,{persist=true}={}){
     const day=theme==='day',button=$('theme-toggle');
     document.documentElement.dataset.theme=day?'day':'night';
+    if(!document.documentElement.dataset.palettePreview)document.documentElement.dataset.palette=day?'glacier':'graphite';
     button.setAttribute('aria-pressed',String(day));
     button.title=day?'切换为夜间配色':'切换为白天配色';
     button.querySelector('span').textContent=day?'白天':'夜间';
     button.querySelector('svg').innerHTML=day?'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>':'<path d="M20.3 14.2A8.5 8.5 0 0 1 9.8 3.7 8.5 8.5 0 1 0 20.3 14.2Z"/>';
     document.querySelector('[data-style="terminal"]').textContent=day?'测绘':'全息';
-    document.querySelector('meta[name="theme-color"]').content=day?'#e8ece2':'#0b1b26';
-    if(persist)try{localStorage.setItem('terra-color-theme-v1',day?'day':'night');}catch{}
+    document.querySelector('meta[name="theme-color"]').content=window.TERRA_PALETTES?.find(p=>p.id===document.documentElement.dataset.palette)?.colors.canvas||(day?'#dfe7f0':'#171b21');
+    if(persist&&!document.documentElement.dataset.palettePreview)try{localStorage.setItem('terra-color-theme-v2',day?'day':'night');}catch{}
   }
   $('theme-toggle').addEventListener('click',()=>setColorTheme(document.documentElement.dataset.theme==='day'?'night':'day'));
   function reveal(element,distance=6,duration=180){
@@ -593,7 +594,7 @@
     document.querySelectorAll('[data-style]').forEach(x=>{
       x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b));
     });
-    try{localStorage.setItem('terra-map-style',state.style);}catch{}
+    if(!document.documentElement.dataset.palettePreview)try{localStorage.setItem('terra-map-style',state.style);}catch{}
   }));
   function bounds(x,y,s) {
     const w=viewport.clientWidth,h=viewport.clientHeight,mx=w*.35,my=h*.3;
@@ -822,6 +823,6 @@
   setColorTheme(document.documentElement.dataset.theme,{persist:false});
   const initialId=readHash();
   initialized=true;updateMotion();overview();syncArchive();resetMap(false);
-  try{if(localStorage.getItem('terra-map-style')==='original')document.querySelector('[data-style="original"]').click();}catch{}
+  try{if(!document.documentElement.dataset.palettePreview&&localStorage.getItem('terra-map-style')==='original')document.querySelector('[data-style="original"]').click();}catch{}
   if(initialId)openHash(initialId);
 })();

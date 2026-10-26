@@ -1,0 +1,20 @@
+{
+  "sourceCommit": "bb521e86271e1b3d9ea4653f15acf7b68cbbf975",
+  "sourceVersion": 14,
+  "commonBase": "71e26e75cb0b489790f5a2d2143eea9b8a7cd283",
+  "importedAt": "2026-10-26",
+  "defaultPalette": "graphite",
+  "dayPalette": "glacier",
+  "scope": [
+    "已发布的四套配色与 A 版默认 UI",
+    "已发布的炎与乌萨斯交界归属修正，24 个回归检查点"
+  ],
+  "preserved": [
+    "394 位干员、434 个形态",
+    "832 张立绘、392 份经历导读",
+    "按需详情载入、形态分享链接、目录筛选"
+  ],
+  "pendingElsewhere": [
+    "高清玩家重绘图的重新对齐仍在另一项目中进行，未导入未完成内容"
+  ]
+}

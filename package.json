@@ -4,13 +4,18 @@
   "private": true,
   "description": "泰拉观测站：明日方舟非官方中文交互地图与人物档案",
   "license": "MIT",
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
-    "build": "node scripts/build-archive.mjs && node scripts/build-region-geometry.mjs && node scripts/import-operators.mjs && node scripts/build-characters.mjs && node scripts/build-operator-details.mjs",
+    "build": "node scripts/build-palettes.mjs && node scripts/build-archive.mjs && node scripts/build-region-geometry.mjs && node scripts/import-operators.mjs && node scripts/build-characters.mjs && node scripts/build-operator-details.mjs",
     "check": "node scripts/check-search.mjs && node scripts/check-static.mjs && node scripts/check-operator-details.mjs",
     "preview": "python3 -m http.server 8769 --directory dist",
     "deploy": "node scripts/deploy-pages.mjs"
   },
-  "repository": { "type": "git", "url": "https://github.com/HainaHuang729/terra-atlas-cn.git" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HainaHuang729/terra-atlas-cn.git"
+  },
   "homepage": "https://hainahuang729.github.io/terra-atlas-cn/"
 }
