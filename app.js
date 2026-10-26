@@ -25,6 +25,8 @@
   };
   const labels = {all:'全部地区',industry:'工业与科技',culture:'文化与信仰',frontier:'荒野与边境'};
   const state = {selected:null,filter:'all',style:'terminal',showLabels:true,view:'overview',tour:null,tourIndex:0,countryPane:'overview',archiveVisible:false,tilt:true,character:null,peopleQuery:'',peopleRegion:'all',peopleProfession:'all',peopleRarity:'all',peopleKind:'all',peopleLimit:60};
+  const operatorDetailCache=new Map();
+  let operatorRequest=0;
   const storageKey = 'terra-geographic-saved-v1';
   const visitedKey = 'terra-geographic-visited-v1';
   function readSet(key) {
@@ -119,6 +121,7 @@
     workspace.classList.toggle('archive-open',mobile()&&!closed);
     $('mobile-archive-button').setAttribute('aria-expanded',String(!closed));
     syncSheetGeometry();
+    syncOperatorStage();
   }
   function showArchive(){
     if(!state.archiveVisible)archiveReturn=document.activeElement;
@@ -142,6 +145,7 @@
     if(restoreFocus){const heading=archive.querySelector('h2');if(heading){heading.tabIndex=-1;heading.focus({preventScroll:true});}}
     archive.scrollTop=0;
     $('archive-index').textContent=index;
+    document.querySelector('.archive-topline>span:first-child').textContent=state.view==='character'?'人物档案':'地理档案';
     document.querySelectorAll('[data-view]').forEach(b => {
       const active=b.dataset.view===(state.view==='country'?'list':state.view==='character'?'people':state.view);
       b.classList.toggle('active',active);
@@ -150,6 +154,7 @@
     $('dock-index').classList.toggle('active',state.view==='list');
     $('dock-saved').classList.toggle('active',state.view==='saved');
     $('dock-characters').classList.toggle('active',['people','character'].includes(state.view));
+    syncOperatorStage();
   }
   function syncCounts() {
     $('characters-count').textContent=characters.length;
@@ -221,26 +226,102 @@
   }
   function operatorFormsHTML(p,formId){
     if(!p.forms?.length)return '';
-    return '<section class="person-section operator-forms"><h3>干员形态 <small>'+p.forms.length+'</small></h3><p class="operator-form-note">每个形态分别记录职业、技能与基础字段。</p>'+p.forms.map((f,i)=>'<details class="operator-form"'+((formId?f.charId===formId:i===0)?' open':'')+'><summary>'+(f.portrait?'<img class="person-avatar" src="'+esc(f.portrait)+'" width="48" height="48" alt="" loading="lazy">':'')+'<span><strong>'+esc(f.name)+'</strong><small>'+f.rarity+' 星 · '+esc(f.profession)+' · '+esc(f.branch)+'</small></span></summary><div class="operator-form-body"><div class="operator-form-meta">'+esc(f.code)+' · '+esc(f.position)+'</div><dl class="operator-form-facts">'+Object.entries(f.profile).filter(([key])=>key!=='代号').map(([key,value])=>'<div><dt>'+esc(key)+'</dt><dd>'+esc(value)+'</dd></div>').join('')+'</dl><h4>技能</h4><ul class="operator-skills">'+(f.skills.length?f.skills.map(name=>'<li>'+esc(name)+'</li>').join(''):'<li>此形态无独立技能记录。</li>')+'</ul><a href="'+esc(f.wiki)+'" target="_blank" rel="noopener noreferrer">查看此形态的完整资料 ↗</a></div></details>').join('')+'</section>';
+    const f=p.forms.find(f=>f.charId===formId)||p.forms[0];
+    return '<section class="operator-form-picker">'+(p.forms.length>1?'<label for="operator-form-select">选择干员形态</label><select id="operator-form-select">'+p.forms.map(x=>'<option value="'+esc(x.charId)+'"'+(x.charId===f.charId?' selected':'')+'>'+esc(x.name)+' · '+esc(x.profession)+'</option>').join('')+'</select>':'')+'<div class="operator-current-class"><span>'+f.rarity+' 星</span><span>'+esc(f.profession)+'</span><span>'+esc(f.branch)+'</span><span>'+esc(f.position)+'</span></div></section>';
+  }
+  function selectedOperatorForm(){
+    return state.characterDetail?.forms.find(f=>f.charId===state.characterForm);
+  }
+  function selectedOperatorArt(){
+    const f=selectedOperatorForm();return f?.artwork.find(a=>a.stage===state.characterArt)||f?.artwork[0];
+  }
+  function syncOperatorStage(){
+    const p=characterById.get(state.character),active=state.view==='character'&&p?.operator&&state.archiveVisible;
+    workspace.classList.toggle('operator-open',Boolean(active));
+    viewport.inert=Boolean(active);
+    const element=$('operator-stage');element.hidden=!active;
+    if(!active){element.innerHTML='';delete element.dataset.key;return;}
+    const f=selectedOperatorForm(),art=selectedOperatorArt(),key=[p.id,f?.charId,art?.path].join('|');
+    if(element.dataset.key===key)return;
+    element.dataset.key=key;
+    element.innerHTML=art?'<div class="operator-stage-title"><span>官方立绘</span><strong>'+esc(f.name)+'</strong><small>'+esc(art.label)+'</small></div><img class="operator-stage-image" data-operator-art src="'+esc(art.path)+'" width="'+art.width+'" height="'+art.height+'" alt="'+esc(f.name+' · '+art.label)+'" decoding="async"><p class="operator-stage-note">游戏原始立绘 · <a href="'+esc(art.originalUrl)+'" target="_blank" rel="noopener noreferrer">查看完整原图 ↗</a></p>':'<div class="operator-stage-loading" role="status">正在载入立绘与档案…</div>';
+    bindOperatorImageErrors(element);
+    if(art)reveal(element.querySelector('img'),6,180);
+  }
+  function bindOperatorImageErrors(element){
+    element.querySelectorAll('[data-operator-art]').forEach(img=>img.addEventListener('error',()=>{
+      img.hidden=true;
+      const note=document.createElement('p');note.className='operator-image-error';note.textContent='立绘暂未载入，可以通过原图链接查看。';img.after(note);
+    },{once:true}));
+  }
+  function dossierFactsHTML(rows,className='operator-dossier-facts'){
+    return '<dl class="'+className+'">'+rows.map(([label,value])=>'<div><dt>'+esc(label)+'</dt><dd>'+esc(value||'未公开')+'</dd></div>').join('')+'</dl>';
+  }
+  function operatorArtControlsHTML(f,art){
+    return '<div class="operator-art-controls"><span>立绘</span><div role="group" aria-label="选择立绘">'+f.artwork.map(a=>'<button data-operator-art-stage="'+a.stage+'" aria-pressed="'+(a.path===art.path)+'">'+esc(a.label)+'</button>').join('')+'</div><a href="'+esc(art.originalUrl)+'" target="_blank" rel="noopener noreferrer">原图 ↗</a></div>';
+  }
+  function operatorDossierHTML(data,f){
+    const art=selectedOperatorArt();
+    const artwork='<div class="operator-desktop-art-controls">'+operatorArtControlsHTML(f,art)+'</div><p class="operator-art-credit">立绘来源：<a href="'+esc(art.sourcePage)+'" target="_blank" rel="noopener noreferrer">PRTS 游戏素材库 ↗</a>'+(f.artists.length?' · 画师 '+f.artists.map(esc).join('、'):'')+'</p>';
+    const basics='<section class="operator-dossier-section" id="operator-facts"><h3>基础档案 <small>'+esc(f.code)+'</small></h3>'+dossierFactsHTML(Object.entries(f.profile))+'</section>';
+    const evaluation=f.evaluation.length?'<section class="operator-dossier-section" id="operator-evaluation"><h3>能力评估</h3>'+dossierFactsHTML(f.evaluation.map(x=>[x.label,x.value]),'operator-evaluation')+'<p class="operator-fine-print">档案原有评语与遮蔽字段按原记录保留。</p></section>':'';
+    const clinical=f.clinical.length?'<details class="operator-dossier-disclosure"><summary>临床诊断记录</summary>'+dossierFactsHTML(f.clinical.map(x=>[x.label,x.value]))+'<p class="operator-fine-print">指标对应当前形态所引用的档案时期。</p></details>':'';
+    const biography=data.biography.length?'<details class="operator-dossier-disclosure operator-biography" id="operator-biography"><summary>人物经历与日常 <small>含早期档案信息</small></summary><p class="operator-fine-print">根据早期公开档案独立整理，涉及个人经历。</p>'+data.biography.map(s=>'<article><h4>'+esc(s.heading)+'</h4><p>'+esc(s.text)+'</p><small>依据：'+s.sourceChapters.map(esc).join('、')+'</small></article>').join('')+'</details>':'';
+    const talents=f.talents.length?'<h4 class="operator-subheading">天赋</h4>'+f.talents.map(t=>'<article class="operator-ability"><h4>'+esc(t.name)+'<small>精英 '+t.phase+' · Lv.'+t.level+'</small></h4>'+(t.description?'<p>'+esc(t.description)+'</p>':'')+'</article>').join(''):'';
+    const skills=f.skills.length?'<h4 class="operator-subheading">技能</h4>'+f.skills.map(s=>'<article class="operator-ability"><h4>'+esc(s.name)+'<small>技能 '+s.skillLevel+' 级</small></h4>'+(s.description?'<p>'+esc(s.description)+'</p>':'<p>完整效果见游戏内说明。</p>')+'<div class="operator-skill-values"><span>所需技力 '+s.spCost+'</span><span>初始技力 '+s.initialSP+'</span>'+(s.duration>0?'<span>持续 '+s.duration+' 秒</span>':'')+'</div></article>').join(''):'';
+    const abilities='<details class="operator-dossier-disclosure" id="operator-abilities"><summary>战斗能力 <small>'+esc(f.profession+' · '+f.branch)+'</small></summary>'+(f.trait?'<p class="operator-trait">'+esc(f.trait)+'</p>':'')+talents+skills+'<p class="operator-fine-print">天赋采用最高精英阶段、潜能 1 的记录；技能标明所用等级，数值未叠加模组与信赖。</p></details>';
+    const credits='<details class="operator-dossier-disclosure"><summary>画师与配音</summary>'+dossierFactsHTML([...(f.artists.length?[['立绘画师',f.artists.join('、')]]:[]),...f.voices.map(v=>[v.language+'配音',v.names.join('、')])])+'</details>';
+    const directory='<details class="operator-dossier-disclosure"><summary>完整档案目录 <small>'+f.chapters.length+' 篇</small></summary><ul class="operator-chapter-list">'+f.chapters.map(c=>'<li><span>'+esc(c.title)+'</span><small>'+(c.unlockType==='TRUST'?'信赖 '+esc(c.unlockValue)+'%':c.unlockType==='EVOLVE'?'精英 '+esc(c.unlockValue):'')+'</small></li>').join('')+'</ul><a class="operator-source-button" href="'+esc(f.wiki)+'" target="_blank" rel="noopener noreferrer">前往 PRTS 阅读完整档案 ↗</a></details>';
+    return artwork+'<nav class="operator-section-nav" aria-label="人物档案内容"><button data-person-jump="operator-facts">基础档案</button><button data-person-jump="operator-evaluation">能力评估</button>'+(data.biography.length?'<button data-person-jump="operator-biography">人物经历</button>':'')+'<button data-person-jump="operator-abilities">战斗能力</button></nav>'+basics+evaluation+clinical+biography+abilities+credits+directory+'<p class="operator-snapshot">资料快照 '+esc(data.collectedAt)+' · 切换形态可查看对应记录。</p>';
+  }
+  function renderLoadedOperatorDossier(){
+    const target=$('operator-dossier'),f=selectedOperatorForm();if(!target||!f)return;
+    const y=archive.scrollTop;
+    target.innerHTML=operatorDossierHTML(state.characterDetail,f);target.setAttribute('aria-busy','false');
+    const hero=$('operator-mobile-hero'),art=selectedOperatorArt();
+    hero.innerHTML='<figure class="operator-mobile-art"><img data-operator-art src="'+esc(art.path)+'" alt="'+esc(f.name+' · '+art.label)+'" width="'+art.width+'" height="'+art.height+'" decoding="async"><figcaption>官方立绘 · '+esc(art.label)+'</figcaption></figure>'+operatorArtControlsHTML(f,art);
+    bindOperatorImageErrors(target);bindOperatorImageErrors(hero);syncOperatorStage();archive.scrollTop=y;
+  }
+  function loadOperatorDossier(p){
+    const request=++operatorRequest;
+    if(!operatorDetailCache.has(p.id)){
+      const task=fetch('operator-details/'+encodeURIComponent(p.id)+'.json').then(response=>{if(!response.ok)throw new Error('Dossier unavailable');return response.json();}).then(data=>{if(data.id!==p.id||!Array.isArray(data.forms))throw new Error('Unexpected dossier');return data;}).catch(error=>{operatorDetailCache.delete(p.id);throw error;});
+      operatorDetailCache.set(p.id,task);
+    }
+    operatorDetailCache.get(p.id).then(data=>{
+      if(request!==operatorRequest||state.view!=='character'||state.character!==p.id)return;
+      state.characterDetail=data;renderLoadedOperatorDossier();
+    }).catch(()=>{
+      if(request!==operatorRequest||state.view!=='character'||state.character!==p.id)return;
+      const target=$('operator-dossier');if(target){target.setAttribute('aria-busy','false');target.innerHTML='<p class="operator-load-error" role="status">详细档案暂未载入。</p><button class="operator-retry" data-operator-retry>重新载入</button><a class="operator-source-button" href="'+esc(p.forms.find(f=>f.charId===state.characterForm)?.wiki||p.forms[0].wiki)+'" target="_blank" rel="noopener noreferrer">查看来源档案 ↗</a>';}
+      $('operator-mobile-hero').innerHTML='';
+      $('operator-stage').innerHTML='<p class="operator-stage-loading">立绘暂未载入，可在档案中重试或查看来源。</p>';
+    });
   }
   function openCharacter(id,{fromCountry=null,formId=null}={}){
     const p=characterById.get(id);if(!p)return;
-    state.view='character';state.character=id;state.selected=null;state.tour=null;updateHash('person/'+id);
+    const activeForm=p.forms?.find(f=>f.charId===formId)||p.forms?.[0];
+    state.view='character';state.character=id;state.characterOrigin=fromCountry;state.characterForm=activeForm?.charId;state.characterArt='base';state.characterDetail=null;state.selected=null;state.tour=null;updateHash('person/'+id+(activeForm&&activeForm.charId!==p.forms[0].charId?'/'+activeForm.charId:''));
     const origin=byId.get(fromCountry);
     const facts=[['档案身份',p.kind],['种族',p.race],[p.placeLabel||'档案出身地',p.birthplace],...(p.baseFacts||[]).filter(f=>['性别','设定性别','生日','出厂日','身高','高度'].includes(f.label)).map(f=>[f.label,f.value])];
     const regionLinks=p.regionRelations.map(r=>{
       const country=byId.get(r.regionId);return country?'<button class="person-region" data-country="'+country.id+'"><span><strong>'+esc(country.name)+'</strong><small>'+esc(r.relation)+'</small></span><span>'+esc(r.note)+'</span></button>':'';
     }).join('');
     setArchive((origin?'<button class="back-link" data-person-return="'+origin.id+'">← '+esc(origin.name)+' · 人物</button>':'<button class="back-link" data-action="people">← 人物索引</button>')+
-      '<div class="person-cover">'+personAvatar(p,'person-avatar-large')+'<div><span class="eyebrow">人物档案</span><h2 class="person-title" tabindex="-1">'+esc(p.name)+'</h2><div class="person-en">'+esc(p.en)+'</div></div></div>'+
-      '<p class="person-role">'+esc(p.role)+'</p><p class="person-summary">'+esc(p.summary)+'</p><dl class="person-facts">'+facts.map(([label,value])=>'<div><dt>'+label+'</dt><dd>'+esc(value||'未公开')+'</dd></div>').join('')+'</dl>'+
-      operatorFormsHTML(p,formId)+
+      '<div class="person-cover">'+personAvatar(activeForm||p,'person-avatar-large')+'<div><span class="eyebrow">人物档案</span><h2 class="person-title" tabindex="-1">'+esc(p.name)+'</h2><div class="person-en">'+esc(p.en)+'</div></div></div>'+
+      (p.operator?operatorFormsHTML(p,state.characterForm)+'<div id="operator-mobile-hero" class="operator-mobile-hero"><p class="operator-loading">正在载入立绘…</p></div>':'')+
+      '<p class="person-role">'+esc(p.role)+'</p><p class="person-summary">'+esc(p.summary)+'</p>'+
+      (p.operator?'<div id="operator-dossier" aria-busy="true"><p class="operator-loading" role="status">正在载入立绘与详细档案…</p></div>':'<dl class="person-facts">'+facts.map(([label,value])=>'<div><dt>'+label+'</dt><dd>'+esc(value||'未公开')+'</dd></div>').join('')+'</dl>')+
       (p.aliases.length?'<section class="person-section"><h3>别名与异格名称</h3><p>'+p.aliases.map(esc).join('、')+'</p></section>':'')+
       '<section class="person-section"><h3>组织与团体联系</h3><div class="person-orgs">'+(p.organizations.length?p.organizations.map(org=>'<button data-people-query="'+esc(org)+'">'+esc(org)+'</button>').join(''):'<p>所引基础资料未明确记录。</p>')+'</div><small>任职、阵营与合作关系依来源语境记录。点选可查看相关人物。</small></section>'+
       '<section class="person-section"><h3>与大地的联系</h3>'+(regionLinks||'<p>当前资料未将此人物关联到地图中的固定地区。</p>')+'<small>出生地、活动与组织联系分别记录，不代表国籍或当前坐标。</small></section>'+
       (p.notes.length?'<section class="person-section"><h3>阅读范围</h3>'+p.notes.map(note=>'<p>'+esc(note)+'</p>').join('')+'</section>':'')+
       '<section class="person-section person-sources"><h3>资料来源</h3><ol>'+p.sources.map(source=>'<li><a href="'+esc(source.url)+'" target="_blank" rel="noopener noreferrer">'+esc(source.title)+' ↗</a></li>').join('')+'</ol></section><button class="person-share" data-action="copy">复制人物链接</button>','P / '+String(characters.indexOf(p)+1).padStart(3,'0'));
     updateMarkers();showArchive();resetMap();archive.querySelector('h2').focus({preventScroll:true});
+    if(p.operator){
+      if(mobile()){$('archive').classList.add('sheet-expanded');$('sheet-expand').setAttribute('aria-expanded','true');$('sheet-expand').setAttribute('aria-label','收起档案');$('sheet-expand').querySelector('b').textContent='收起档案';syncSheetGeometry();}
+      loadOperatorDossier(p);
+    }
   }
   function openConcept(id){
     const c=concepts.find(c=>c.id===id);if(!c)return;
@@ -373,6 +454,10 @@
     if(next!==null){e.preventDefault();setCountryPane(ids[next],{focus:true});}
   });
   archive.addEventListener('click',e => {
+    const artStage=e.target.closest('[data-operator-art-stage]');
+    if(artStage){state.characterArt=artStage.dataset.operatorArtStage;renderLoadedOperatorDossier();$(mobile()?'operator-mobile-hero':'operator-dossier').querySelector('[data-operator-art-stage="'+state.characterArt+'"]').focus({preventScroll:true});return;}
+    if(e.target.closest('[data-operator-retry]')){loadOperatorDossier(characterById.get(state.character));return;}
+    const jump=e.target.closest('[data-person-jump]');if(jump){const target=$(jump.dataset.personJump);if(target){if(target.tagName==='DETAILS')target.open=true;target.scrollIntoView({block:'start',behavior:reduceMotion()?'auto':'smooth'});target.tabIndex=-1;target.focus({preventScroll:true});}return;}
     const person=e.target.closest('[data-character]');
     if(e.target.closest('[data-people-more]')){state.peopleLimit+=60;updatePeopleList({reset:false});return;}
     if(person){openCharacter(person.dataset.character,{fromCountry:person.dataset.characterOrigin});return;}
@@ -393,6 +478,7 @@
   }));
   archive.addEventListener('input',e=>{if(e.target.id==='people-query'){state.peopleQuery=e.target.value;updatePeopleList();}});
   archive.addEventListener('change',e=>{const key={'people-region':'peopleRegion','people-profession':'peopleProfession','people-rarity':'peopleRarity','people-kind':'peopleKind'}[e.target.id];if(key){state[key]=e.target.value;updatePeopleList();}});
+  archive.addEventListener('change',e=>{if(e.target.id==='operator-form-select'){openCharacter(state.character,{fromCountry:state.characterOrigin,formId:e.target.value});$('operator-form-select').focus({preventScroll:true});}});
   const regionData=window.TERRA_REGIONS||{},surface=$('map-surface'),regionLayers=$('region-layers');
   function emblem(id){
     const r=regionData[id],size=r.imageSize||[510,510];
@@ -721,7 +807,7 @@
   function openHash(id){
     if(byId.has(id)){selectCountry(id);return;}
     if(id==='people'){renderPeople();return;}
-    if(id.startsWith('person/')&&characterById.has(id.slice(7))){openCharacter(id.slice(7));return;}
+    if(id.startsWith('person/')){const [,personId,formId]=id.split('/');if(characterById.has(personId)){openCharacter(personId,{formId});return;}}
     if(id.startsWith('concept/')&&concepts.some(c=>c.id===id.slice(8))){openConcept(id.slice(8));return;}
     goHome();
   }
